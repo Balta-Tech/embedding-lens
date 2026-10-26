@@ -1,0 +1,15 @@
+{
+  "_about": "Words judged correct for each sample moment, by looking at its frames. A word counts if it names something visible, or the activity or setting; near-synonyms are fine, wrong species, wrong places and invented objects are not. Judged by Claude (an AI model) against the frames, so treat it as one careful annotator, not ground truth. Every word any read-out produced was judged; words not listed here were judged wrong.",
+  "zugspitze:3": ["cave", "cavern", "tunnel", "grotto", "darkness", "crevice", "chasm", "mountain path", "gorge", "night", "headlamp", "hiker"],
+  "zugspitze:13": ["alpenstock", "backpacker", "forest path", "gully", "hike", "hiker", "hiking equipment", "mountain pass", "mountain path", "mountain stream", "mountain river", "mountaineering bag", "waterfall", "walking cane", "trail", "valley"],
+  "zugspitze:28": ["belay", "buttress", "climbing a rope", "cordage", "crag", "escarpment", "mountain path", "precipice", "ridge rope", "rock climber", "rock climbing", "rock face", "via ferrata", "cliff", "steel cable"],
+  "zugspitze:50": ["alpine glacier", "alpinist", "crampon", "hiker", "ice ax", "ice climbing", "icecap", "piedmont glacier", "glacier", "ice", "snow"],
+  "zugspitze:61": ["alpinist", "crampon", "gaiter", "hiker", "hiking boot", "hiking equipment", "ice ax", "ice climbing", "mountaineering bag", "snow", "ice", "mountaineer"],
+  "zugspitze:88": ["alpinist", "climb mountain", "flag pole", "flagpole", "hiker", "mountaineer", "pinnacle", "sticker", "summit", "totem pole", "selfie", "mountain"],
+  "wetterstein:20": ["buttress", "chasm", "cliff", "climb mountain", "crag", "crevice", "geological formation", "gully", "hike", "mountain pass", "mountain path", "mountainside", "outcrop", "outdoors", "rock face", "rock formation", "saddle", "mountain", "ridge"],
+  "kart:20": ["auto racing", "bucket seat", "cart", "go-kart", "karting", "motorsport", "race track", "racer", "raceway", "steering wheel", "race car", "racetrack", "helmet"],
+  "f16:9": ["aileron", "air field", "airfield", "aircraft", "aircraft model", "fighter jet", "flight simulator", "horizontal tail", "landing flap", "warplane", "wing", "runway", "taxiway", "jet plane"],
+  "f16:18": ["airplane", "fighter jet", "flight simulator", "gulf", "ocean", "warplane", "aircraft", "sea", "coast", "jet plane"],
+  "assetto:13": ["autobahn", "autostrada", "carriageway", "city nightview", "divided highway", "highway", "interchange", "overpass", "sedan", "sodium-vapor lamp", "spaghetti junction", "superhighway", "traffic", "turnpike", "night", "car"],
+  "trex:10": ["browser", "computer screen", "dialog box", "modem", "web site", "website", "screenshot", "video game", "dinosaur"]
+}
