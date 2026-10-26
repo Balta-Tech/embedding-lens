@@ -1,6 +1,6 @@
 """EmbeddingGemma 2: Google's 740M on-device embedder for text, images, video and audio.
 
-Video goes in as a short clip file, cut from the source video. The model samples frames itself
+Video goes in as a short clip file, cut from the source video. The model samples frames itself at
 its default of 1 fps, so it sees half the frames the other models see).
 """
 
