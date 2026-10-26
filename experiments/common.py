@@ -98,8 +98,20 @@ def _phrase_index(name: str) -> dict[str, int]:
 
 
 def save(name: str, result) -> None:
+    """Write results, keeping earlier results for models this run did not cover.
+
+    Experiments run per model at different times; rows (or dict entries) are keyed by model.
+    """
     RESULTS_DIR.mkdir(parents=True, exist_ok=True)
-    (RESULTS_DIR / f"{name}.json").write_text(json.dumps(result, indent=2))
+    path = RESULTS_DIR / f"{name}.json"
+    if path.exists():
+        old = json.loads(path.read_text())
+        if isinstance(result, list) and isinstance(old, list) and all("model" in r for r in result):
+            fresh = {r["model"] for r in result}
+            result = [r for r in old if r.get("model") not in fresh] + result
+        elif isinstance(result, dict) and isinstance(old, dict) and "rows" not in result:
+            result = old | result
+    path.write_text(json.dumps(result, indent=2))
 
 
 def table(rows: list[dict], columns: list[str]) -> str:
