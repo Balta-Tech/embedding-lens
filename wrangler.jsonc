@@ -1,0 +1,9 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "embedding-lens",
+  "account_id": "9b86fb4123a251688a33273e22a555b5",
+  "compatibility_date": "2026-10-01",
+  // Static site only: the build output of `npm run build`. The embedding backend runs locally.
+  "assets": { "directory": "./web/dist" },
+  "routes": [{ "pattern": "embedding-lens.balta-tech.com", "custom_domain": true }]
+}
