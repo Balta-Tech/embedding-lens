@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 360" font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0b0d10"/>
+      <stop offset="1" stop-color="#141a22"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.78" cy="0.5" r="0.45">
+      <stop offset="0" stop-color="#7cc4ff" stop-opacity="0.22"/>
+      <stop offset="1" stop-color="#7cc4ff" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1200" height="360" fill="url(#bg)"/>
+  <rect width="1200" height="360" fill="url(#glow)"/>
+
+  <!-- film strip: the video side -->
+  <g opacity="0.9">
+    <rect x="60" y="250" width="420" height="58" rx="6" fill="#1b222c"/>
+    <g fill="#2a3442">
+      <rect x="72" y="260" width="88" height="38" rx="3"/>
+      <rect x="172" y="260" width="88" height="38" rx="3"/>
+      <rect x="272" y="260" width="88" height="38" rx="3"/>
+      <rect x="372" y="260" width="88" height="38" rx="3"/>
+    </g>
+    <path d="M72 298 L100 274 L118 286 L136 268 L160 298 Z" fill="#46617f"/>
+    <path d="M172 298 L196 270 L214 282 L232 264 L260 298 Z" fill="#4f6d8e"/>
+    <path d="M272 298 L298 276 L320 266 L340 280 L360 298 Z" fill="#46617f"/>
+    <path d="M372 298 L392 280 L414 262 L436 278 L460 298 Z" fill="#587a9c"/>
+  </g>
+
+  <!-- arrow into the shared space -->
+  <path d="M495 279 C 560 279, 600 230, 650 200" stroke="#3b4757" stroke-width="2" fill="none" stroke-dasharray="4 6"/>
+
+  <!-- word bubbles: what the vector is closest to -->
+  <g text-anchor="middle" fill="#e8e6e1">
+    <circle cx="880" cy="170" r="86" fill="#7cc4ff" fill-opacity="0.16" stroke="#7cc4ff" stroke-opacity="0.6"/>
+    <text x="880" y="178" font-size="26" font-weight="600">mountain ridge</text>
+    <circle cx="1040" cy="110" r="52" fill="#9be7c4" fill-opacity="0.14" stroke="#9be7c4" stroke-opacity="0.55"/>
+    <text x="1040" y="116" font-size="18">snow</text>
+    <circle cx="1050" cy="245" r="44" fill="#f4c97a" fill-opacity="0.14" stroke="#f4c97a" stroke-opacity="0.55"/>
+    <text x="1050" y="251" font-size="16">helmet cam</text>
+    <circle cx="735" cy="95" r="38" fill="#c7a6ff" fill-opacity="0.14" stroke="#c7a6ff" stroke-opacity="0.5"/>
+    <text x="735" y="100" font-size="14">hiking</text>
+    <circle cx="745" cy="275" r="30" fill="#ff9f9f" fill-opacity="0.12" stroke="#ff9f9f" stroke-opacity="0.45"/>
+    <text x="745" y="279" font-size="12">ice</text>
+  </g>
+
+  <!-- title -->
+  <text x="60" y="118" font-size="64" font-weight="700" fill="#e8e6e1" letter-spacing="-1">embedding-lens</text>
+  <text x="62" y="162" font-size="22" fill="#8b8f97">What does a video embedding actually see?</text>
+  <text x="62" y="200" font-size="15" fill="#5f6672">Balta Tech · embedding-lens.balta-tech.com</text>
+</svg>
