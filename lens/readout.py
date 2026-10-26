@@ -110,7 +110,7 @@ class Space:
         vocab_scores = np.sort(self.scores(v, method))
         s = self.scores(v, method, self.describe(text))
         # Tolerance: the same phrase scored alone can differ from the batched score in the last bits
-        better = len(vocab_scores) - np.searchsorted(vocab_scores, s + 1e-5, side="left")
+        better = len(vocab_scores) - np.searchsorted(vocab_scores, s + 1e-6, side="left")
         return s, better + 1, 100.0 * (1 - better / len(vocab_scores))
 
 
