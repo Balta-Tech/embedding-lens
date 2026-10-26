@@ -116,13 +116,13 @@ export function createGame(manifest, state) {
   async function reveal(key) {
     root.querySelector("#reveal").disabled = true;
     root.querySelector("#game-input").disabled = true;
-    const [result, readouts] = await Promise.all([score(key), loadReadouts(state.model)]);
+    const [result, readouts] = await Promise.all([score(key), loadReadouts(state.model, "small")]);
     const known = result.words.filter((w) => w.percentile !== null).map((w) => w.percentile).sort((a, b) => b - a);
     // Round score: the average of your best three words, so one stray guess doesn't sink you
     const best = known.slice(0, 3);
     const points = best.length ? best.reduce((a, b) => a + b, 0) / 3 : 0;
     game.total += points;
-    const top = readouts.segments[key].calibrated.slice(0, 8).map(([p]) => p);
+    const top = readouts.segments[key][game.data.method === "centered" ? "centered" : "raw"].slice(0, 8).map(([p]) => p);
     root.querySelector("#game-result").innerHTML = `
       <div class="verdicts">
         ${result.words.map((w) => w.percentile === null

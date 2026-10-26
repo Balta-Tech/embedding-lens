@@ -3,12 +3,13 @@ import { drawBubbles } from "./bubbles.js";
 import { formatTime, loadLanes, loadReadouts, spriteUrl, timeOf, youtubeUrl } from "./data.js";
 
 const LENS_NOTES = {
-  raw: "Plain cosine similarity. Honest, but words that sit close to every video tend to win.",
-  calibrated:
-    "The gap between video and text vectors removed, and words that are close to everything discounted (centring + CSLS). What is specific to this moment.",
+  raw: "Plain closeness. For Qwen3-VL and SigLIP 2 this is the most faithful read-out: checked against the frames, it beats every correction.",
+  centered:
+    "Each modality's average removed first, closing the gap between video and text vectors. It rescues EmbeddingGemma 2, where every video sits close to every word, and holds up best as the vocabulary grows.",
   sparse:
-    "A handful of words whose vectors add up to this moment's vector. Each one explains something the others don't.",
+    "A few words whose vectors add up to this moment's vector, each explaining something the others don't. The first word is usually right; the later ones tend to be oddly specific.",
 };
+const TIER_LABELS = { small: "4.6k", medium: "23k", large: "119k" };
 const LANE_COUNT = 6;
 
 export function createExplorer(manifest, state) {
@@ -50,6 +51,16 @@ export function createExplorer(manifest, state) {
     const lens = e.target.closest("button")?.dataset.lens;
     if (lens) set({ lens });
   });
+  const tierPicker = $("tier-picker");
+  for (const t of manifest.tiers) {
+    const b = document.createElement("button");
+    b.type = "button";
+    b.dataset.tier = t.id;
+    b.textContent = TIER_LABELS[t.id] || t.id;
+    b.title = `${t.size.toLocaleString()} words and phrases`;
+    b.addEventListener("click", () => set({ tier: t.id }));
+    tierPicker.append(b);
+  }
 
   strip.addEventListener("keydown", (e) => {
     const video = manifest.videos.find((v) => v.id === state.video);
@@ -63,8 +74,8 @@ export function createExplorer(manifest, state) {
 
   async function renderStrip() {
     const video = manifest.videos.find((v) => v.id === state.video);
-    const [lanes, readouts] = await Promise.all([loadLanes(state.model), loadReadouts(state.model)]);
-    const key = `${state.video}:${state.model}`;
+    const [lanes, readouts] = await Promise.all([loadLanes(state.model), loadReadouts(state.model, state.tier)]);
+    const key = `${state.video}:${state.model}:${state.tier}`;
     if (drawnStrip !== key) {
       drawnStrip = key;
       strip.innerHTML = "";
@@ -141,14 +152,20 @@ export function createExplorer(manifest, state) {
 
     tabs.querySelectorAll(".video-tab").forEach((t) => t.setAttribute("aria-selected", t.dataset.video === state.video));
     modelPicker.querySelectorAll("button").forEach((b) => b.setAttribute("aria-pressed", b.dataset.model === state.model));
-    $("lens-picker").querySelectorAll("button").forEach((b) => b.setAttribute("aria-pressed", b.dataset.lens === state.lens));
+    const best = manifest.models.find((m) => m.id === state.model)?.bestLens;
+    $("lens-picker").querySelectorAll("button").forEach((b) => {
+      b.setAttribute("aria-pressed", b.dataset.lens === state.lens);
+      b.classList.toggle("best", b.dataset.lens === best);
+      b.title = b.dataset.lens === best ? "Most faithful for this model" : "";
+    });
+    tierPicker.querySelectorAll("button").forEach((b) => b.setAttribute("aria-pressed", b.dataset.tier === state.tier));
 
-    const data = (await loadReadouts(state.model)).segments[key];
+    const data = (await loadReadouts(state.model, state.tier)).segments[key];
     let words;
     let note = LENS_NOTES[state.lens];
     if (state.lens === "sparse") {
       words = data.sparse.terms;
-      note += ` Together they reproduce the vector with cosine ${data.sparse.fit.toFixed(2)}.`;
+      note += ` Together they reproduce ${Math.round(data.sparse.fit * 100)}% of the vector's direction.`;
     } else {
       words = data[state.lens];
     }

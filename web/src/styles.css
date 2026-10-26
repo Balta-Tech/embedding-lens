@@ -197,6 +197,7 @@ h1, h2, h3 { margin: 0; font-weight: 400; }
 .segmented { display: inline-flex; padding: 3px; border-radius: 999px; background: var(--surface); border: 1px solid var(--line); flex-wrap: wrap; }
 .segmented button { border: 0; background: transparent; padding: 6px 13px; border-radius: 999px; font-size: 13.5px; color: var(--muted); cursor: pointer; }
 .segmented button[aria-pressed="true"] { background: var(--text); color: var(--bg); }
+.segmented button.best::after { content: ""; display: inline-block; width: 5px; height: 5px; margin-left: 6px; border-radius: 50%; background: var(--good); vertical-align: middle; }
 .lens-note { margin: 2px 0 0; color: var(--muted); font-size: 14px; min-height: 3em; }
 
 .readout { position: relative; }

@@ -18,3 +18,8 @@ FRAME_WIDTH = 640
 # Videos are cut into fixed windows of this many seconds. Short enough that a segment shows
 # one thing, long enough to contain motion.
 SEGMENT_SECONDS = 5
+
+# The most faithful read-out per model, from experiments/eyeball_score.py (words judged against
+# the frames). Raw cosine wins for the two models whose spaces are not crowded; EmbeddingGemma 2,
+# where every video is close to every phrase, needs centring.
+BEST_METHOD = {"qwen3vl": "raw", "gemma2": "centered", "siglip2": "raw"}

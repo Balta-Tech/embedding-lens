@@ -13,7 +13,7 @@ async function json(path) {
 }
 
 export const loadManifest = () => json("manifest.json");
-export const loadReadouts = (model) => json(`readouts/${model}.json`);
+export const loadReadouts = (model, tier) => json(`readouts/${model}.${tier}.json`);
 export const loadLanes = (model) => json(`lanes/${model}.json`);
 export const loadSearch = (model) => json(`search/${model}.json`);
 export const loadResult = (name) => json(`results/${name}.json`).catch(() => null);

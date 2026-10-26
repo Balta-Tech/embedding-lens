@@ -66,7 +66,7 @@
           <li>
             <span class="step-num">3</span>
             <h3>Read out</h3>
-            <p>Rank <b data-stat="vocab">23,000</b> words and phrases by closeness, corrected for words that sit close to everything.</p>
+            <p>Rank up to <b data-stat="vocab">119,000</b> words and phrases by closeness, and check the result against the frames.</p>
           </li>
         </ol>
       </section>
@@ -94,9 +94,13 @@
                 <span class="control-label">Lens</span>
                 <div class="segmented" id="lens-picker">
                   <button type="button" data-lens="raw">Raw</button>
-                  <button type="button" data-lens="calibrated">Calibrated</button>
+                  <button type="button" data-lens="centered">Centred</button>
                   <button type="button" data-lens="sparse">Sparse</button>
                 </div>
+              </div>
+              <div class="control">
+                <span class="control-label">Words</span>
+                <div class="segmented" id="tier-picker"></div>
               </div>
               <p class="lens-note" id="lens-note"></p>
             </div>

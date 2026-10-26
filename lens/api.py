@@ -12,12 +12,12 @@ from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel, Field
 
+from lens.config import BEST_METHOD
 from lens.index import load_segments, load_vocab
 from lens.models import MODEL_NAMES, load
 from lens.readout import METHODS, Space, softmax
 
 DEFAULT_MODEL = "qwen3vl"
-DEFAULT_METHOD = "centered_csls"
 
 app = FastAPI(title="embedding-lens")
 app.add_middleware(
@@ -42,6 +42,11 @@ def _space(name: str, tier: str) -> tuple[list[str], Space]:
     return keys, Space(phrases, text, videos, neutral=_model(name).embed_texts(["a video"])[0])
 
 
+def _method(model: str, method: str | None) -> str:
+    """Each model's most faithful read-out unless the caller asks for another."""
+    return method or BEST_METHOD.get(model, "raw")
+
+
 def _check(model: str, method: str) -> None:
     if model not in MODEL_NAMES:
         raise HTTPException(404, f"unknown model {model!r}")
@@ -63,9 +68,10 @@ def health() -> dict:
 
 @app.get("/api/readout")
 def readout(
-    segment: str, model: str = DEFAULT_MODEL, method: str = DEFAULT_METHOD,
-    tier: str = "large", n: int = 30,
+    segment: str, model: str = DEFAULT_MODEL, method: str | None = None,
+    tier: str = "medium", n: int = 30,
 ) -> dict:
+    method = _method(model, method)
     _check(model, method)
     keys, space = _space(model, tier)
     v = space.reference[_segment_index(keys, segment)]
@@ -79,28 +85,29 @@ class ScoreRequest(BaseModel):
     segment: str
     words: list[str] = Field(min_length=1, max_length=10)
     model: str = DEFAULT_MODEL
-    method: str = DEFAULT_METHOD
+    method: str | None = None
     tier: str = "large"
 
 
 @app.post("/api/score")
 def score(req: ScoreRequest) -> dict:
     """The game: how close are the player's words to what the model saw?"""
-    _check(req.model, req.method)
+    method = _method(req.model, req.method)
+    _check(req.model, method)
     keys, space = _space(req.model, req.tier)
     v = space.reference[_segment_index(keys, req.segment)]
     words = [w.strip().lower() for w in req.words if w.strip()][:10]
     if not words:
         raise HTTPException(422, "no words")
     text = _model(req.model).embed_texts(words)
-    scores, ranks, percentiles = space.rank_of(v, text, req.method)
+    scores, ranks, percentiles = space.rank_of(v, text, method)
     return {
         "vocabulary_size": len(space.phrases),
         "words": [
             {"phrase": w, "score": float(s), "rank": int(r), "percentile": float(p)}
             for w, s, r, p in zip(words, scores, ranks, percentiles)
         ],
-        "model_top": [{"phrase": p, "score": s} for p, s in space.top(v, 10, req.method)],
+        "model_top": [{"phrase": p, "score": s} for p, s in space.top(v, 10, method)],
     }
 
 

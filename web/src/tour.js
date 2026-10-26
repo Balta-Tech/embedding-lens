@@ -1,52 +1,71 @@
 // A short guided tour: each step sets the page into a state and explains what to look at.
 import { loadReadouts } from "./data.js";
 
+const words = async (state, key) => (await loadReadouts(state.model, state.tier)).segments[key];
 const top = async (state, key, lens, n = 3) => {
-  const data = (await loadReadouts(state.model)).segments[key];
-  const words = lens === "sparse" ? data.sparse.terms : data[lens];
-  return words.slice(0, n).map(([p]) => `“${p}”`).join(", ");
+  const data = await words(state, key);
+  const list = lens === "sparse" ? data.sparse.terms : data[lens];
+  return list.slice(0, n).map(([p]) => `“${p}”`).join(", ");
 };
+const QWEN = { model: "qwen3vl", tier: "medium" };
 
 export const STEPS = [
   {
     target: "#explore",
     title: "A moment becomes a vector",
     async body(state) {
-      return `Fifteen seconds into the Zugspitze climb: a gorge tunnel lit by a head torch. One vector for these five seconds, and the words closest to it are ${await top(state, "zugspitze:3", "raw")}.`;
+      return `Fifteen seconds into the Zugspitze climb: a gorge at night, lit by a head torch. These five seconds are one vector, and the words closest to it are ${await top(state, "zugspitze:3", "raw")}.`;
     },
-    set: { video: "zugspitze", index: 3, lens: "raw" },
+    set: { ...QWEN, video: "zugspitze", index: 3, lens: "raw" },
   },
   {
     target: ".explorer",
-    title: "Raw closeness says what's generic",
+    title: "Closeness, read as words",
     async body(state) {
-      return `On the glacier, raw cosine picks ${await top(state, "zugspitze:50", "raw")}. Correct, but words like these also sit close to plenty of other snowy footage.`;
+      return `On the glacier, Qwen3-VL-Embedding says ${await top(state, "zugspitze:50", "raw", 4)}. Checked against the frames, 80% of its top-5 words are actually visible: the most faithful of the three models.`;
     },
-    set: { video: "zugspitze", index: 50, lens: "raw" },
+    set: { ...QWEN, video: "zugspitze", index: 50, lens: "raw" },
+  },
+  {
+    target: "#model-picker",
+    title: "Not every model is this honest",
+    async body(state) {
+      return `EmbeddingGemma 2 on a browser window: ${await top(state, "trex:10", "raw", 4)}. In its space every video is close to every word, so short generic words win everywhere.`;
+    },
+    set: { model: "gemma2", tier: "medium", video: "trex", index: 10, lens: "raw" },
   },
   {
     target: "#lens-picker",
-    title: "Calibrated says what's specific",
+    title: "Centring rescues it",
     async body(state) {
-      return `The calibrated lens removes the offset all video vectors share and discounts words that are close to everything. Now: ${await top(state, "zugspitze:50", "calibrated")}.`;
+      return `Remove the offset all video vectors share and it reads ${await top(state, "trex:10", "centered", 4)}. The green dot marks the most faithful lens for each model: raw for the other two.`;
     },
-    set: { video: "zugspitze", index: 50, lens: "calibrated" },
+    set: { model: "gemma2", tier: "medium", video: "trex", index: 10, lens: "centered" },
   },
   {
-    target: "#lens-picker",
-    title: "Sparse says what it's made of",
+    target: "#tier-picker",
+    title: "More words, less truth",
     async body(state) {
-      return `The sparse lens explains the vector as a sum of a few words, each adding something new: ${await top(state, "zugspitze:50", "sparse", 4)}.`;
+      return `With all 119,000 WordNet nouns, rare near-misses slip in: ${await top(state, "zugspitze:3", "raw", 4)}. For every model the 4.6k-word list was the most precise.`;
     },
-    set: { video: "zugspitze", index: 50, lens: "sparse" },
+    set: { model: "siglip2", tier: "large", video: "zugspitze", index: 3, lens: "raw" },
+  },
+  {
+    target: "#change",
+    title: "What changed?",
+    async body(state) {
+      const c = (await words(state, "zugspitze:89")).change;
+      return `The difference between two moments is a direction too. At the summit, reading it out gives ${c.appeared.slice(0, 3).map((w) => `“+${w}”`).join(", ")}: the summit cross enters the frame. The orange lane in the strip marks the biggest changes.`;
+    },
+    set: { ...QWEN, video: "zugspitze", index: 89, lens: "raw" },
   },
   {
     target: "#strip",
     title: "Simulator or reality?",
     async body(state) {
-      return `Same model, an F-16 over the sea in a flight simulator: ${await top(state, "f16:18", "calibrated")}. The Lab section measures how well each model separates rendered from real footage.`;
+      return `An F-16 over the sea in a flight simulator: ${await top(state, "f16:18", "raw", 4)}. Telling rendered from real is harder than it looks; the Lab shows why.`;
     },
-    set: { video: "f16", index: 18, lens: "calibrated" },
+    set: { ...QWEN, video: "f16", index: 18, lens: "raw" },
   },
   {
     target: "#search",
@@ -58,6 +77,12 @@ export const STEPS = [
     target: "#game",
     title: "Your turn",
     body: () => "Describe a moment in a few words and see where they rank among everything the model could have said.",
+    set: {},
+  },
+  {
+    target: "#lab",
+    title: "How we know",
+    body: () => "Every default on this page comes from a small experiment, including the judgements by eye. The Lab has the numbers.",
     set: {},
   },
 ];

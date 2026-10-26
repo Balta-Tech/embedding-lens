@@ -15,14 +15,14 @@ async function hero(manifest, state) {
   const sprite = document.getElementById("hero-sprite");
   const svg = document.getElementById("hero-bubbles");
   const caption = document.getElementById("hero-caption");
-  const data = await loadReadouts(state.model);
+  const data = await loadReadouts(state.model, state.tier);
   let i = 0;
   const show = () => {
     const key = FEATURED[i % FEATURED.length];
     const video = manifest.videos.find((v) => v.id === key.split(":")[0]);
     sprite.style.backgroundImage = `url(${spriteUrl(key)})`;
     caption.textContent = `${video.title.split(",")[0]} · ${formatTime(timeOf(manifest, key))}`;
-    drawBubbles(svg, data.segments[key].calibrated, { count: 9, minFont: 11 });
+    drawBubbles(svg, data.segments[key][state.lens], { count: 9, minFont: 11 });
     i++;
   };
   show();
@@ -34,7 +34,7 @@ function stats(manifest) {
   const set = (name, value) => document.querySelectorAll(`[data-stat="${name}"]`).forEach((el) => { el.textContent = value; });
   set("segments", segments.toLocaleString());
   set("seconds", manifest.segmentSeconds);
-  set("vocab", manifest.vocab.size.toLocaleString());
+  set("vocab", Math.max(...manifest.tiers.map((t) => t.size)).toLocaleString());
 }
 
 function statusPill() {
@@ -52,7 +52,8 @@ function statusPill() {
 
 async function main() {
   const manifest = await loadManifest();
-  const state = { model: manifest.defaultModel, lens: "calibrated", video: "zugspitze", index: 50 };
+  const model = manifest.models.find((m) => m.id === manifest.defaultModel);
+  const state = { model: model.id, lens: model.bestLens, tier: manifest.defaultTier, video: "zugspitze", index: 50 };
   stats(manifest);
   statusPill();
   hero(manifest, state);
