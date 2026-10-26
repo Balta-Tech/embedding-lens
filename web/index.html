@@ -3,18 +3,183 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>embedding-lens</title>
-    <style>
-      :root { color-scheme: dark; }
-      body { margin: 0; min-height: 100vh; display: grid; place-items: center;
-             background: #0b0d10; color: #e8e6e1; font: 16px/1.5 system-ui, sans-serif; }
-      p { color: #8b8f97; }
-    </style>
+    <title>embedding-lens — what does a video embedding see?</title>
+    <meta name="description" content="Six videos, 291 five-second moments, 23,000 words: read a video embedding back out as language." />
+    <meta property="og:title" content="embedding-lens" />
+    <meta property="og:description" content="What does a video embedding actually see? Read it back out as words." />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
   </head>
   <body>
-    <main>
-      <h1>embedding-lens</h1>
-      <p>What does a video embedding see? Coming together.</p>
+    <header class="topbar">
+      <a class="brand" href="#top" aria-label="embedding-lens home">
+        <svg viewBox="0 0 32 32" aria-hidden="true"><circle cx="13" cy="13" r="8.5" /><path d="M19.5 19.5 27 27" /><circle cx="11" cy="12" r="2" class="dot a" /><circle cx="15.5" cy="15" r="1.4" class="dot b" /></svg>
+        <span>embedding-lens</span>
+      </a>
+      <nav>
+        <a href="#explore">Explore</a>
+        <a href="#search">Search</a>
+        <a href="#game">Play</a>
+        <a href="#lab">Lab</a>
+      </nav>
+      <button class="status" id="status" type="button" title="Live features need the local backend">
+        <span class="status-dot"></span><span class="status-text">Precomputed</span>
+      </button>
+    </header>
+
+    <main id="top">
+      <section class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow">An experiment by <a href="https://balta-tech.com">Balta Tech</a></p>
+          <h1>What does a video embedding <em>see</em>?</h1>
+          <p class="lede" id="hero-lede">
+            Six videos, cut into five-second moments. Each moment becomes a single vector in a
+            space it shares with language, and we ask which words land closest.
+          </p>
+          <div class="hero-actions">
+            <button class="btn primary" id="start-tour" type="button">Take the tour <span aria-hidden="true">→</span></button>
+            <a class="btn ghost" href="#game">You vs the model</a>
+          </div>
+        </div>
+        <figure class="hero-visual" id="hero-visual" aria-label="A video moment and the words closest to its embedding">
+          <div class="hero-frame"><div class="sprite" id="hero-sprite"></div></div>
+          <svg class="hero-bubbles" id="hero-bubbles"></svg>
+          <figcaption id="hero-caption"></figcaption>
+        </figure>
+      </section>
+
+      <section class="how" aria-labelledby="how-title">
+        <h2 id="how-title" class="visually-hidden">How it works</h2>
+        <ol class="steps">
+          <li>
+            <span class="step-num">1</span>
+            <h3>Cut</h3>
+            <p><b data-stat="segments">291</b> moments of <b data-stat="seconds">5</b> seconds, sampled at two frames per second.</p>
+          </li>
+          <li>
+            <span class="step-num">2</span>
+            <h3>Embed</h3>
+            <p>A model turns each moment into one vector, in the same space it maps sentences to.</p>
+          </li>
+          <li>
+            <span class="step-num">3</span>
+            <h3>Read out</h3>
+            <p>Rank <b data-stat="vocab">23,000</b> words and phrases by closeness, corrected for words that sit close to everything.</p>
+          </li>
+        </ol>
+      </section>
+
+      <section id="explore" class="panel">
+        <div class="section-head">
+          <p class="eyebrow">Explore</p>
+          <h2>Scrub through a video and watch the words change</h2>
+        </div>
+        <div class="video-tabs" id="video-tabs" role="tablist"></div>
+        <div class="strip-wrap" id="strip" role="listbox" aria-label="Moments of this video"></div>
+        <div class="explorer">
+          <div class="moment">
+            <div class="moment-frame"><div class="sprite" id="moment-sprite"></div></div>
+            <div class="moment-meta">
+              <span class="timecode" id="moment-time">0:00</span>
+              <a id="moment-yt" target="_blank" rel="noopener">Watch this moment on YouTube ↗</a>
+            </div>
+            <div class="controls">
+              <div class="control">
+                <span class="control-label">Model</span>
+                <div class="segmented" id="model-picker"></div>
+              </div>
+              <div class="control">
+                <span class="control-label">Lens</span>
+                <div class="segmented" id="lens-picker">
+                  <button type="button" data-lens="raw">Raw</button>
+                  <button type="button" data-lens="calibrated">Calibrated</button>
+                  <button type="button" data-lens="sparse">Sparse</button>
+                </div>
+              </div>
+              <p class="lens-note" id="lens-note"></p>
+            </div>
+          </div>
+          <div class="readout">
+            <svg class="bubbles" id="bubbles" role="img" aria-label="Words closest to this moment"></svg>
+            <ol class="wordlist" id="wordlist"></ol>
+          </div>
+        </div>
+      </section>
+
+      <section id="search" class="panel">
+        <div class="section-head">
+          <p class="eyebrow">Search</p>
+          <h2>Type a scene, find the moments</h2>
+          <p class="section-sub">The same space works backwards: embed a sentence and look for the moments that sit closest to it.</p>
+        </div>
+        <form class="search-form" id="search-form">
+          <input id="search-input" type="search" placeholder="mountains" autocomplete="off" aria-label="Search the videos" />
+          <button class="btn primary" type="submit">Search</button>
+        </form>
+        <div class="chips" id="search-presets"></div>
+        <p class="hint" id="search-hint"></p>
+        <div class="search-results" id="search-results"></div>
+        <div class="search-lanes" id="search-lanes"></div>
+      </section>
+
+      <section id="game" class="panel">
+        <div class="section-head">
+          <p class="eyebrow">Play</p>
+          <h2>You vs the model</h2>
+          <p class="section-sub">Describe the moment in up to five words. Then see where your words rank among everything the model could have said.</p>
+        </div>
+        <div class="game" id="game-root"></div>
+      </section>
+
+      <section id="lab" class="panel">
+        <div class="section-head">
+          <p class="eyebrow">Lab</p>
+          <h2>What the experiments showed</h2>
+          <p class="section-sub">Small, reproducible experiments behind every default on this page. Code in <a href="https://github.com/Balta-Tech/embedding-lens/tree/main/experiments">experiments/</a>.</p>
+        </div>
+        <div class="lab" id="lab-root"></div>
+      </section>
     </main>
+
+    <footer class="footer">
+      <div>
+        <a class="brand small" href="#top">embedding-lens</a>
+        <p>Built by <a href="https://balta-tech.com">Balta Tech</a>. Videos from <a href="https://www.youtube.com/@rbalazs">@rbalazs</a>.</p>
+      </div>
+      <div class="footer-links">
+        <a href="https://github.com/Balta-Tech/embedding-lens">Source</a>
+        <a href="https://github.com/Balta-Tech/embedding-lens/blob/main/docs/research.md">Research notes</a>
+      </div>
+    </footer>
+
+    <div class="tour" id="tour" hidden>
+      <div class="tour-card" role="dialog" aria-modal="false" aria-labelledby="tour-title">
+        <p class="tour-step" id="tour-step"></p>
+        <h3 id="tour-title"></h3>
+        <p id="tour-body"></p>
+        <div class="tour-actions">
+          <button type="button" class="btn ghost small" id="tour-close">Close</button>
+          <span></span>
+          <button type="button" class="btn ghost small" id="tour-back">Back</button>
+          <button type="button" class="btn primary small" id="tour-next">Next</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="backend-help" id="backend-help" hidden>
+      <div class="backend-card">
+        <h3>Live features</h3>
+        <p>Everything on this page works from precomputed results. Free-text search and scoring words outside the built-in vocabulary need the embedding models, which run on your own machine:</p>
+        <pre><code>git clone https://github.com/Balta-Tech/embedding-lens
+cd embedding-lens && uv sync
+uv run uvicorn lens.api:app --port 8000</code></pre>
+        <p class="hint">This page looks for it at <code>http://localhost:8000</code>.</p>
+        <button type="button" class="btn primary small" id="backend-close">Got it</button>
+      </div>
+    </div>
+
+    <script type="module" src="/src/main.js"></script>
   </body>
 </html>
