@@ -81,12 +81,20 @@ def second_opinion(judge: str, word_lists: list[list[str]], method: str = "cente
     """
     judge_space = space(judge)
     _, judge_videos = segments(judge)
+    lookup = _phrase_index(judge)
     out = []
     for v, words in zip(judge_videos, word_lists):
-        text = model(judge).embed_texts(words)
+        # Every chosen word comes from the shared vocabulary lists, so the judge already has it
+        known = [lookup[w] for w in words if w in lookup]
+        text = judge_space.vocab.text[known] if len(known) == len(words) else model(judge).embed_texts(words)
         _, _, pct = judge_space.rank_of(v, text, method)
         out.append(pct.mean())
     return float(np.mean(out))
+
+
+@cache
+def _phrase_index(name: str) -> dict[str, int]:
+    return {p: i for i, p in enumerate(space(name).phrases)}
 
 
 def save(name: str, result) -> None:

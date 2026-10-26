@@ -81,7 +81,10 @@ class Space:
             else np.zeros(len(text)),
         )
 
-    def scores(self, v: np.ndarray, method: str = "csls", phrases: Phrases | None = None):
+    def scores(
+        self, v: np.ndarray, method: str = "csls", phrases: Phrases | None = None, alpha: float = 0.5
+    ):
+        """alpha sets the strength of the CSLS correction: 0.5 is standard CSLS, 0 is none."""
         p = phrases or self.vocab
         if method == "raw":
             return p.text @ v
@@ -96,17 +99,19 @@ class Space:
         if method == "csls":
             # r_v always comes from the vocabulary, also when scoring a few extra phrases
             r_v = np.sort(self.vocab.text @ v)[-self.k :].mean()
-            return 2 * (p.text @ v) - p.r - r_v
+            return 2 * (p.text @ v - alpha * p.r) - r_v
         vc = unit(v - self.video_mean)
         if method == "centered":
             return p.centered @ vc
         if method == "centered_csls":
             r_v = np.sort(self.vocab.centered @ vc)[-self.k :].mean()
-            return 2 * (p.centered @ vc) - p.r_centered - r_v
+            return 2 * (p.centered @ vc - alpha * p.r_centered) - r_v
         raise ValueError(f"unknown method {method!r}; expected one of {METHODS}")
 
-    def top(self, v: np.ndarray, n: int = 20, method: str = "csls") -> list[tuple[str, float]]:
-        s = self.scores(v, method)
+    def top(
+        self, v: np.ndarray, n: int = 20, method: str = "csls", alpha: float = 0.5
+    ) -> list[tuple[str, float]]:
+        s = self.scores(v, method, alpha=alpha)
         idx = np.argpartition(-s, n)[:n]
         idx = idx[np.argsort(-s[idx])]
         return [(self.phrases[i], float(s[i])) for i in idx]

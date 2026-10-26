@@ -14,6 +14,8 @@ from lens.readout import METHODS
 from lens.vocab import TIERS
 
 TOP = 5
+# Extra strengths of the CSLS correction to try (0.5 is standard CSLS, included above)
+ALPHAS = (0.25, 0.75)
 # Who judges whom: each model is checked by the strongest other model available
 JUDGE = {"qwen3vl": "gemma2", "gemma2": "qwen3vl", "siglip2": "qwen3vl"}
 
@@ -24,11 +26,12 @@ def run(models: list[str]) -> list[dict]:
         _, videos = segments(name)
         for tier in TIERS:
             s = space(name, tier)
-            for method in METHODS:
-                if method == "neutral":
-                    continue  # same ranking as raw by construction (see lens/readout.py)
-                words = [[p for p, _ in s.top(v, TOP, method)] for v in videos]
-                row = {"model": name, "vocab": tier, "method": method}
+            variants = [(m, 0.5) for m in METHODS if m != "neutral"]  # neutral: same ranking as raw
+            variants += [(m, a) for m in ("csls", "centered_csls") for a in ALPHAS]
+            for method, alpha in variants:
+                words = [[p for p, _ in s.top(v, TOP, method, alpha)] for v in videos]
+                label = method if alpha == 0.5 or "csls" not in method else f"{method}@{alpha}"
+                row = {"model": name, "vocab": tier, "method": label}
                 row |= round_trip(name, words) | hubness(words)
                 judge = JUDGE[name]
                 row["judge"] = second_opinion(judge, words) if judge in models else float("nan")
