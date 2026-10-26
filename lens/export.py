@@ -16,7 +16,7 @@ import numpy as np
 from lens.config import RESULTS_DIR, ROOT, SEGMENT_SECONDS
 from lens.index import load_null, load_segments, load_vocab, model_dir
 from lens.models import load
-from lens.readout import Space, sparse_decompose, unit
+from lens.readout import Space, change, sparse_decompose, unit
 from lens.videos import SOURCES, duration_seconds, segments, video_path
 
 OUT = ROOT / "web" / "public"
@@ -95,13 +95,17 @@ def export_model(name: str) -> None:
     phrases, text = load_vocab(name, TIER)
     space = Space(phrases, text, videos, null_videos=load_null(name))
     readouts = {}
-    for key, v in zip(keys, videos):
+    for i, (key, v) in enumerate(zip(keys, videos)):
         terms, fit = sparse_decompose(v, space, 6)
         readouts[key] = {
             "raw": [[p, _r(s)] for p, s in space.top(v, TOP, "raw")],
             "calibrated": [[p, _r(s)] for p, s in space.top(v, TOP, CALIBRATED)],
             "sparse": {"terms": [[p, _r(w)] for p, w in terms], "fit": _r(fit, 3)},
         }
+        # What changed since the previous moment of the same video
+        if i > 0 and keys[i - 1].split(":")[0] == key.split(":")[0]:
+            amount, appeared, faded = change(space, videos[i - 1], v, 4)
+            readouts[key]["change"] = {"amount": _r(amount, 3), "appeared": appeared, "faded": faded}
     _write(DATA_OUT / "readouts" / f"{name}.json", {"keys": keys, "segments": readouts})
 
     model = load(name)

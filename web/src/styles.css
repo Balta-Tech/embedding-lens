@@ -203,6 +203,11 @@ h1, h2, h3 { margin: 0; font-weight: 400; }
 .bubbles { width: 100%; aspect-ratio: 1 / 0.82; display: block; overflow: visible; }
 .bubble circle { stroke-width: 1.2; }
 .bubble text { font-family: var(--sans); fill: var(--text); text-anchor: middle; dominant-baseline: central; pointer-events: none; }
+.change { margin: 4px 0 10px; font-size: 14px; color: var(--muted); min-height: 1.5em; }
+.change .plus { color: var(--good); }
+.change .minus { color: var(--c5); }
+.change b { font: 500 11px var(--mono); letter-spacing: 0.08em; text-transform: uppercase; color: var(--faint); margin-right: 6px; }
+.lane-cell.change { background: var(--c3); }
 .wordlist { list-style: none; margin: 8px 0 0; padding: 0; columns: 2; column-gap: 24px; font-size: 13px; color: var(--muted); }
 .wordlist li { display: flex; justify-content: space-between; gap: 8px; padding: 3px 0; border-bottom: 1px dashed var(--line); break-inside: avoid; }
 .wordlist .score { font-family: var(--mono); color: var(--faint); }

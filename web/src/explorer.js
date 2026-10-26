@@ -63,7 +63,7 @@ export function createExplorer(manifest, state) {
 
   async function renderStrip() {
     const video = manifest.videos.find((v) => v.id === state.video);
-    const lanes = await loadLanes(state.model);
+    const [lanes, readouts] = await Promise.all([loadLanes(state.model), loadReadouts(state.model)]);
     const key = `${state.video}:${state.model}`;
     if (drawnStrip !== key) {
       drawnStrip = key;
@@ -81,6 +81,16 @@ export function createExplorer(manifest, state) {
         frames.append(b);
       }
       strip.append(frames);
+      // How much the vector moved since the previous moment: peaks are scene changes
+      const changeRow = row("lane", "change");
+      for (let i = 0; i < video.segments; i++) {
+        const amount = readouts.segments[`${video.id}:${i}`]?.change?.amount ?? 0;
+        const cell = document.createElement("span");
+        cell.className = "lane-cell change";
+        cell.style.opacity = Math.max(0.04, Math.min(1, amount * 1.6)).toFixed(2);
+        changeRow.append(cell);
+      }
+      strip.append(changeRow);
       // The concepts that vary most within this video are the interesting lanes
       const start = offsetOf(manifest, video.id);
       const ranked = lanes.concepts
@@ -143,6 +153,12 @@ export function createExplorer(manifest, state) {
       words = data[state.lens];
     }
     $("lens-note").textContent = note;
+    const change = data.change;
+    $("change").innerHTML = change
+      ? `<b>Since ${formatTime(timeOf(manifest, key) - manifest.segmentSeconds)}</b>` +
+        change.appeared.slice(0, 3).map((w) => `<span class="plus">+${w}</span>`).join(" ") + " &nbsp; " +
+        change.faded.slice(0, 3).map((w) => `<span class="minus">−${w}</span>`).join(" ")
+      : "";
     drawBubbles(bubbles, words, { count: state.lens === "sparse" ? 6 : 14 });
     list.innerHTML = words
       .slice(0, 12)

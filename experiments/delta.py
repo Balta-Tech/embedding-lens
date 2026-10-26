@@ -8,11 +8,10 @@ on the negative side, what went away. Large changes mark scene cuts.
 """
 
 import sys
-
-import numpy as np
+from itertools import pairwise
 
 from experiments.common import save, segments, space
-from lens.readout import unit
+from lens.readout import change
 
 TOP = 6
 
@@ -21,20 +20,11 @@ def run(name: str, video: str) -> list[dict]:
     keys, vectors = segments(name)
     idx = [i for i, k in enumerate(keys) if k.startswith(video + ":")]
     s = space(name, "medium")
-    centered = unit(vectors[idx] - s.video_mean)
     rows = []
-    for a, b in zip(range(len(idx) - 1), range(1, len(idx))):
-        change = 1 - float(centered[a] @ centered[b])
-        delta = unit(centered[b] - centered[a])
-        along = s.vocab.centered @ delta
-        order = np.argsort(along)
-        rows.append({
-            "from": keys[idx[a]],
-            "to": keys[idx[b]],
-            "change": change,
-            "appeared": [s.phrases[i] for i in order[::-1][:TOP]],
-            "faded": [s.phrases[i] for i in order[:TOP]],
-        })
+    for a, b in pairwise(idx):
+        amount, appeared, faded = change(s, vectors[a], vectors[b], TOP)
+        rows.append({"from": keys[a], "to": keys[b], "change": amount,
+                     "appeared": appeared, "faded": faded})
     return rows
 
 

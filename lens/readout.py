@@ -164,6 +164,25 @@ def sparse_decompose(
     return sorted(terms, key=lambda t: -t[1]), fit
 
 
+def change(
+    space: Space, before: np.ndarray, after: np.ndarray, n: int = 6
+) -> tuple[float, list[str], list[str]]:
+    """What changed between two moments, read out as words.
+
+    The difference between two centred segment vectors is itself a direction in the shared space.
+    Phrases along it name what appeared; phrases against it name what went away. Returns
+    (1 - cosine between the two moments, appeared, faded).
+    """
+    a, b = unit(before - space.video_mean), unit(after - space.video_mean)
+    along = space.vocab.centered @ unit(b - a)
+    order = np.argsort(along)
+    return (
+        1 - float(a @ b),
+        [space.phrases[i] for i in order[::-1][:n]],
+        [space.phrases[i] for i in order[:n]],
+    )
+
+
 def softmax(scores: np.ndarray, temperature: float = 0.02) -> np.ndarray:
     z = (scores - scores.max()) / temperature
     e = np.exp(z)
