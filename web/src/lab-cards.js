@@ -58,14 +58,16 @@ registerCard(async ({ loadResult, labels }) => {
     max: Math.max(0.05, ...results.map((r) => 1 - r.reversed_cos)),
     format: (v) => v.toFixed(3),
   }));
-  const flips = results.map((r) => {
-    const off = r.probe.filter((p) => p.phase === "take-off");
-    const flipped = off.filter((p) => Math.sign(p.forward) !== Math.sign(p.backward)).length;
-    return `${labels[r.model] || r.model}: ${flipped}/${off.length} take-offs read as landings when reversed`;
-  });
+  // Played backwards, a take-off should read more like a landing and vice versa.
+  // Shift toward the opposite event, averaged over both phases: > 0 means time-aware.
+  const shift = (r) => {
+    const s = r.probe.map((p) => (p.phase === "take-off" ? p.forward - p.backward : p.backward - p.forward));
+    return s.reduce((a, b) => a + b, 0) / s.length;
+  };
   const note = document.createElement("p");
   note.className = "hint";
-  note.innerHTML = flips.join("<br>");
+  note.innerHTML = "Played backwards, does a take-off read more like a landing? Average shift toward the opposite event:<br>" +
+    results.map((r) => `${labels[r.model] || r.model}: ${shift(r) >= 0 ? "+" : ""}${shift(r).toFixed(4)}`).join("<br>");
   body.append(note);
   return card({
     title: "Does it know which way time runs?",
