@@ -1,0 +1,14 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+.pytest_cache/
+.ruff_cache/
+
+# Local data: downloaded videos, extracted frames, vocabularies and cached embeddings
+data/
+
+# OS / editors
+.DS_Store
+.idea/
+.vscode/

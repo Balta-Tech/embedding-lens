@@ -1,0 +1,29 @@
+[project]
+name = "embedding-lens"
+version = "0.1.0"
+description = "See what a multimodal embedding model 'sees' in a video, one segment at a time."
+readme = "README.md"
+requires-python = ">=3.12,<3.13"
+dependencies = [
+    "torch>=2.8",
+    "torchvision>=0.23",
+    "transformers>=4.57",
+    "accelerate>=1.10",
+    "sentence-transformers>=5.1",
+    "qwen-vl-utils>=0.0.14",
+    "huggingface-hub>=0.35",
+    "pillow>=11",
+    "numpy>=2",
+    "fastapi>=0.115",
+    "uvicorn>=0.32",
+    "nltk>=3.9",
+]
+
+[dependency-groups]
+dev = ["pytest>=8", "ruff>=0.7"]
+
+[tool.ruff]
+line-length = 100
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
