@@ -14,6 +14,8 @@ how they correct raw cosine similarity:
     centered       cosine after subtracting each modality's mean vector, which removes the
                    "modality gap" (Liang et al. 2022) shared by all videos / all texts.
     centered_csls  both.
+    null           cos(v, t) - mean over null videos (black, grey, noise) of cos(null, t). A
+                   per-phrase "content-free" profile, so unlike neutral it does change the ranking.
 
 Everything except raw and neutral needs a reference set of video vectors. Using the corpus being
 read out answers "what is distinctive here"; a broad reference set answers "what is in here".
@@ -23,7 +25,7 @@ from dataclasses import dataclass
 
 import numpy as np
 
-METHODS = ("raw", "neutral", "prior", "zscore", "csls", "centered", "centered_csls")
+METHODS = ("raw", "neutral", "null", "prior", "zscore", "csls", "centered", "centered_csls")
 
 
 def unit(x: np.ndarray) -> np.ndarray:
@@ -40,6 +42,7 @@ class Phrases:
     sigma: np.ndarray          # (N,) its standard deviation
     r: np.ndarray              # (N,) mean raw similarity to the k nearest reference videos
     r_centered: np.ndarray     # (N,) the same in the centred space
+    null: np.ndarray           # (N,) mean raw similarity to the null videos (0 if none given)
 
 
 class Space:
@@ -49,12 +52,14 @@ class Space:
         text: np.ndarray,
         reference: np.ndarray,
         neutral: np.ndarray | None = None,
+        null_videos: np.ndarray | None = None,
         k: int = 10,
     ) -> None:
         self.phrases = phrases
         self.k = min(k, len(reference))
         self.reference = reference
         self.neutral = neutral
+        self.null_videos = null_videos
         self.text_mean = text.mean(axis=0)
         self.video_mean = reference.mean(axis=0)
         self.reference_centered = unit(reference - self.video_mean)
@@ -72,6 +77,8 @@ class Space:
             sigma=sims.std(axis=0) + 1e-6,
             r=np.sort(sims, axis=0)[-self.k :].mean(axis=0),
             r_centered=np.sort(sims_c, axis=0)[-self.k :].mean(axis=0),
+            null=(self.null_videos @ text.T).mean(axis=0) if self.null_videos is not None
+            else np.zeros(len(text)),
         )
 
     def scores(self, v: np.ndarray, method: str = "csls", phrases: Phrases | None = None):
@@ -80,6 +87,8 @@ class Space:
             return p.text @ v
         if method == "neutral":
             return p.text @ v - float(self.neutral @ v)
+        if method == "null":
+            return p.text @ v - p.null
         if method == "prior":
             return p.text @ v - p.mu
         if method == "zscore":

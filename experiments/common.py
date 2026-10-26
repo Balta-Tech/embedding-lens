@@ -6,7 +6,7 @@ from functools import cache
 import numpy as np
 
 from lens.config import RESULTS_DIR
-from lens.index import load_segments, load_vocab
+from lens.index import load_null, load_segments, load_vocab
 from lens.models import load
 from lens.readout import Space, unit
 from lens.videos import SOURCES_BY_ID
@@ -37,7 +37,7 @@ def space(name: str, tier: str = "large") -> Space:
     phrases, text = load_vocab(name, tier)
     _, videos = segments(name)
     neutral = model(name).embed_texts([NEUTRAL])[0]
-    return Space(phrases, text, videos, neutral=neutral)
+    return Space(phrases, text, videos, neutral=neutral, null_videos=load_null(name))
 
 
 def round_trip(name: str, word_lists: list[list[str]]) -> dict[str, float]:
