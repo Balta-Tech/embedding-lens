@@ -3,6 +3,7 @@ import { drawBubbles } from "./bubbles.js";
 import { backend, detectBackend, formatTime, loadManifest, loadReadouts, spriteUrl, timeOf } from "./data.js";
 import { createExplorer } from "./explorer.js";
 import { createGame } from "./game.js";
+import "./lab-cards.js";
 import { createLab } from "./lab.js";
 import { createSearch } from "./search.js";
 import { createTour } from "./tour.js";
