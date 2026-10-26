@@ -27,13 +27,20 @@ READOUTS = {
 }
 
 
-def run(name: str, tier: str = "medium") -> dict:
+# The other vocabulary sizes, for the methods that matter most
+OTHER_TIERS = {"small": ("raw", "prior", "centered", "sparse"), "large": ("raw", "prior", "centered", "sparse")}
+
+
+def run(name: str) -> dict:
     keys, videos = segments(name)
-    s = space(name, tier)
+    spaces = {"medium": space(name, "medium")} | {t: space(name, t) for t in OTHER_TIERS}
     out = {}
     for key in SAMPLE:
         v = videos[keys.index(key)]
-        out[key] = {label: [p for p, _ in fn(s, v)] for label, fn in READOUTS.items()}
+        out[key] = {label: [p for p, _ in fn(spaces["medium"], v)] for label, fn in READOUTS.items()}
+        for tier, labels in OTHER_TIERS.items():
+            for label in labels:
+                out[key][f"{label}/{tier}"] = [p for p, _ in READOUTS[label](spaces[tier], v)]
     return out
 
 
