@@ -100,19 +100,23 @@ registerCard(async ({ loadResult, labels }) => {
   const results = await loadResult("residual");
   if (!results) return null;
   const body = document.createElement("div");
-  body.append(bars(results.flatMap((r, i) => [
-    { label: `${labels[r.model] || r.model}: content`, value: r.action_share_content, tint: TINTS[i] },
-    { label: "only-in-motion", value: r.action_share_residual, tint: TINTS[i] },
-  ]), { max: 1, format: pct }));
-  const r = results[0];
-  const ex = r.examples.find((e) => e.segment.startsWith("zugspitze")) || r.examples[0];
+  body.append(bars(results.map((r, i) => ({
+    label: labels[r.model] || r.model,
+    value: 1 - r.video_vs_frames_cos,
+    tint: TINTS[i],
+  })), { max: Math.max(0.05, ...results.map((r) => 1 - r.video_vs_frames_cos)), format: (v) => v.toFixed(2) }));
+  // The most telling example: a sequence-only residual that names the kind of footage
+  const pick = results
+    .flatMap((r) => r.examples.map((e) => ({ ...e, model: r.model })))
+    .find((e) => e.motion.slice(0, 4).some((w) => /video game|screenshot|simulator/.test(w)))
+    || results[0].examples[0];
   const words = document.createElement("div");
   words.className = "words-pair";
-  words.innerHTML = `<div><b>${ex.segment}: what's in it</b>${ex.content.slice(0, 6).join(", ")}</div><div><b>what only motion adds</b>${ex.motion.slice(0, 6).join(", ")}</div>`;
+  words.innerHTML = `<div><b>${pick.segment}: what's in it</b>${pick.content.slice(0, 5).join(", ")}</div><div><b>what only the sequence adds</b>${pick.motion.slice(0, 5).join(", ")}</div>`;
   body.append(words);
   return card({
     title: "What frames alone don't show",
-    takeaway: "The video vector minus the average of its own frames, read out as words. Share of action words (verbs, Kinetics actions) in the normal read-out vs in this motion-only residual.",
+    takeaway: `How far a model's video vector sits from the average of its own frames (0 = a bag of frames). The leftover, read out as words, is mostly noise and not actions (action words: ${results.map((r) => `${pct(r.action_share_residual)} vs ${pct(r.action_share_content)} normally`).join("; ")}); occasionally it names the kind of footage.`,
     body,
   });
 });
