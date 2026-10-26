@@ -144,3 +144,64 @@ registerCard(async ({ loadResult, labels }) => {
     body,
   });
 });
+
+registerCard(async ({ loadResult, labels }) => {
+  const rows = await loadResult("eyeball_score");
+  if (!rows) return null;
+  const models = [...new Set(rows.map((r) => r.model))];
+  const methods = ["raw", "centered", "centered_csls", "prior", "sparse"];
+  const tiers = ["small", "", "large"];
+  const body = document.createElement("table");
+  const get = (m, method, tier) => rows.find((r) => r.model === m && r.method === (tier ? `${method}/${tier}` : method));
+  body.innerHTML = `<thead><tr><th>Read-out</th>${models.map((m) => `<th>${labels[m] || m}<br>4.6k · 23k · 119k</th>`).join("")}</tr></thead><tbody>${methods.map((k) => `
+    <tr><td>${METHOD_LABELS[k]}</td>${models.map((m) => {
+      const best = Math.max(...rows.filter((r) => r.model === m).map((r) => r["precision@5"]));
+      return `<td>${tiers.map((t) => {
+        const r = get(m, k, t);
+        if (!r) return "–";
+        const v = Math.round(r["precision@5"] * 100);
+        return r["precision@5"] === best ? `<b style="color:var(--good)">${v}</b>` : v;
+      }).join(" · ")}</td>`;
+    }).join("")}</tr>`).join("")}</tbody>`;
+  return card({
+    title: "Checked by eye",
+    takeaway: "Share of top-5 words that are actually visible in 12 sample moments (judged against the frames by an AI annotator; the list is in experiments/judgements.json). By vocabulary size: small · medium · large. Bigger vocabularies let rare near-matches in; centring degrades least.",
+    wide: true,
+    body,
+  });
+});
+
+registerCard(async ({ loadResult, labels }) => {
+  const rows = await loadResult("geometry");
+  if (!rows) return null;
+  const raw = rows.filter((r) => r.method === "raw");
+  const body = document.createElement("div");
+  body.append(bars(raw.map((r, i) => ({ label: labels[r.model] || r.model, value: r.cross_mean, tint: TINTS[i] })), {
+    max: 1, format: (v) => v.toFixed(2),
+  }));
+  const note = document.createElement("p");
+  note.className = "hint";
+  note.innerHTML = Object.entries(rows.reduce((acc, r) => {
+    (acc[r.model] ||= []).push(`${METHOD_LABELS[r.method]} ${pct(r.hub_top)}`);
+    return acc;
+  }, {})).map(([m, parts]) => `${labels[m] || m}: top-10 words take ${parts.join(", ")} of all slots`).join("<br>");
+  body.append(note);
+  return card({
+    title: "Why the best correction depends on the model",
+    takeaway: "Mean cosine between any video and any phrase. When every video is already close to every phrase, a few generic words win everywhere (hub share below) and centring helps; when the two sit far apart, raw closeness is already well calibrated.",
+    body,
+  });
+});
+
+registerCard(async ({ loadResult, labels }) => {
+  const data = await loadResult("speed");
+  if (!data) return null;
+  const body = document.createElement("table");
+  body.innerHTML = `<thead><tr><th>Model</th><th>phrases / s</th><th>4.6k</th><th>23k</th><th>119k</th><th>moments / s</th></tr></thead><tbody>${data.rows.map((r) =>
+    `<tr><td>${labels[r.model] || r.model}</td><td>${Math.round(r.phrases_per_s)}</td><td>${r.small_min.toFixed(1)} min</td><td>${r.medium_min.toFixed(1)} min</td><td>${r.large_min.toFixed(0)} min</td><td>${r.segments_per_s.toFixed(1)}</td></tr>`).join("")}</tbody>`;
+  return card({
+    title: "How slow is it?",
+    takeaway: "Measured on an Apple M3 Pro laptop (18 GB) while indexing. Vocabularies are embedded once and cached; reading out a moment afterwards is a single matrix product and takes milliseconds.",
+    body,
+  });
+});
