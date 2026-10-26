@@ -49,3 +49,6 @@ class SigLIP2FrameAverage(Embedder):
     def _embed_segment(self, segment: Segment) -> np.ndarray:
         frames = [Image.open(p).convert("RGB") for p in segment.frames]
         return self.embed_frames(frames).mean(axis=0)
+
+    def embed_images(self, paths) -> np.ndarray:
+        return self.embed_frames([Image.open(p).convert("RGB") for p in paths])

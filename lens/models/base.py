@@ -32,6 +32,10 @@ class Embedder(ABC):
     @abstractmethod
     def _embed_segment(self, segment: Segment) -> np.ndarray: ...
 
+    @abstractmethod
+    def embed_images(self, paths: Sequence) -> np.ndarray:
+        """Single frames as still images: unit vectors, one per path."""
+
     def embed_texts(
         self,
         phrases: Sequence[str],

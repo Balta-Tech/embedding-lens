@@ -10,8 +10,8 @@ import numpy as np
 import torch
 from sentence_transformers import SentenceTransformer
 
-from lens.config import DATA, FRAME_WIDTH
-from lens.models.base import Embedder, device
+from lens.config import DATA, FRAME_FPS, FRAME_WIDTH
+from lens.models.base import Embedder, device, normalize
 from lens.videos import SOURCES_BY_ID, Segment, video_path
 
 MODEL_ID = "google/embeddinggemma-2"
@@ -36,6 +36,20 @@ def clip_path(segment: Segment):
     return out
 
 
+def frames_to_clip(frames, out):
+    """Build a silent clip from an explicit frame sequence (reversed, shuffled, synthetic)."""
+    if not out.exists():
+        out.parent.mkdir(parents=True, exist_ok=True)
+        listing = out.with_suffix(".txt")
+        listing.write_text("".join(f"file '{f}'\nduration {1 / FRAME_FPS}\n" for f in frames))
+        subprocess.run(
+            ["ffmpeg", "-v", "error", "-y", "-f", "concat", "-safe", "0", "-i", str(listing),
+             "-vf", f"fps={FRAME_FPS}", "-c:v", "libx264", "-pix_fmt", "yuv420p", str(out)],
+            check=True,
+        )
+    return out
+
+
 class EmbeddingGemma2(Embedder):
     name = "gemma2"
     dim = 768
@@ -54,4 +68,14 @@ class EmbeddingGemma2(Embedder):
 
     @torch.no_grad()
     def _embed_segment(self, segment: Segment) -> np.ndarray:
-        return self.model.encode({"video": str(clip_path(segment))}, convert_to_numpy=True)
+        if segment.video_id in SOURCES_BY_ID:
+            clip = clip_path(segment)
+        else:
+            clip = frames_to_clip(segment.frames, CLIPS_DIR / segment.video_id / "clip.mp4")
+        return self.model.encode({"video": str(clip)}, convert_to_numpy=True)
+
+    @torch.no_grad()
+    def embed_images(self, paths) -> np.ndarray:
+        return normalize(np.stack([
+            self.model.encode({"image": str(p)}, convert_to_numpy=True) for p in paths
+        ]))

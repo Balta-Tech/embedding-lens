@@ -13,7 +13,6 @@ vector. A video model might. Two probes:
 """
 
 import random
-import subprocess
 import sys
 import tempfile
 from pathlib import Path
@@ -21,7 +20,7 @@ from pathlib import Path
 import numpy as np
 
 from experiments.common import model, save, table
-from lens.config import FRAME_FPS
+from lens.models.gemma import frames_to_clip
 from lens.readout import unit
 from lens.videos import SOURCES_BY_ID, Segment, segments
 
@@ -29,18 +28,6 @@ TAKEOFF = [13, 14, 15]
 LANDING = [29, 30, 31, 32]
 PROBES = ("a fighter jet taking off from a runway", "a fighter jet landing on a runway")
 SAMPLE = 24  # other segments for the reversal probe
-
-
-def frames_to_clip(frames: tuple[Path, ...], out: Path) -> Path:
-    """Gemma takes video files: rebuild a silent clip from an explicit frame order."""
-    listing = out.with_suffix(".txt")
-    listing.write_text("".join(f"file '{f}'\nduration {1 / FRAME_FPS}\n" for f in frames))
-    subprocess.run(
-        ["ffmpeg", "-v", "error", "-y", "-f", "concat", "-safe", "0", "-i", str(listing),
-         "-vf", f"fps={FRAME_FPS}", "-c:v", "libx264", "-pix_fmt", "yuv420p", str(out)],
-        check=True,
-    )
-    return out
 
 
 def embed(name: str, segment: Segment, frames: tuple[Path, ...], tmp: Path) -> np.ndarray:

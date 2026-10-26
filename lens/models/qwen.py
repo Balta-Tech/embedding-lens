@@ -12,7 +12,7 @@ import numpy as np
 import torch
 from huggingface_hub import snapshot_download
 
-from lens.models.base import Embedder, device
+from lens.models.base import Embedder, device, normalize
 from lens.videos import Segment
 
 MODEL_ID = "Qwen/Qwen3-VL-Embedding-2B"
@@ -58,3 +58,8 @@ class Qwen3VLEmbedding(Embedder):
         frames = [str(p) for p in segment.frames]
         inputs = [{"video": frames, "instruction": self.instruction}]
         return self.embedder.process(inputs).float().cpu().numpy()[0]
+
+    @torch.no_grad()
+    def embed_images(self, paths) -> np.ndarray:
+        inputs = [{"image": str(p), "instruction": self.instruction} for p in paths]
+        return normalize(self.embedder.process(inputs).float().cpu().numpy())
