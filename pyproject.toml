@@ -9,7 +9,7 @@ dependencies = [
     "torchvision>=0.23",
     "transformers>=4.57",
     "accelerate>=1.10",
-    "sentence-transformers>=5.1",
+    "sentence-transformers[video]>=5.1",
     "qwen-vl-utils>=0.0.14",
     "huggingface-hub>=0.35",
     "pillow>=11",
@@ -18,7 +18,15 @@ dependencies = [
     "uvicorn>=0.32",
     "nltk>=3.9",
     "yt-dlp[default]>=2026.10.21",
+    "torchcodec>=0.17.0",
 ]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["lens"]
 
 [dependency-groups]
 dev = ["pytest>=8", "ruff>=0.7"]
