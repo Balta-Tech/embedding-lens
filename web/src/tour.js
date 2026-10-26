@@ -54,10 +54,11 @@ export const STEPS = [
     target: "#change",
     title: "What changed?",
     async body(state) {
-      const c = (await words(state, "zugspitze:89")).change;
-      return `The difference between two moments is a direction too. At the summit, reading it out gives ${c.appeared.slice(0, 3).map((w) => `“+${w}”`).join(", ")}: the summit cross enters the frame. The orange lane in the strip marks the biggest changes.`;
+      const c = (await words(state, "zugspitze:64")).change;
+      const list = (ws, sign) => ws.slice(0, 3).map((w) => `“${sign}${w}”`).join(", ");
+      return `The difference between two moments is a direction too. Here the climb leaves the glacier for steel cables, and reading the difference out gives ${list(c.appeared, "+")} and ${list(c.faded, "−")}. The orange lane in the strip marks the biggest changes.`;
     },
-    set: { ...QWEN, video: "zugspitze", index: 89, lens: "raw" },
+    set: { ...QWEN, video: "zugspitze", index: 64, lens: "raw" },
   },
   {
     target: "#strip",
