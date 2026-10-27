@@ -65,7 +65,9 @@ def _segment_index(keys: list[str], segment: str) -> int:
 
 @app.get("/api/health")
 def health() -> dict:
-    return {"ok": True, "models": MODEL_NAMES, "default": DEFAULT_MODEL}
+    # The site only offers what this backend can do; older backends lack "rerank"
+    return {"ok": True, "models": MODEL_NAMES, "default": DEFAULT_MODEL,
+            "features": ["readout", "score", "search", "rerank"]}
 
 
 @app.get("/api/readout")

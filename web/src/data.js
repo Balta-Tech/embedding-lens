@@ -67,7 +67,7 @@ const API = (() => {
   return location.hostname === "localhost" ? "" : API_HOST;
 })();
 
-export const backend = { live: false, listeners: new Set() };
+export const backend = { live: false, features: [], listeners: new Set() };
 
 export async function detectBackend() {
   const controller = new AbortController();
@@ -75,6 +75,7 @@ export async function detectBackend() {
   try {
     const r = await fetch(`${API}/api/health`, { signal: controller.signal });
     backend.live = r.ok;
+    backend.features = r.ok ? ((await r.json()).features ?? ["readout", "score", "search"]) : [];
   } catch {
     backend.live = false;
   } finally {

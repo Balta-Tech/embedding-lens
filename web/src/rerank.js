@@ -28,7 +28,7 @@ export function createRerank(manifest, state) {
     if (!after) {
       chart.innerHTML = "";
       root.dataset.empty = "";
-      document.getElementById("rerank-empty").textContent = backend.live
+      document.getElementById("rerank-empty").textContent = backend.features.includes("rerank")
         ? "Not precomputed for this model and vocabulary. Rerank it live:"
         : "Not precomputed for this model and vocabulary. Switch to Qwen3-VL with 23k words in Explore, or start the live backend.";
       updateLive();
@@ -78,7 +78,7 @@ export function createRerank(manifest, state) {
   }
 
   function updateLive() {
-    liveBtn.hidden = !backend.live;
+    liveBtn.hidden = !backend.features.includes("rerank");
   }
 
   liveBtn.addEventListener("click", async () => {
