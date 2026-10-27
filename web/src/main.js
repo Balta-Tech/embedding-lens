@@ -5,6 +5,7 @@ import { createExplorer } from "./explorer.js";
 import { createGame } from "./game.js";
 import "./lab-cards.js";
 import { createLab } from "./lab.js";
+import { createRerank } from "./rerank.js";
 import { createSearch } from "./search.js";
 import { createTour } from "./tour.js";
 
@@ -59,6 +60,9 @@ async function main() {
   hero(manifest, state);
   const explorer = createExplorer(manifest, state);
   await explorer.set({});
+  const rerank = createRerank(manifest, state);
+  rerank.render();
+  explorer.onChange(() => rerank.render());
   const search = createSearch(manifest, state, explorer);
   createGame(manifest);
   createLab(manifest);

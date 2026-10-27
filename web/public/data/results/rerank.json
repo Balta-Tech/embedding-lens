@@ -1,0 +1,646 @@
+{
+  "k": 50,
+  "seconds_per_moment": {
+    "qwen3vl/medium/50": 4.873262345790863,
+    "qwen3vl/medium/10": 4.61466258764267,
+    "qwen3vl/medium/20": 3.798710823059082,
+    "qwen3vl/medium/100": 5.487395405769348,
+    "qwen3vl/large/50": 5.287157833576202,
+    "siglip2/medium/50": 4.407011429468791,
+    "siglip2/large/50": 4.007816433906555,
+    "gemma2/medium/50": 3.2088772455851235,
+    "gemma2/large/50": 4.059425155321757
+  },
+  "rows": [
+    {
+      "model": "qwen3vl",
+      "vocab": "medium",
+      "k": 50,
+      "p@5 before": 0.8,
+      "p@5 after": 0.9333333333333333,
+      "mean source rank": 14.683333333333334
+    },
+    {
+      "model": "qwen3vl",
+      "vocab": "medium",
+      "k": 10,
+      "p@5 before": 0.8,
+      "p@5 after": 0.9333333333333333,
+      "mean source rank": 4.866666666666666
+    },
+    {
+      "model": "qwen3vl",
+      "vocab": "medium",
+      "k": 20,
+      "p@5 before": 0.8,
+      "p@5 after": 0.9666666666666667,
+      "mean source rank": 8.0
+    },
+    {
+      "model": "qwen3vl",
+      "vocab": "medium",
+      "k": 100,
+      "p@5 before": 0.8,
+      "p@5 after": 0.9,
+      "mean source rank": 25.2
+    },
+    {
+      "model": "qwen3vl",
+      "vocab": "large",
+      "k": 50,
+      "p@5 before": 0.75,
+      "p@5 after": 0.9,
+      "mean source rank": 12.866666666666667
+    },
+    {
+      "model": "siglip2",
+      "vocab": "medium",
+      "k": 50,
+      "p@5 before": 0.75,
+      "p@5 after": 0.9333333333333333,
+      "mean source rank": 17.533333333333335
+    },
+    {
+      "model": "siglip2",
+      "vocab": "large",
+      "k": 50,
+      "p@5 before": 0.48333333333333334,
+      "p@5 after": 0.95,
+      "mean source rank": 19.416666666666668
+    },
+    {
+      "model": "gemma2",
+      "vocab": "medium",
+      "k": 50,
+      "p@5 before": 0.55,
+      "p@5 after": 0.8833333333333333,
+      "mean source rank": 15.65
+    },
+    {
+      "model": "gemma2",
+      "vocab": "large",
+      "k": 50,
+      "p@5 before": 0.5,
+      "p@5 after": 0.8333333333333334,
+      "mean source rank": 22.6
+    }
+  ],
+  "examples": {
+    "qwen3vl/medium/50": {
+      "zugspitze:3": {
+        "before": [
+          "hiker",
+          "hike",
+          "cave",
+          "trail",
+          "backpacker"
+        ],
+        "after": [
+          "cave",
+          "cavern",
+          "darkness",
+          "flashlight",
+          "tunnel"
+        ],
+        "moved_from": [
+          3,
+          9,
+          12,
+          35,
+          24
+        ]
+      },
+      "zugspitze:13": {
+        "before": [
+          "hiker",
+          "hike",
+          "mountain path",
+          "trail",
+          "hiking equipment"
+        ],
+        "after": [
+          "hiker",
+          "hike",
+          "mountain",
+          "mountain path",
+          "path"
+        ],
+        "moved_from": [
+          1,
+          2,
+          49,
+          3,
+          8
+        ]
+      },
+      "zugspitze:28": {
+        "before": [
+          "rock climber",
+          "climbing a rope",
+          "rock climbing",
+          "climber",
+          "abseiler"
+        ],
+        "after": [
+          "rock climbing",
+          "climb",
+          "rope",
+          "cliff",
+          "rock face"
+        ],
+        "moved_from": [
+          3,
+          16,
+          49,
+          27,
+          10
+        ]
+      },
+      "zugspitze:50": {
+        "before": [
+          "ice climbing",
+          "alpinist",
+          "ice ax",
+          "crevasse",
+          "rock climber"
+        ],
+        "after": [
+          "ice climbing",
+          "climber",
+          "alpinist",
+          "ice",
+          "hiker"
+        ],
+        "moved_from": [
+          1,
+          8,
+          2,
+          24,
+          6
+        ]
+      },
+      "zugspitze:61": {
+        "before": [
+          "ice climbing",
+          "crevasse",
+          "alpinist",
+          "climb mountain",
+          "ice ax"
+        ],
+        "after": [
+          "ice climbing",
+          "climb",
+          "alpinist",
+          "icepick",
+          "rock climbing"
+        ],
+        "moved_from": [
+          1,
+          21,
+          3,
+          16,
+          8
+        ]
+      },
+      "zugspitze:88": {
+        "before": [
+          "snow-on-the-mountain",
+          "climb mountain",
+          "alpinist",
+          "mount",
+          "peak"
+        ],
+        "after": [
+          "mountain",
+          "alpinist",
+          "rock climbing",
+          "peak",
+          "climber"
+        ],
+        "moved_from": [
+          9,
+          3,
+          29,
+          5,
+          18
+        ]
+      },
+      "wetterstein:20": {
+        "before": [
+          "hiker",
+          "mountainside",
+          "mountain path",
+          "rock face",
+          "trail"
+        ],
+        "after": [
+          "mountain",
+          "mountain landscape",
+          "hike",
+          "hiker",
+          "cliff"
+        ],
+        "moved_from": [
+          11,
+          34,
+          7,
+          1,
+          48
+        ]
+      },
+      "kart:20": {
+        "before": [
+          "karting",
+          "go-kart",
+          "racing",
+          "auto racing",
+          "motorsport"
+        ],
+        "after": [
+          "karting",
+          "go-kart",
+          "steering wheel",
+          "race track",
+          "raceway"
+        ],
+        "moved_from": [
+          1,
+          2,
+          18,
+          26,
+          11
+        ]
+      },
+      "f16:9": {
+        "before": [
+          "flight simulator",
+          "fighter jet",
+          "simulator",
+          "stealth fighter",
+          "stealth aircraft"
+        ],
+        "after": [
+          "video game",
+          "fighter jet",
+          "flight simulator",
+          "runway",
+          "game"
+        ],
+        "moved_from": [
+          7,
+          2,
+          1,
+          30,
+          25
+        ]
+      },
+      "f16:18": {
+        "before": [
+          "flight simulator",
+          "aerial torpedo",
+          "fighter jet",
+          "stealth aircraft",
+          "flight"
+        ],
+        "after": [
+          "video game",
+          "fighter jet",
+          "fighter",
+          "plane",
+          "flight simulator"
+        ],
+        "moved_from": [
+          29,
+          3,
+          16,
+          19,
+          1
+        ]
+      },
+      "assetto:13": {
+        "before": [
+          "highway",
+          "divided highway",
+          "traffic",
+          "autobahn",
+          "action film"
+        ],
+        "after": [
+          "highway",
+          "traffic",
+          "action",
+          "overpass",
+          "road"
+        ],
+        "moved_from": [
+          1,
+          3,
+          41,
+          33,
+          8
+        ]
+      },
+      "trex:10": {
+        "before": [
+          "small computer system interface",
+          "twitterer",
+          "computer screen",
+          "interface",
+          "screenshot"
+        ],
+        "after": [
+          "computer screen",
+          "internet",
+          "doodle",
+          "audio",
+          "screenshot"
+        ],
+        "moved_from": [
+          3,
+          31,
+          22,
+          37,
+          5
+        ]
+      }
+    },
+    "siglip2/large/50": {
+      "zugspitze:3": {
+        "before": [
+          "cave in",
+          "cave",
+          "cavern",
+          "cave dweller",
+          "grot"
+        ],
+        "after": [
+          "cave",
+          "cavern",
+          "darkness",
+          "tunnel",
+          "grotto"
+        ],
+        "moved_from": [
+          2,
+          3,
+          20,
+          15,
+          16
+        ]
+      },
+      "zugspitze:13": {
+        "before": [
+          "hiking",
+          "hiker",
+          "mountain path",
+          "flume",
+          "chute"
+        ],
+        "after": [
+          "hiking",
+          "hike",
+          "hiker",
+          "mountain path",
+          "mountain trail"
+        ],
+        "moved_from": [
+          1,
+          16,
+          2,
+          3,
+          9
+        ]
+      },
+      "zugspitze:28": {
+        "before": [
+          "ridge rope",
+          "abseiling",
+          "crag",
+          "clamber",
+          "climbing hemp-vine"
+        ],
+        "after": [
+          "rock climbing",
+          "cliff",
+          "mountain climbing",
+          "alpinism",
+          "rock face"
+        ],
+        "moved_from": [
+          13,
+          28,
+          39,
+          35,
+          23
+        ]
+      },
+      "zugspitze:50": {
+        "before": [
+          "ice axe",
+          "ice climbing",
+          "ice ax",
+          "frost heave",
+          "avalanche"
+        ],
+        "after": [
+          "ice climbing",
+          "alpinist",
+          "mountain climber",
+          "mountaineering",
+          "alpinism"
+        ],
+        "moved_from": [
+          2,
+          18,
+          27,
+          13,
+          25
+        ]
+      },
+      "zugspitze:61": {
+        "before": [
+          "crampon",
+          "speleologist",
+          "crevasse",
+          "mountaineering",
+          "ice axe"
+        ],
+        "after": [
+          "ice climbing",
+          "climbing",
+          "mountaineering",
+          "mountain climbing",
+          "alpinism"
+        ],
+        "moved_from": [
+          6,
+          39,
+          4,
+          13,
+          7
+        ]
+      },
+      "zugspitze:88": {
+        "before": [
+          "stalin peak",
+          "cliffhanger",
+          "teapot dome scandal",
+          "steeplejack",
+          "lookout man"
+        ],
+        "after": [
+          "alpinism",
+          "alpinist",
+          "hiker",
+          "summit",
+          "mountaineer"
+        ],
+        "moved_from": [
+          15,
+          37,
+          46,
+          10,
+          11
+        ]
+      },
+      "wetterstein:20": {
+        "before": [
+          "transylvanian alps",
+          "crag",
+          "crna gora",
+          "gully",
+          "rockslide"
+        ],
+        "after": [
+          "mountain climbing",
+          "chasm",
+          "cliff",
+          "mountain trail",
+          "crna gora"
+        ],
+        "moved_from": [
+          35,
+          8,
+          19,
+          22,
+          3
+        ]
+      },
+      "kart:20": {
+        "before": [
+          "karting",
+          "cart track",
+          "dodgem",
+          "karttika",
+          "buggy whip"
+        ],
+        "after": [
+          "karting",
+          "go-kart",
+          "race track",
+          "racetrack",
+          "cart track"
+        ],
+        "moved_from": [
+          1,
+          7,
+          49,
+          15,
+          2
+        ]
+      },
+      "f16:9": {
+        "before": [
+          "usaf",
+          "forced landing",
+          "power takeoff",
+          "fighter jet",
+          "air base"
+        ],
+        "after": [
+          "fighter jet",
+          "flight simulator",
+          "fighter aircraft",
+          "military plane",
+          "airfield"
+        ],
+        "moved_from": [
+          4,
+          34,
+          27,
+          15,
+          26
+        ]
+      },
+      "f16:18": {
+        "before": [
+          "flight maneuver",
+          "contrail",
+          "airplane maneuver",
+          "jet plane",
+          "dogfight"
+        ],
+        "after": [
+          "fighter jet",
+          "fighter aircraft",
+          "flight simulator",
+          "plane",
+          "military plane"
+        ],
+        "moved_from": [
+          11,
+          45,
+          12,
+          28,
+          41
+        ]
+      },
+      "assetto:13": {
+        "before": [
+          "highway robbery",
+          "autobahn",
+          "car traffic",
+          "autostrada",
+          "freeway"
+        ],
+        "after": [
+          "highway",
+          "traffic",
+          "freeway",
+          "interstate highway",
+          "overpass"
+        ],
+        "moved_from": [
+          27,
+          22,
+          5,
+          43,
+          14
+        ]
+      },
+      "trex:10": {
+        "before": [
+          "webcam",
+          "slow virus",
+          "dialog box",
+          "command prompt",
+          "title bar"
+        ],
+        "after": [
+          "web browser",
+          "tutorial",
+          "screenshot",
+          "text editor",
+          "browser"
+        ],
+        "moved_from": [
+          25,
+          27,
+          50,
+          30,
+          20
+        ]
+      }
+    }
+  }
+}

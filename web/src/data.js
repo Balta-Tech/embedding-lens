@@ -17,6 +17,8 @@ export const loadReadouts = (model, tier) => json(`readouts/${model}.${tier}.jso
 export const loadLanes = (model) => json(`lanes/${model}.json`);
 export const loadSearch = (model) => json(`search/${model}.json`);
 export const loadResult = (name) => json(`results/${name}.json`).catch(() => null);
+// Reranked read-outs exist only for some model and vocabulary pairs
+export const loadRerank = (model, tier) => json(`readouts/${model}.${tier}.rerank.json`).catch(() => null);
 
 export const loadGameVocab = (model) => json(`game/${model}/vocab.json`);
 
@@ -94,3 +96,4 @@ async function post(path, body) {
 
 export const liveSearch = (query, model) => post("/api/search", { query, model });
 export const liveScore = (segment, words, model) => post("/api/score", { segment, words, model });
+export const liveRerank = (segment, model, tier) => post("/api/rerank", { segment, model, tier });

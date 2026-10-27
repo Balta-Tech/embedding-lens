@@ -20,6 +20,7 @@
       </a>
       <nav>
         <a href="#explore">Explore</a>
+        <a href="#rerank">Rerank</a>
         <a href="#search">Search</a>
         <a href="#game">Play</a>
         <a href="#lab">Lab</a>
@@ -109,6 +110,26 @@
             <svg class="bubbles" id="bubbles" role="img" aria-label="Words closest to this moment"></svg>
             <p class="change" id="change"></p>
             <ol class="wordlist" id="wordlist"></ol>
+          </div>
+        </div>
+      </section>
+
+      <section id="rerank" class="panel">
+        <div class="section-head">
+          <p class="eyebrow">Rerank</p>
+          <h2>Fetch fifty, then look again</h2>
+          <p class="section-sub">Cosine similarity compares two vectors that were made apart. A reranker reads the video and one phrase together and answers “does this describe it?”. Too slow for a whole vocabulary, so it only re-sorts the embedding's top 50.</p>
+        </div>
+        <div class="rerank" id="rerank-root">
+          <div class="rerank-moment">
+            <div class="moment-frame"><div class="sprite" id="rerank-sprite"></div></div>
+            <p class="rerank-meta" id="rerank-meta"></p>
+            <p class="hint">Follows the moment, model and words picked in Explore. Reranker: Qwen3-VL-Reranker 2B.</p>
+          </div>
+          <div class="rerank-chart-wrap">
+            <div class="rerank-chart" id="rerank-chart"></div>
+            <p class="hint rerank-empty" id="rerank-empty"></p>
+            <button type="button" class="btn small" id="rerank-live" hidden>Rerank live</button>
           </div>
         </div>
       </section>

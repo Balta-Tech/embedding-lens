@@ -1,5 +1,5 @@
 // A short guided tour: each step sets the page into a state and explains what to look at.
-import { loadReadouts } from "./data.js";
+import { loadReadouts, loadRerank } from "./data.js";
 
 const words = async (state, key) => (await loadReadouts(state.model, state.tier)).segments[key];
 const top = async (state, key, lens, n = 3) => {
@@ -49,6 +49,16 @@ export const STEPS = [
       const small = (await loadReadouts(state.model, "small")).segments["zugspitze:88"].raw;
       const list = small.slice(0, 3).map(([p]) => `“${p}”`).join(", ");
       return `The summit, read by SigLIP 2 against all 119,000 WordNet nouns: ${await top(state, "zugspitze:88", "raw", 4)}. Against the 4.6k-word tag list: ${list}. For every model the small list was the most precise.`;
+    },
+    set: { model: "siglip2", tier: "large", video: "zugspitze", index: 88, lens: "raw" },
+  },
+  {
+    target: "#rerank",
+    title: "A second look",
+    async body() {
+      const after = (await loadRerank("siglip2", "large"))?.segments["zugspitze:88"];
+      const list = after ? after.slice(0, 3).map(([p]) => `“${p}”`).join(", ") : "summit words";
+      return `Same summit, same 119,000 words. A reranker reads the video together with each of SigLIP's top 50 phrases and re-sorts them: ${list}. Across the judged moments this took SigLIP 2 from 48% to 95% visible words.`;
     },
     set: { model: "siglip2", tier: "large", video: "zugspitze", index: 88, lens: "raw" },
   },

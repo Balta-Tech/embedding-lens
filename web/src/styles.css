@@ -329,3 +329,22 @@ h1, h2, h3 { margin: 0; font-weight: 400; }
 /* Word suggestions in the game, offline only */
 .suggest { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; margin: 10px 2px 0; font-size: 13.5px; color: var(--muted); }
 .suggest .chip { padding: 4px 10px; font-size: 13px; }
+/* Rerank */
+.rerank { display: grid; grid-template-columns: minmax(0, 300px) minmax(0, 1fr); gap: 40px; align-items: start; }
+.rerank-meta { margin: 12px 0 0; font-size: 14px; color: var(--muted); }
+.rerank-meta b { display: block; color: var(--text); font-weight: 600; }
+.rerank-chart svg { display: block; max-width: 100%; overflow: visible; font-size: 14px; }
+.rerank-chart .head { font: 500 11px var(--mono); letter-spacing: 0.1em; text-transform: uppercase; fill: var(--muted); }
+.rerank-chart .w { fill: var(--text); }
+.rerank-chart .w.faded { fill: var(--faint); text-decoration: line-through; }
+.rerank-chart .from { fill: var(--c2); font: 500 11px var(--mono); }
+.rerank-chart .deeper { font: 500 11px var(--mono); fill: var(--faint); }
+.rerank-chart .lines path { fill: none; stroke-width: 1.5; stroke: var(--line-2); }
+.rerank-chart .lines .up, .rerank-chart .lines .new { stroke: var(--c2); }
+.rerank-chart .lines .down { stroke: var(--c3); }
+.rerank-chart .lines .out { stroke: var(--c5); stroke-dasharray: 3 4; opacity: 0.6; }
+.rerank:not([data-empty]) .rerank-empty { display: none; }
+@media (max-width: 760px) {
+  .rerank { grid-template-columns: minmax(0, 1fr); gap: 20px; }
+  .rerank-chart svg { font-size: 12px; }
+}

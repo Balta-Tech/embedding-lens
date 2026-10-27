@@ -234,3 +234,42 @@ registerCard(async ({ loadResult }) => {
     body,
   });
 }, 2);
+
+registerCard(async ({ loadResult, labels }) => {
+  const result = await loadResult("rerank");
+  if (!result) return null;
+  const main = result.rows.filter((r) => r.k === result.k);
+  const models = [...new Set(main.map((r) => r.model))];
+  const tiers = ["medium", "large"];
+  const get = (m, t) => main.find((r) => r.model === m && r.vocab === t);
+  const cell = (r) => {
+    if (!r) return "–";
+    const before = Math.round(r["p@5 before"] * 100);
+    const after = Math.round(r["p@5 after"] * 100);
+    const tone = after > before ? "var(--good)" : after < before ? "var(--c5)" : "inherit";
+    return `${before} → <b style="color:${tone}">${after}</b>`;
+  };
+  const body = document.createElement("div");
+  const table = document.createElement("table");
+  table.innerHTML = `<thead><tr><th>First stage</th>${tiers.map((t) => `<th>${t === "medium" ? "23k" : "119k"} words</th>`).join("")}</tr></thead>
+    <tbody>${models.map((m) => `<tr><td>${labels[m] || m}</td>${tiers.map((t) => `<td>${cell(get(m, t))}</td>`).join("")}</tr>`).join("")}</tbody>`;
+  body.append(table);
+  const sweep = result.rows.filter((r) => r.model === "qwen3vl" && r.vocab === "medium").sort((a, b) => a.k - b.k);
+  if (sweep.length > 1) {
+    const note = document.createElement("p");
+    note.className = "hint";
+    note.innerHTML = `How many candidates to rerank (${labels.qwen3vl || "qwen3vl"}, 23k words): ` +
+      sweep.map((r) => `top ${r.k} → ${pct(r["p@5 after"])}`).join(" · ") +
+      `. About ${result.seconds_per_moment["qwen3vl/medium/50"].toFixed(1)} s per moment for 50 on an M3 Pro, with the video encoded once and reused for every phrase.`;
+    body.append(note);
+  }
+  const gains = main.map((r) => r["p@5 after"] - r["p@5 before"]);
+  const mean = gains.reduce((a, b) => a + b, 0) / gains.length;
+  const helped = gains.filter((g) => g > 0).length;
+  return card({
+    title: "Fetch fifty, then rerank",
+    takeaway: `Qwen3-VL-Reranker re-sorts each read-out's top ${result.k}, reading video and phrase together. Share of top-5 words visible in the frames, before → after: it helps in ${helped} of ${gains.length} set-ups, by ${mean >= 0 ? "+" : ""}${Math.round(mean * 100)} points on average, and the large vocabulary stops hurting. Words only the reranker produced were judged after the fact by the same AI annotator, so read the gains as large, not exact.`,
+    wide: true,
+    body,
+  });
+}, 1.5);

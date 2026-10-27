@@ -32,7 +32,10 @@ vocabulary (4.6k / 23k / 119k phrases) ─▶ text vectors ───┘
 Read-outs: **raw** cosine, **centred** (each modality's mean removed, closing the modality gap), a
 **sparse** non-negative decomposition, and a **change** read-out of the difference between two
 consecutive moments. Hub corrections (CSLS, priors, z-scores, null videos) are implemented and
-measured too. Which read-out to trust depends on the model; the [experiments](experiments/)
+measured too. A second stage, [Qwen3-VL-Reranker 2B](https://huggingface.co/Qwen/Qwen3-VL-Reranker-2B),
+reads the video together with each of the top 50 phrases and re-sorts them
+([`lens/rerank.py`](lens/rerank.py); `uv run python -m lens.rerank qwen3vl:medium` exports it for the
+site). Which read-out to trust depends on the model; the [experiments](experiments/)
 decide it, partly by judging read-outs against the frames
 ([`judgements.json`](experiments/judgements.json)).
 
