@@ -211,3 +211,23 @@ registerCard(async ({ loadResult, labels }) => {
     body,
   });
 });
+
+registerCard(async ({ loadResult }) => {
+  const data = await loadResult("agreement");
+  if (!data) return null;
+  const body = document.createElement("div");
+  body.className = "bars";
+  body.innerHTML = Object.entries(data.correlations).map(([name, rho]) => {
+    const width = Math.abs(rho) * 50;
+    const left = rho >= 0 ? 50 : 50 - width;
+    const tint = rho >= 0 ? "var(--good)" : "var(--c5)";
+    return `<div class="row"><span>${name}</span>
+      <div class="track" style="position:relative"><span style="position:absolute;left:${left}%;width:${width}%;background:${tint}"></span><i style="position:absolute;left:50%;top:-2px;bottom:-2px;width:1px;background:var(--faint)"></i></div>
+      <span class="val">${rho >= 0 ? "+" : ""}${rho.toFixed(2)}</span></div>`;
+  }).join("");
+  return card({
+    title: "The obvious metric points the wrong way",
+    takeaway: `Rank correlation with precision judged by eye, over ${data.configurations} combinations of model, read-out and vocabulary. Words that find their moment again are often wrong; words another model agrees with are usually right.`,
+    body,
+  });
+});

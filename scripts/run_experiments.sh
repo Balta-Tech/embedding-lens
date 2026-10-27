@@ -5,14 +5,14 @@
 set -u
 cd "$(dirname "$0")/.."
 MODELS="qwen3vl gemma2 siglip2"
-ALL="sim_real sparse geometry templates time_arrow residual eyeball eyeball_score delta methods speed"
+ALL="sim_real sparse geometry templates time_arrow residual eyeball eyeball_score delta methods agreement speed"
 
 run() {
   local name=$1
   case $name in
     residual) args="qwen3vl gemma2" ;;
     delta) args="qwen3vl zugspitze" ;;
-    eyeball_score|speed) args="" ;;
+    eyeball_score|agreement|speed) args="" ;;
     *) args=$MODELS ;;
   esac
   echo "=== $name $args"
