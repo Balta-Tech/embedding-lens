@@ -30,7 +30,7 @@ export function createSearch(manifest, state, explorer) {
 
   function updateHint() {
     hint.textContent = backend.live
-      ? "Live: any sentence works, embedded on your machine."
+      ? "Live: any sentence works, embedded by the live backend."
       : "Offline: try the suggestions. Free text needs the live backend (see the status pill above).";
   }
 
