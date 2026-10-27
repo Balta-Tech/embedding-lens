@@ -1,7 +1,7 @@
 import numpy as np
 import pytest
 
-from lens.readout import METHODS, Space, sparse_decompose, unit
+from lens.readout import METHODS, Space, change, sparse_decompose, unit
 
 
 @pytest.fixture
@@ -38,3 +38,14 @@ def test_sparse_decompose_recovers_a_planted_mixture(space):
     assert {p for p, _ in terms} == {f"p{i}" for i in planted}
     assert terms[0][0] == "p10"
     assert fit > 0.99
+
+
+def test_change_reads_out_the_difference_and_skips_identical_moments(space):
+    before = space.reference[0]
+    # Move the moment towards phrase 42: it should be the top "appeared" word
+    after = unit(before + 0.8 * unit(space.vocab.centered[42]))
+    amount, appeared, faded = change(space, before, after, 3)
+    assert "p42" not in faded
+    assert amount > 0
+    assert appeared[0] == "p42"
+    assert change(space, before, before)[1:] == ([], [])

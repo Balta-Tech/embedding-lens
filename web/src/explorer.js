@@ -171,7 +171,9 @@ export function createExplorer(manifest, state) {
     }
     $("lens-note").textContent = note;
     const change = data.change;
-    $("change").innerHTML = change
+    $("change").innerHTML = change && !change.appeared.length
+      ? `<b>Since ${formatTime(timeOf(manifest, key) - manifest.segmentSeconds)}</b>no change`
+      : change
       ? `<b>Since ${formatTime(timeOf(manifest, key) - manifest.segmentSeconds)}</b>` +
         change.appeared.slice(0, 3).map((w) => `<span class="plus">+${w}</span>`).join(" ") + " &nbsp; " +
         change.faded.slice(0, 3).map((w) => `<span class="minus">−${w}</span>`).join(" ")

@@ -174,10 +174,13 @@ def change(
     (1 - cosine between the two moments, appeared, faded).
     """
     a, b = unit(before - space.video_mean), unit(after - space.video_mean)
+    amount = 1 - float(a @ b)
+    if amount < 1e-4:
+        return amount, [], []  # identical moments (e.g. black end frames): nothing to read out
     along = space.vocab.centered @ unit(b - a)
     order = np.argsort(along)
     return (
-        1 - float(a @ b),
+        amount,
         [space.phrases[i] for i in order[::-1][:n]],
         [space.phrases[i] for i in order[:n]],
     )
