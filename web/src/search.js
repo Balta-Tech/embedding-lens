@@ -1,6 +1,7 @@
 // Search: text to video. Presets are precomputed; free text needs the live backend.
 import { backend, formatTime, liveSearch, loadSearch, spriteUrl, timeOf, youtubeUrl } from "./data.js";
 import { offsetOf } from "./explorer.js";
+import { busy, waiting } from "./wait.js";
 
 const SHOW = 8;
 
@@ -44,9 +45,17 @@ export function createSearch(manifest, state, explorer) {
         hint.textContent = "That query isn't precomputed. Free search needs the live backend.";
         return;
       }
-      hint.textContent = "Searching…";
-      const live = await liveSearch(query, state.model);
-      scores = live.segments.map((s) => s.z);
+      const done = busy(form.querySelector("button"), "Searching…");
+      const stop = waiting(hint, "Embedding your sentence with the live model. This takes a few seconds.");
+      try {
+        scores = (await liveSearch(query, state.model)).segments.map((s) => s.z);
+      } catch {
+        hint.textContent = "The live backend didn't answer. Try a suggestion, or again in a moment.";
+        return;
+      } finally {
+        done();
+        stop();
+      }
       updateHint();
     }
     renderPresets();
