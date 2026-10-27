@@ -29,9 +29,12 @@ vocabulary (4.6k / 23k / 119k phrases) ─▶ text vectors ───┘
 | [EmbeddingGemma 2](https://huggingface.co/google/embeddinggemma-2) | mp4 clip | 768 |
 | [SigLIP 2 base](https://huggingface.co/google/siglip2-base-patch16-256) | frames averaged (baseline) | 768 |
 
-Read-outs: **raw** cosine, **centred** (each modality's mean removed, closing the modality gap),
-**CSLS** hub correction, and a **sparse** non-negative decomposition. Which one to trust depends on
-the model; the [experiments](experiments/) measure it.
+Read-outs: **raw** cosine, **centred** (each modality's mean removed, closing the modality gap), a
+**sparse** non-negative decomposition, and a **change** read-out of the difference between two
+consecutive moments. Hub corrections (CSLS, priors, z-scores, null videos) are implemented and
+measured too. Which read-out to trust depends on the model; the [experiments](experiments/)
+decide it, partly by judging read-outs against the frames
+([`judgements.json`](experiments/judgements.json)).
 
 ## Repository
 
@@ -62,14 +65,15 @@ on `localhost:8000`:
 uv run uvicorn lens.api:app --port 8000
 ```
 
-Experiments, e.g. `uv run python -m experiments.methods siglip2 gemma2 qwen3vl`; tests with
-`uv run pytest`.
+Experiments: `scripts/run_experiments.sh` (all, several hours) or
+`scripts/run_experiments.sh geometry sim_real` (some). Tests: `uv run pytest`.
 
 ## Deploy
 
 Static build served by the `embedding-lens` Cloudflare Worker ([`wrangler.jsonc`](wrangler.jsonc)).
 Every push to `main` runs [`deploy.yml`](.github/workflows/deploy.yml): `npm ci`, `npm run build`,
-`wrangler deploy`. Requires the repository secret `CLOUDFLARE_API_TOKEN`.
+`wrangler deploy`. Requires the repository secret `CLOUDFLARE_API_TOKEN`. The generated site data
+in `web/public/data` and `web/public/media` is committed, so CI does not need the models.
 
 ## Credits
 
