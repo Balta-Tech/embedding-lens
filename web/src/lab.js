@@ -3,15 +3,17 @@ import { loadResult } from "./data.js";
 
 const CARDS = [];
 
-export function registerCard(fn) {
-  CARDS.push(fn);
+// Lower rank renders first
+export function registerCard(fn, rank = 50) {
+  CARDS.push({ fn, rank });
 }
 
 export async function createLab(manifest) {
   const root = document.getElementById("lab-root");
   const labels = Object.fromEntries(manifest.models.map((m) => [m.id, m.label]));
-  for (const card of CARDS) {
-    const el = await card({ loadResult, labels });
+  CARDS.sort((a, b) => a.rank - b.rank);
+  for (const { fn } of CARDS) {
+    const el = await fn({ loadResult, labels });
     if (el) root.append(el);
   }
   if (!root.children.length) {

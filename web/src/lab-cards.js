@@ -48,7 +48,7 @@ registerCard(async ({ loadResult, labels }) => {
     wide: true,
     body,
   });
-});
+}, 4);
 
 registerCard(async ({ loadResult, labels }) => {
   const results = await loadResult("time_arrow");
@@ -74,7 +74,7 @@ registerCard(async ({ loadResult, labels }) => {
     takeaway: "How far a moment's vector moves when its frames play backwards (0 = time-blind). An averaged image model cannot tell; a video model might.",
     body,
   });
-});
+}, 7);
 
 registerCard(async ({ loadResult, labels }) => {
   const results = await loadResult("sim_real");
@@ -94,7 +94,7 @@ registerCard(async ({ loadResult, labels }) => {
     takeaway: `How well “video game footage” vs “real camera footage” separates rendered from filmed moments (ROC AUC, 0.5 = chance). Hardest pair: real kart racing vs Assetto Corsa. Below: what ${labels[best.model] || best.model} thinks separates them.`,
     body,
   });
-});
+}, 9);
 
 registerCard(async ({ loadResult, labels }) => {
   const results = await loadResult("residual");
@@ -119,7 +119,7 @@ registerCard(async ({ loadResult, labels }) => {
     takeaway: `How far a model's video vector sits from the average of its own frames (0 = a bag of frames). The leftover, read out as words, is mostly noise and not actions (action words: ${results.map((r) => `${pct(r.action_share_residual)} vs ${pct(r.action_share_content)} normally`).join("; ")}); occasionally it names the kind of footage.`,
     body,
   });
-});
+}, 8);
 
 registerCard(async ({ loadResult, labels }) => {
   const rows = await loadResult("templates");
@@ -136,7 +136,7 @@ registerCard(async ({ loadResult, labels }) => {
     takeaway: "Each phrase wrapped in a template before embedding (“a video of …”), or averaged over all of them. Round-trip retrieval of the top 5 words, small vocabulary.",
     body,
   });
-});
+}, 6);
 
 registerCard(async ({ loadResult, labels }) => {
   const rows = await loadResult("sparse");
@@ -149,7 +149,7 @@ registerCard(async ({ loadResult, labels }) => {
     takeaway: "Top-k returns near-synonyms; a sparse decomposition picks words that each explain something new. Redundancy is the mean similarity between the chosen words; fit is how much of the vector they reproduce.",
     body,
   });
-});
+}, 5);
 
 registerCard(async ({ loadResult, labels }) => {
   const rows = await loadResult("eyeball_score");
@@ -175,7 +175,7 @@ registerCard(async ({ loadResult, labels }) => {
     wide: true,
     body,
   });
-});
+}, 1);
 
 registerCard(async ({ loadResult, labels }) => {
   const rows = await loadResult("geometry");
@@ -197,7 +197,7 @@ registerCard(async ({ loadResult, labels }) => {
     takeaway: "Mean cosine between any video and any phrase. When every video is already close to every phrase, a few generic words win everywhere (hub share below) and centring helps; when the two sit far apart, raw closeness is already well calibrated.",
     body,
   });
-});
+}, 3);
 
 registerCard(async ({ loadResult, labels }) => {
   const data = await loadResult("speed");
@@ -210,7 +210,7 @@ registerCard(async ({ loadResult, labels }) => {
     takeaway: "Measured on an Apple M3 Pro laptop (18 GB) while indexing. Vocabularies are embedded once and cached; reading out a moment afterwards is a single matrix product and takes milliseconds.",
     body,
   });
-});
+}, 10);
 
 registerCard(async ({ loadResult }) => {
   const data = await loadResult("agreement");
@@ -230,4 +230,4 @@ registerCard(async ({ loadResult }) => {
     takeaway: `Rank correlation with precision judged by eye, over ${data.configurations} combinations of model, read-out and vocabulary. Words that find their moment again are often wrong; words another model agrees with are usually right.`,
     body,
   });
-});
+}, 2);
