@@ -44,7 +44,9 @@ export function createRerank(manifest, state) {
     const width = chart.getBoundingClientRect().width || 560;
     const left = 0;
     const right = width;
-    const gutter = Math.min(150, width * 0.32);
+    // On phones the word columns need most of the width; the lines get what is left
+    const narrow = width < 480;
+    const gutter = narrow ? width * 0.42 : Math.min(150, width * 0.32);
     const height = ROWS * ROW + 34;
     const rightRank = new Map(after.slice(0, ROWS).map(([p], i) => [p, i]));
     const y = (i) => 22 + i * ROW;
@@ -62,7 +64,7 @@ export function createRerank(manifest, state) {
       if (!fromTop) {
         lines.push(`<path class="new" d="M${left + gutter},${deep} C${width / 2},${deep} ${width / 2},${y(j) - 4} ${right - gutter},${y(j) - 4}"/>`);
       }
-      labels.push(`<text class="w" x="${right - gutter + 10}" y="${y(j)}">${p}${fromTop ? "" : ` <tspan class="from">from #${from}</tspan>`}</text>`);
+      labels.push(`<text class="w" x="${right - gutter + 10}" y="${y(j)}">${p}${fromTop ? "" : ` <tspan class="from">${narrow ? "" : "from "}#${from}</tspan>`}</text>`);
     });
     chart.innerHTML = `
       <svg viewBox="0 0 ${width} ${height}" width="${width}" height="${height}" role="img" aria-label="Embedding order against reranked order">
@@ -70,6 +72,7 @@ export function createRerank(manifest, state) {
         <text class="head" x="${right - gutter + 10}" y="8">Reranked (top ${k})</text>
         <g class="lines">${lines.join("")}</g>
         <text class="deeper" x="${left + gutter - 10}" y="${deep + 3}" text-anchor="end">#9–${k}</text>
+        <text class="deeper" x="${right - gutter + 10}" y="${deep + 3}">dropped</text>
         ${labels.join("")}
       </svg>`;
   }
