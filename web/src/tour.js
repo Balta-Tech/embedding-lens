@@ -36,9 +36,9 @@ export const STEPS = [
   },
   {
     target: "#lens-picker",
-    title: "Centring rescues it",
+    title: "Centring helps it",
     async body(state) {
-      return `Remove the offset all video vectors share and it reads ${await top(state, "trex:10", "centered", 4)}. The green dot marks the most faithful lens for each model: raw for the other two.`;
+      return `Remove the offset all video vectors share and the generic words are gone: ${await top(state, "trex:10", "centered", 4)}. Not perfect, but about the screen now. The green dot marks the most faithful lens for each model; for the other two it is raw.`;
     },
     set: { model: "gemma2", tier: "medium", video: "trex", index: 10, lens: "centered" },
   },
@@ -46,9 +46,11 @@ export const STEPS = [
     target: "#tier-picker",
     title: "More words, less truth",
     async body(state) {
-      return `With all 119,000 WordNet nouns, rare near-misses slip in: ${await top(state, "zugspitze:3", "raw", 4)}. For every model the 4.6k-word list was the most precise.`;
+      const small = (await loadReadouts(state.model, "small")).segments["zugspitze:88"].raw;
+      const list = small.slice(0, 3).map(([p]) => `“${p}”`).join(", ");
+      return `The summit, read by SigLIP 2 against all 119,000 WordNet nouns: ${await top(state, "zugspitze:88", "raw", 4)}. Against the 4.6k-word tag list: ${list}. For every model the small list was the most precise.`;
     },
-    set: { model: "siglip2", tier: "large", video: "zugspitze", index: 3, lens: "raw" },
+    set: { model: "siglip2", tier: "large", video: "zugspitze", index: 88, lens: "raw" },
   },
   {
     target: "#change",

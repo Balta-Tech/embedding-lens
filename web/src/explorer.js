@@ -94,11 +94,13 @@ export function createExplorer(manifest, state) {
       strip.append(frames);
       // How much the vector moved since the previous moment: peaks are scene changes
       const changeRow = row("lane", "change");
-      for (let i = 0; i < video.segments; i++) {
-        const amount = readouts.segments[`${video.id}:${i}`]?.change?.amount ?? 0;
+      const amounts = Array.from({ length: video.segments }, (_, i) => readouts.segments[`${video.id}:${i}`]?.change?.amount ?? 0);
+      const peak = Math.max(...amounts) || 1;
+      for (const amount of amounts) {
         const cell = document.createElement("span");
         cell.className = "lane-cell change";
-        cell.style.opacity = Math.max(0.04, Math.min(1, amount * 1.6)).toFixed(2);
+        // Squared, so only the real cuts stand out
+        cell.style.opacity = Math.max(0.04, (amount / peak) ** 2).toFixed(2);
         changeRow.append(cell);
       }
       strip.append(changeRow);

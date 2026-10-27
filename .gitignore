@@ -6,7 +6,7 @@ __pycache__/
 .ruff_cache/
 
 # Local data: downloaded videos, extracted frames, vocabularies and cached embeddings
-data/
+/data/
 
 # OS / editors
 .DS_Store

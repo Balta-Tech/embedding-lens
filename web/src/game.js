@@ -1,5 +1,5 @@
 // You vs the model: describe a moment, then see where your words rank in the model's eyes.
-import { backend, formatTime, liveScore, loadGame, loadReadouts, spriteUrl, timeOf } from "./data.js";
+import { backend, formatTime, liveScore, loadGameRanks, loadGameVocab, loadReadouts, spriteUrl, timeOf } from "./data.js";
 
 const ROUNDS = 5;
 const MAX_WORDS = 5;
@@ -13,19 +13,33 @@ function shuffle(items) {
   return a;
 }
 
-export function createGame(manifest, state) {
+// Typed words are matched to the vocabulary loosely: case, plurals, hyphens vs spaces
+function variants(word) {
+  const w = word.trim().toLowerCase().replace(/\s+/g, " ");
+  const forms = [w, w.replace(/-/g, " "), w.replace(/ /g, "-"), w.replace(/[- ]/g, "")];
+  for (const f of [...forms]) {
+    if (f.endsWith("ies")) forms.push(`${f.slice(0, -3)}y`);
+    if (f.endsWith("es")) forms.push(f.slice(0, -2));
+    if (f.endsWith("s")) forms.push(f.slice(0, -1));
+  }
+  return forms;
+}
+
+export function createGame(manifest) {
   const root = document.getElementById("game-root");
+  // The game is always played against the default (most faithful) model
+  const model = manifest.defaultModel;
+  const modelLabel = manifest.models.find((m) => m.id === model)?.label ?? model;
   let game;
 
   async function start() {
-    const data = await loadGame(state.model);
-    // Skip the first and last moment of each video: intros and end screens
-    const pool = data.keys.filter((k) => {
-      const [v, i] = k.split(":");
-      const video = manifest.videos.find((x) => x.id === v);
-      return Number(i) > 0 && Number(i) < video.segments - 1;
-    });
-    game = { rounds: shuffle(pool).slice(0, ROUNDS), round: 0, total: 0, words: [], data };
+    const [data, readouts] = await Promise.all([loadGameVocab(model), loadReadouts(model, "medium")]);
+    const index = new Map(data.vocab.map((w, i) => [w, i]));
+    // Skip the first and last moment of each video (intros, end screens) and frozen frames
+    const pool = manifest.videos.flatMap((v) =>
+      Array.from({ length: v.segments - 2 }, (_, i) => `${v.id}:${i + 1}`)
+        .filter((k) => readouts.segments[k]?.change?.appeared?.length !== 0));
+    game = { rounds: shuffle(pool).slice(0, ROUNDS), round: 0, total: 0, words: [], data, index, readouts };
     renderRound();
   }
 
@@ -96,19 +110,19 @@ export function createGame(manifest, state) {
   async function score(key) {
     if (backend.live) {
       try {
-        const r = await liveScore(key, game.words, state.model);
+        const r = await liveScore(key, game.words, model);
         return { size: r.vocabulary_size, words: r.words.map((w) => ({ phrase: w.phrase, rank: w.rank, percentile: w.percentile })) };
       } catch { /* fall back to the offline table */ }
     }
-    const { vocab, keys, ranks } = game.data;
-    const row = keys.indexOf(key) * vocab.length;
+    const size = game.data.vocab.length;
+    const ranks = await loadGameRanks(model, key);
     return {
-      size: vocab.length,
+      size,
       words: game.words.map((w) => {
-        const i = vocab.indexOf(w);
-        if (i < 0) return { phrase: w, rank: null, percentile: null };
-        const rank = ranks[row + i];
-        return { phrase: w, rank, percentile: 100 * (1 - (rank - 1) / vocab.length) };
+        const i = variants(w).map((f) => game.index.get(f)).find((x) => x !== undefined);
+        if (i === undefined) return { phrase: w, rank: null, percentile: null };
+        const rank = ranks[i];
+        return { phrase: w, rank, percentile: 100 * (1 - (rank - 1) / size) };
       }),
     };
   }
@@ -116,7 +130,8 @@ export function createGame(manifest, state) {
   async function reveal(key) {
     root.querySelector("#reveal").disabled = true;
     root.querySelector("#game-input").disabled = true;
-    const [result, readouts] = await Promise.all([score(key), loadReadouts(state.model, "small")]);
+    const result = await score(key);
+    const readouts = game.readouts;
     const known = result.words.filter((w) => w.percentile !== null).map((w) => w.percentile).sort((a, b) => b - a);
     // Round score: the average of your best three words, so one stray guess doesn't sink you
     const best = known.slice(0, 3);
@@ -126,10 +141,10 @@ export function createGame(manifest, state) {
     root.querySelector("#game-result").innerHTML = `
       <div class="verdicts">
         ${result.words.map((w) => w.percentile === null
-          ? `<div class="verdict unknown"><span>${w.phrase}</span><div class="bar"></div><span class="num">not in offline list</span></div>`
+          ? `<div class="verdict unknown"><span>${w.phrase}</span><div class="bar"></div><span class="num">not in the word list</span></div>`
           : `<div class="verdict"><span>${w.phrase}</span><div class="bar"><span style="width:${w.percentile}%"></span></div><span class="num">top ${topPct(w.rank, result.size)}</span></div>`).join("")}
       </div>
-      <p class="hint">Ranked among ${result.size.toLocaleString()} words${backend.live ? " (live)" : ""}. Round: <b>${Math.round(points)}</b> pts.</p>
+      <p class="hint">Ranked by ${modelLabel} among ${result.size.toLocaleString()} words${backend.live ? " (live)" : ""}. Round: <b>${Math.round(points)}</b> pts.</p>
       <div class="model-says"><h4>The model's own words</h4><div class="chips">${top.map((p) => `<span class="chip" aria-pressed="${game.words.includes(p)}">${p}</span>`).join("")}</div></div>
       <div class="game-actions"><button class="btn primary" id="next" type="button">${game.round + 1 < ROUNDS ? "Next moment" : "See result"} →</button></div>`;
     root.querySelector(".game-score").textContent = `${Math.round(game.total)} pts`;

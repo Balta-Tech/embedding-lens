@@ -18,15 +18,15 @@ export const loadLanes = (model) => json(`lanes/${model}.json`);
 export const loadSearch = (model) => json(`search/${model}.json`);
 export const loadResult = (name) => json(`results/${name}.json`).catch(() => null);
 
-export async function loadGame(model) {
-  const key = `game:${model}`;
-  if (!cache.has(key)) {
-    cache.set(key, Promise.all([
-      json(`game/${model}.json`),
-      fetch(`/data/game/${model}.ranks.bin`).then((r) => r.arrayBuffer()),
-    ]).then(([meta, buffer]) => ({ ...meta, ranks: new Uint16Array(buffer) })));
+export const loadGameVocab = (model) => json(`game/${model}/vocab.json`);
+
+export async function loadGameRanks(model, key) {
+  const [video, index] = key.split(":");
+  const path = `game/${model}/${video}-${String(index).padStart(3, "0")}.bin`;
+  if (!cache.has(path)) {
+    cache.set(path, fetch(`/data/${path}`).then((r) => r.arrayBuffer()).then((b) => new Uint16Array(b)));
   }
-  return cache.get(key);
+  return cache.get(path);
 }
 
 export function spriteUrl(key) {

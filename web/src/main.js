@@ -60,13 +60,12 @@ async function main() {
   const explorer = createExplorer(manifest, state);
   await explorer.set({});
   const search = createSearch(manifest, state, explorer);
-  const game = createGame(manifest, state);
+  createGame(manifest);
   createLab(manifest);
   explorer.onChange(() => search.refresh());
   const tour = createTour(explorer, state);
   document.getElementById("start-tour").addEventListener("click", () => tour.start());
   detectBackend();
-  void game;
 }
 
 main();

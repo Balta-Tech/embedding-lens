@@ -117,11 +117,11 @@ h1, h2, h3 { margin: 0; font-weight: 400; }
 
 .hero-visual { position: relative; margin: 0; aspect-ratio: 1 / 0.92; }
 .hero-frame {
-  position: absolute; left: 0; top: 22%; width: 62%; aspect-ratio: 16 / 9;
+  position: absolute; left: 0; top: 24%; width: 56%; aspect-ratio: 16 / 9;
   border-radius: 12px; overflow: hidden; border: 1px solid var(--line-2);
   box-shadow: 0 30px 80px -30px rgb(0 0 0 / 0.6);
 }
-.hero-bubbles { position: absolute; top: 0; right: -2%; width: 58%; height: 100%; overflow: visible; pointer-events: none; }
+.hero-bubbles { position: absolute; top: 4%; right: -4%; width: 50%; height: 92%; overflow: visible; pointer-events: none; }
 .hero-visual figcaption { position: absolute; left: 0; bottom: 8%; font: 12px var(--mono); color: var(--faint); }
 
 /* sprites: SPRITE_FRAMES frames side by side, stepped through with CSS */

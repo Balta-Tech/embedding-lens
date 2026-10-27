@@ -31,7 +31,7 @@ MODELS = {
 DEFAULT_MODEL = "qwen3vl"
 TIERS = ("small", "medium", "large")
 DEFAULT_TIER = "medium"
-GAME_TIER = "small"
+GAME_TIER = "medium"
 TOP = 24
 SPRITE_FRAMES = 5
 
@@ -137,18 +137,25 @@ def _lane(space: Space, videos: np.ndarray, concept: np.ndarray) -> np.ndarray:
 
 
 def export_game(name: str, space: Space, keys: list[str], videos: np.ndarray) -> None:
-    """Rank of every small-vocabulary word for every segment, so the game works offline."""
+    """Rank of every vocabulary word for every moment, so the game scores words offline.
+
+    One small file per moment (uint16 ranks, 1 = closest), so a game only downloads the
+    moments it shows. Only the default model plays the game.
+    """
+    if name != DEFAULT_MODEL:
+        return
     phrases, text = load_vocab(name, GAME_TIER)
     game_space = Space(phrases, text, videos, null_videos=space.null_videos)
     method = BEST_METHOD[name]
-    ranks = np.zeros((len(keys), len(phrases)), dtype=np.uint16)
-    for i, v in enumerate(videos):
-        order = np.argsort(-game_space.scores(v, method))
-        ranks[i, order] = np.arange(1, len(phrases) + 1)
-    folder = DATA_OUT / "game"
-    folder.mkdir(parents=True, exist_ok=True)
-    (folder / f"{name}.ranks.bin").write_bytes(ranks.tobytes())
-    _write(folder / f"{name}.json", {"keys": keys, "vocab": phrases, "method": method})
+    folder = DATA_OUT / "game" / name
+    shutil.rmtree(DATA_OUT / "game", ignore_errors=True)
+    folder.mkdir(parents=True)
+    for key, v in zip(keys, videos):
+        ranks = np.zeros(len(phrases), dtype=np.uint16)
+        ranks[np.argsort(-game_space.scores(v, method))] = np.arange(1, len(phrases) + 1)
+        video, index = key.split(":")
+        (folder / f"{video}-{int(index):03d}.bin").write_bytes(ranks.tobytes())
+    _write(folder / "vocab.json", {"vocab": phrases, "method": method})
 
 
 def export_media() -> None:

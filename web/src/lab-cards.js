@@ -9,6 +9,7 @@ const METHOD_LABELS = {
   csls: "CSLS",
   centered: "centred",
   centered_csls: "centred + CSLS",
+  sparse: "sparse sum",
 };
 const TINTS = ["var(--c1)", "var(--c2)", "var(--c3)", "var(--c4)", "var(--c5)", "var(--c6)", "var(--faint)"];
 const pct = (v) => `${Math.round(v * 100)}%`;
@@ -106,10 +107,9 @@ registerCard(async ({ loadResult, labels }) => {
     tint: TINTS[i],
   })), { max: Math.max(0.05, ...results.map((r) => 1 - r.video_vs_frames_cos)), format: (v) => v.toFixed(2) }));
   // The most telling example: a sequence-only residual that names the kind of footage
-  const pick = results
-    .flatMap((r) => r.examples.map((e) => ({ ...e, model: r.model })))
-    .find((e) => e.motion.slice(0, 4).some((w) => /video game|screenshot|simulator/.test(w)))
-    || results[0].examples[0];
+  const examples = results.flatMap((r) => r.examples.map((e) => ({ ...e, model: r.model })));
+  const at = (e) => e.motion.slice(0, 5).findIndex((w) => /video game|screenshot|simulator/.test(w));
+  const pick = examples.filter((e) => at(e) >= 0).sort((a, b) => at(a) - at(b))[0] || examples[0];
   const words = document.createElement("div");
   words.className = "words-pair";
   words.innerHTML = `<div><b>${pick.segment}: what's in it</b>${pick.content.slice(0, 5).join(", ")}</div><div><b>what only the sequence adds</b>${pick.motion.slice(0, 5).join(", ")}</div>`;
@@ -124,16 +124,19 @@ registerCard(async ({ loadResult, labels }) => {
 registerCard(async ({ loadResult, labels }) => {
   const rows = await loadResult("templates");
   if (!rows) return null;
-  const body = document.createElement("div");
   const sel = rows.filter((r) => r.method === "centered");
-  body.append(bars(sel.map((r, i) => ({
-    label: `${(labels[r.model] || r.model).split(" ")[0]}: ${r.template.replace("{}", "…")}`,
-    value: r["r@5"],
-    tint: TINTS[[...new Set(sel.map((x) => x.model))].indexOf(r.model)],
-  })), { max: 1, format: pct }));
+  const models = [...new Set(sel.map((r) => r.model))];
+  const templates = [...new Set(sel.map((r) => r.template))];
+  const body = document.createElement("table");
+  body.innerHTML = `<thead><tr><th>Template</th>${models.map((m) => `<th>${labels[m] || m}</th>`).join("")}</tr></thead><tbody>${templates.map((t) => `
+    <tr><td>${t === "{}" ? "the word alone" : t.replace("{}", "…")}</td>${models.map((m) => {
+      const r = sel.find((x) => x.model === m && x.template === t);
+      const best = Math.max(...sel.filter((x) => x.model === m).map((x) => x["r@5"]));
+      return r ? `<td class="${r["r@5"] === best ? "best" : ""}">${pct(r["r@5"])}</td>` : "<td>–</td>";
+    }).join("")}</tr>`).join("")}</tbody>`;
   return card({
     title: "Does the prompt around a word matter?",
-    takeaway: "Each phrase wrapped in a template before embedding (“a video of …”), or averaged over all of them. Round-trip retrieval of the top 5 words, small vocabulary.",
+    takeaway: "Each phrase wrapped in a template before embedding, or averaged over all of them (ensemble). Round-trip retrieval of the top 5 words, small vocabulary, centred. Differences are within noise; each model's own documented prompt is as good as anything.",
     body,
   });
 }, 6);
