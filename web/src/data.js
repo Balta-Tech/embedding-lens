@@ -55,7 +55,7 @@ export function youtubeUrl(manifest, key) {
 
 // In development Vite proxies /api; the deployed site uses the hosted backend. Setting
 // localStorage "embedding-lens:api" (e.g. to http://localhost:8000) points it elsewhere.
-const API_HOST = "https://embedded-lens-api.balta-tech.com";
+const API_HOST = "https://embedding-lens-api.balta-tech.com";
 
 const API = (() => {
   try {
