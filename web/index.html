@@ -24,7 +24,7 @@
         <a href="#game">Play</a>
         <a href="#lab">Lab</a>
       </nav>
-      <button class="status" id="status" type="button" title="Live features need the local backend">
+      <button class="status" id="status" type="button" title="Live features need the backend">
         <span class="status-dot"></span><span class="status-text">Precomputed</span>
       </button>
     </header>
@@ -176,11 +176,11 @@
     <div class="backend-help" id="backend-help" hidden>
       <div class="backend-card">
         <h3>Live features</h3>
-        <p>Everything on this page works from precomputed results. Free-text search and scoring words outside the built-in vocabulary need the embedding models, which run on your own machine:</p>
+        <p>Everything on this page works from precomputed results. Free-text search and scoring words outside the built-in vocabulary need the embedding models, served from <code>embedded-lens-api.balta-tech.com</code>. When that is offline, run the backend yourself:</p>
         <pre><code>git clone https://github.com/Balta-Tech/embedding-lens
 cd embedding-lens && uv sync
 uv run uvicorn lens.api:app --port 8000</code></pre>
-        <p class="hint">This page looks for it at <code>http://localhost:8000</code>.</p>
+        <p class="hint">Then point this page at it from the browser console: <code>localStorage.setItem("embedding-lens:api", "http://localhost:8000")</code> and reload.</p>
         <button type="button" class="btn primary small" id="backend-close">Got it</button>
       </div>
     </div>

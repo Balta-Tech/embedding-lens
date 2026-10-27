@@ -1,4 +1,4 @@
-// Search: text to video. Presets are precomputed; free text needs the local backend.
+// Search: text to video. Presets are precomputed; free text needs the live backend.
 import { backend, formatTime, liveSearch, loadSearch, spriteUrl, timeOf, youtubeUrl } from "./data.js";
 import { offsetOf } from "./explorer.js";
 
@@ -31,7 +31,7 @@ export function createSearch(manifest, state, explorer) {
   function updateHint() {
     hint.textContent = backend.live
       ? "Live: any sentence works, embedded on your machine."
-      : "Offline: try the suggestions. Free text needs the local backend (see the status pill above).";
+      : "Offline: try the suggestions. Free text needs the live backend (see the status pill above).";
   }
 
   async function run(query) {
@@ -41,7 +41,7 @@ export function createSearch(manifest, state, explorer) {
     let scores = data.scores[query];
     if (!scores) {
       if (!backend.live) {
-        hint.textContent = "That query isn't precomputed. Start the local backend to search freely.";
+        hint.textContent = "That query isn't precomputed. Free search needs the live backend.";
         return;
       }
       hint.textContent = "Searching…";

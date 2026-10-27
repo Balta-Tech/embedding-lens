@@ -58,19 +58,22 @@ uv run python -m lens.export                        # write web/public/data
 npm install && npm run dev                          # http://localhost:5173
 ```
 
-Live features (free-text search, scoring any word in the game) need the local API; the site finds it
-on `localhost:8000`:
+Live features (free-text search, scoring any word in the game) need the API. The deployed site calls
+`https://embedded-lens-api.balta-tech.com`; `npm run dev` proxies `/api` to `localhost:8000`:
 
 ```bash
 uv run uvicorn lens.api:app --port 8000
 ```
+
+To point the deployed site at your own backend, set `localStorage["embedding-lens:api"]` (for example
+to `http://localhost:8000`) and reload.
 
 Experiments: `scripts/run_experiments.sh` (all, several hours) or
 `scripts/run_experiments.sh geometry sim_real` (some). Tests: `uv run pytest`.
 
 ## Deploy
 
-Static build served by the `embedding-lens` Cloudflare Worker ([`wrangler.jsonc`](wrangler.jsonc)).
+Static build served by the `embedding-lens` Cloudflare Worker; the API runs separately behind `embedded-lens-api.balta-tech.com` ([`wrangler.jsonc`](wrangler.jsonc)).
 Every push to `main` runs [`deploy.yml`](.github/workflows/deploy.yml): `npm ci`, `npm run build`,
 `wrangler deploy`. Requires the repository secret `CLOUDFLARE_API_TOKEN`. The generated site data
 in `web/public/data` and `web/public/media` is committed, so CI does not need the models.

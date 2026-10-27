@@ -1,4 +1,4 @@
-// Loading precomputed data, and talking to the optional local backend.
+// Loading precomputed data, and talking to the optional live backend.
 
 const cache = new Map();
 
@@ -53,20 +53,23 @@ export function youtubeUrl(manifest, key) {
 
 // --- live backend --------------------------------------------------------------------------
 
-// In development Vite proxies /api; the deployed site looks for the backend on this machine.
+// In development Vite proxies /api; the deployed site uses the hosted backend. Setting
+// localStorage "embedding-lens:api" (e.g. to http://localhost:8000) points it elsewhere.
+const API_HOST = "https://embedded-lens-api.balta-tech.com";
+
 const API = (() => {
   try {
     const override = localStorage.getItem("embedding-lens:api");
     if (override) return override;
   } catch { /* storage unavailable */ }
-  return location.hostname === "localhost" ? "" : "http://localhost:8000";
+  return location.hostname === "localhost" ? "" : API_HOST;
 })();
 
 export const backend = { live: false, listeners: new Set() };
 
 export async function detectBackend() {
   const controller = new AbortController();
-  const timer = setTimeout(() => controller.abort(), 1500);
+  const timer = setTimeout(() => controller.abort(), 4000);
   try {
     const r = await fetch(`${API}/api/health`, { signal: controller.signal });
     backend.live = r.ok;
