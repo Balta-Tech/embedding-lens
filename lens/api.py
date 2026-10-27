@@ -3,6 +3,7 @@
     uv run uvicorn lens.api:app --port 8000
 
 Models load on first use; only the text side is needed, segment vectors come from the cache.
+Reranking (/api/rerank) also needs the frames in data/frames and the reranker weights.
 """
 
 from functools import cache
@@ -16,6 +17,7 @@ from lens.config import BEST_METHOD
 from lens.index import load_segments, load_vocab
 from lens.models import MODEL_NAMES, load
 from lens.readout import METHODS, Space, softmax
+from lens.videos import all_segments
 
 DEFAULT_MODEL = "qwen3vl"
 
@@ -127,3 +129,41 @@ def search(req: SearchRequest) -> dict:
     z = (sims - sims.mean()) / (sims.std() + 1e-6)
     return {"segments": [{"key": k, "score": float(s), "z": float(zz)}
                          for k, s, zz in zip(keys, sims, z)]}
+
+
+class RerankRequest(BaseModel):
+    segment: str
+    model: str = DEFAULT_MODEL
+    tier: str = "medium"
+    k: int = Field(default=50, ge=5, le=100)
+
+
+@cache
+def _segments_by_key() -> dict:
+    return {s.key: s for s in all_segments()}
+
+
+@app.post("/api/rerank")
+def rerank(req: RerankRequest) -> dict:
+    """Second stage: Qwen3-VL-Reranker re-sorts the embedding read-out's top k for a segment.
+
+    Needs the segment's frames (data/frames) and the reranker weights on this machine.
+    """
+    method = _method(req.model, None)
+    _check(req.model, method)
+    keys, space = _space(req.model, req.tier)
+    v = space.reference[_segment_index(keys, req.segment)]
+    segment = _segments_by_key().get(req.segment)
+    if segment is None or not segment.frames:
+        raise HTTPException(503, "this backend has no frames for that segment")
+    words = [p for p, _ in space.top(v, req.k, method)]
+    scores = _reranker().score(segment, words)
+    order = np.argsort(-scores)
+    return {"k": req.k, "ranked": [[words[j], float(scores[j]), int(j) + 1] for j in order]}
+
+
+@cache
+def _reranker():
+    from lens.rerank import Reranker
+
+    return Reranker()
