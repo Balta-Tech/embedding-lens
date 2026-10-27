@@ -1,0 +1,3860 @@
+{
+  "gemma2": {
+    "zugspitze:3": {
+      "raw": [
+        "cave",
+        "cave myotis",
+        "crevasse",
+        "grotto",
+        "mountain path"
+      ],
+      "null": [
+        "rope bridge",
+        "railroad tunnel",
+        "climbing fumitory",
+        "grotto",
+        "cave myotis"
+      ],
+      "prior": [
+        "grotto",
+        "cave myotis",
+        "cave",
+        "sea cave",
+        "darkness"
+      ],
+      "centered": [
+        "grotto",
+        "cave",
+        "cave myotis",
+        "sea cave",
+        "ice cave"
+      ],
+      "centered_csls": [
+        "grotto",
+        "cave",
+        "cave myotis",
+        "night bell",
+        "sea cave"
+      ],
+      "centered_csls@0.25": [
+        "grotto",
+        "cave",
+        "cave myotis",
+        "sea cave",
+        "night bell"
+      ],
+      "sparse": [
+        "cave",
+        "night porter",
+        "kelp greenling",
+        "grotto",
+        "pleurothallis"
+      ],
+      "raw/small": [
+        "cave",
+        "grotto",
+        "mountain path",
+        "sea cave",
+        "ice cave"
+      ],
+      "prior/small": [
+        "grotto",
+        "cave",
+        "sea cave",
+        "darkness",
+        "ice cave"
+      ],
+      "centered/small": [
+        "grotto",
+        "cave",
+        "sea cave",
+        "ice cave",
+        "darkness"
+      ],
+      "sparse/small": [
+        "cave",
+        "darkness",
+        "hiker",
+        "grotto",
+        "night market"
+      ],
+      "raw/large": [
+        "lurking place",
+        "catacala",
+        "cave",
+        "cave myotis",
+        "cave in"
+      ],
+      "prior/large": [
+        "lurking place",
+        "nightwalker",
+        "grotto",
+        "cave myotis",
+        "fingal's cave"
+      ],
+      "centered/large": [
+        "grotto",
+        "cave myotis",
+        "cave",
+        "lurking place",
+        "nightwalker"
+      ],
+      "sparse/large": [
+        "grotto",
+        "pyrola uniflora",
+        "nightwalker",
+        "speleologist",
+        "luridness"
+      ]
+    },
+    "zugspitze:13": {
+      "raw": [
+        "mountain path",
+        "mountain pass",
+        "alpenstock",
+        "hike",
+        "hiker"
+      ],
+      "null": [
+        "mountain path",
+        "crossing river",
+        "hiking equipment",
+        "mountaineering bag",
+        "towpath"
+      ],
+      "prior": [
+        "mountain path",
+        "hike",
+        "hiker",
+        "backpacker",
+        "forest path"
+      ],
+      "centered": [
+        "mountain path",
+        "hiker",
+        "hike",
+        "backpacker",
+        "forest path"
+      ],
+      "centered_csls": [
+        "waterfall",
+        "mountain path",
+        "hike",
+        "backpacker",
+        "hiker"
+      ],
+      "centered_csls@0.25": [
+        "mountain path",
+        "hiker",
+        "hike",
+        "backpacker",
+        "waterfall"
+      ],
+      "sparse": [
+        "mountain path",
+        "backpacker",
+        "walking cane",
+        "waterfall",
+        "acidophilus milk"
+      ],
+      "raw/small": [
+        "mountain path",
+        "mountain pass",
+        "hike",
+        "hiker",
+        "mountaineer"
+      ],
+      "prior/small": [
+        "mountain path",
+        "hike",
+        "hiker",
+        "forest path",
+        "hiking equipment"
+      ],
+      "centered/small": [
+        "mountain path",
+        "hiker",
+        "hike",
+        "forest path",
+        "waterfall"
+      ],
+      "sparse/small": [
+        "mountain path",
+        "waterfall",
+        "walking cane",
+        "mineral water",
+        "business woman"
+      ],
+      "raw/large": [
+        "mountain path",
+        "mountain trail",
+        "brenner pass",
+        "mountain pass",
+        "alpenstock"
+      ],
+      "prior/large": [
+        "mountain trail",
+        "mountain path",
+        "kukenaam falls",
+        "horseshoe falls",
+        "backpacking"
+      ],
+      "centered/large": [
+        "mountain path",
+        "mountain trail",
+        "hiker",
+        "hike",
+        "backpacker"
+      ],
+      "sparse/large": [
+        "mountain path",
+        "rana cascadae",
+        "meniere's disease",
+        "marie grosholtz",
+        "walking cane"
+      ]
+    },
+    "zugspitze:28": {
+      "raw": [
+        "ridge rope",
+        "abseiling",
+        "crevasse",
+        "abseiler",
+        "mountain path"
+      ],
+      "null": [
+        "rope bridge",
+        "ridge rope",
+        "abseiling",
+        "belay",
+        "climbing fumitory"
+      ],
+      "prior": [
+        "ridge rope",
+        "rope bridge",
+        "abseiling",
+        "escarpment",
+        "funambulism"
+      ],
+      "centered": [
+        "ridge rope",
+        "rope bridge",
+        "abseiling",
+        "escarpment",
+        "ropewalker"
+      ],
+      "centered_csls": [
+        "ridge rope",
+        "rope bridge",
+        "escarpment",
+        "abseiling",
+        "railway line"
+      ],
+      "centered_csls@0.25": [
+        "ridge rope",
+        "rope bridge",
+        "escarpment",
+        "abseiling",
+        "ropewalker"
+      ],
+      "sparse": [
+        "ridge rope",
+        "grindelia robusta",
+        "chain tongs",
+        "funambulist",
+        "crevasse"
+      ],
+      "raw/small": [
+        "mountain path",
+        "ledge",
+        "rope bridge",
+        "cliff",
+        "outcrop"
+      ],
+      "prior/small": [
+        "rope bridge",
+        "railway line",
+        "rock face",
+        "ledge",
+        "mountain path"
+      ],
+      "centered/small": [
+        "rope bridge",
+        "ledge",
+        "mountain path",
+        "cliff",
+        "rock face"
+      ],
+      "sparse/small": [
+        "rope bridge",
+        "cliff",
+        "ladder",
+        "enamel",
+        "sundial"
+      ],
+      "raw/large": [
+        "ridge rope",
+        "tightrope",
+        "guide rope",
+        "abseil",
+        "abseiling"
+      ],
+      "prior/large": [
+        "ridge rope",
+        "rope bridge",
+        "tightrope",
+        "bungee cord",
+        "tightrope walking"
+      ],
+      "centered/large": [
+        "ridge rope",
+        "tightrope",
+        "rope bridge",
+        "climbing iron",
+        "rope ladder"
+      ],
+      "sparse/large": [
+        "ridge rope",
+        "genus grindelia",
+        "ski trail",
+        "solitary confinement",
+        "high-handedness"
+      ]
+    },
+    "zugspitze:50": {
+      "raw": [
+        "ice ax",
+        "abseiler",
+        "alpenstock",
+        "alpinist",
+        "ice climbing"
+      ],
+      "null": [
+        "ski boot",
+        "ice climbing",
+        "ski equipment",
+        "ice ax",
+        "belay"
+      ],
+      "prior": [
+        "ice ax",
+        "ice climbing",
+        "ski boot",
+        "alpine glacier",
+        "polar glacier"
+      ],
+      "centered": [
+        "ice ax",
+        "ice climbing",
+        "alpenstock",
+        "polar glacier",
+        "ice bag"
+      ],
+      "centered_csls": [
+        "ice ax",
+        "ice climbing",
+        "ski pole",
+        "alpenstock",
+        "ski equipment"
+      ],
+      "centered_csls@0.25": [
+        "ice ax",
+        "ice climbing",
+        "alpenstock",
+        "ski pole",
+        "polar glacier"
+      ],
+      "sparse": [
+        "ice ax",
+        "ski boot",
+        "osteocyte",
+        "climbing corydalis",
+        "crackle"
+      ],
+      "raw/small": [
+        "mountaineer",
+        "ski pole",
+        "mountain path",
+        "outcrop",
+        "climb mountain"
+      ],
+      "prior/small": [
+        "ski boot",
+        "ice bag",
+        "ski equipment",
+        "sea ice",
+        "ice shelf"
+      ],
+      "centered/small": [
+        "ice bag",
+        "ski boot",
+        "ski pole",
+        "ski equipment",
+        "hiking equipment"
+      ],
+      "sparse/small": [
+        "ice bag",
+        "ski boot",
+        "topping",
+        "rock face",
+        "hiker"
+      ],
+      "raw/large": [
+        "ice ax",
+        "ice axe",
+        "piolet",
+        "climbing boneset",
+        "abseiler"
+      ],
+      "prior/large": [
+        "ice axe",
+        "pack ice",
+        "ice ax",
+        "ice climbing",
+        "piolet"
+      ],
+      "centered/large": [
+        "ice axe",
+        "ice ax",
+        "pack ice",
+        "glacial boulder",
+        "ice climbing"
+      ],
+      "sparse/large": [
+        "ice axe",
+        "lepidothamnus fonkii",
+        "renal calculus",
+        "crackle",
+        "freezing point"
+      ]
+    },
+    "zugspitze:61": {
+      "raw": [
+        "abseiler",
+        "alpinist",
+        "ice ax",
+        "mountaineering bag",
+        "crampon"
+      ],
+      "null": [
+        "ski boot",
+        "ice climbing",
+        "hiking equipment",
+        "mountaineering bag",
+        "ice bag"
+      ],
+      "prior": [
+        "ice bag",
+        "hiking equipment",
+        "ski boot",
+        "mountaineering bag",
+        "ice climbing"
+      ],
+      "centered": [
+        "ice bag",
+        "mountaineering bag",
+        "ice ax",
+        "ice climbing",
+        "hiking equipment"
+      ],
+      "centered_csls": [
+        "ice bag",
+        "mountaineering bag",
+        "hiking equipment",
+        "gaiter",
+        "personal flotation device"
+      ],
+      "centered_csls@0.25": [
+        "ice bag",
+        "mountaineering bag",
+        "ice ax",
+        "hiking equipment",
+        "ice climbing"
+      ],
+      "sparse": [
+        "ice bag",
+        "ornithologist",
+        "ski boot",
+        "crevasse",
+        "alpinist"
+      ],
+      "raw/small": [
+        "mountaineering bag",
+        "mountaineer",
+        "ice bag",
+        "ledge",
+        "climber"
+      ],
+      "prior/small": [
+        "ice bag",
+        "hiking equipment",
+        "ski boot",
+        "mountaineering bag",
+        "personal flotation device"
+      ],
+      "centered/small": [
+        "ice bag",
+        "mountaineering bag",
+        "hiking equipment",
+        "ski boot",
+        "hiking boot"
+      ],
+      "sparse/small": [
+        "ice bag",
+        "ski boot",
+        "climber",
+        "paste",
+        "stone carving"
+      ],
+      "raw/large": [
+        "piolet",
+        "abseiler",
+        "pack ice",
+        "ice axe",
+        "alpinist"
+      ],
+      "prior/large": [
+        "pack ice",
+        "ice axe",
+        "ice bag",
+        "piolet",
+        "speleologist"
+      ],
+      "centered/large": [
+        "ice axe",
+        "pack ice",
+        "ice bag",
+        "speleologist",
+        "piolet"
+      ],
+      "sparse/large": [
+        "pack ice",
+        "speleologist",
+        "commiphora myrrha",
+        "golgi's cell",
+        "ice axe"
+      ]
+    },
+    "zugspitze:88": {
+      "raw": [
+        "alpinist",
+        "mountaineer",
+        "abseiler",
+        "pinnacle",
+        "extremum"
+      ],
+      "null": [
+        "abseiler",
+        "alpenstock",
+        "belay",
+        "climb mountain",
+        "climbing fumitory"
+      ],
+      "prior": [
+        "totem pole",
+        "alpinist",
+        "pinnacle",
+        "edelweiss",
+        "giant"
+      ],
+      "centered": [
+        "totem pole",
+        "alpinist",
+        "edelweiss",
+        "pinnacle",
+        "rock climber"
+      ],
+      "centered_csls": [
+        "totem pole",
+        "giant",
+        "trophy",
+        "royal mast",
+        "sticker"
+      ],
+      "centered_csls@0.25": [
+        "totem pole",
+        "giant",
+        "trophy",
+        "royal mast",
+        "edelweiss"
+      ],
+      "sparse": [
+        "pinnacle",
+        "totem pole",
+        "weissbier",
+        "chalice vine",
+        "litterbin"
+      ],
+      "raw/small": [
+        "mountaineer",
+        "summit",
+        "rock climber",
+        "spike",
+        "climber"
+      ],
+      "prior/small": [
+        "totem pole",
+        "rock climber",
+        "mountaineer",
+        "trophy",
+        "obelisk"
+      ],
+      "centered/small": [
+        "totem pole",
+        "rock climber",
+        "trophy",
+        "mountaineer",
+        "climber"
+      ],
+      "sparse/small": [
+        "totem pole",
+        "summit",
+        "sticker",
+        "beer",
+        "climber"
+      ],
+      "raw/large": [
+        "apex of the sun's way",
+        "alpinist",
+        "mount bartle frere",
+        "mountaineer",
+        "abseiler"
+      ],
+      "prior/large": [
+        "north peak",
+        "totem pole",
+        "pobedy peak",
+        "jakob liebmann beer",
+        "pillar of strength"
+      ],
+      "centered/large": [
+        "totem pole",
+        "pillar of strength",
+        "alpinist",
+        "north peak",
+        "jakob liebmann beer"
+      ],
+      "sparse/large": [
+        "pinnacle",
+        "totem pole",
+        "jakob liebmann beer",
+        "saussurea",
+        "international wanted notice"
+      ]
+    },
+    "wetterstein:20": {
+      "raw": [
+        "mountain path",
+        "crevice",
+        "crevasse",
+        "mountainside",
+        "mountain pass"
+      ],
+      "null": [
+        "mountain path",
+        "climbing fumitory",
+        "abseiling",
+        "mountain pass",
+        "climb mountain"
+      ],
+      "prior": [
+        "rock face",
+        "mountainside",
+        "mountain path",
+        "rock formation",
+        "hike"
+      ],
+      "centered": [
+        "rock face",
+        "mountainside",
+        "mountain path",
+        "crevice",
+        "cliff"
+      ],
+      "centered_csls": [
+        "rock face",
+        "mountainside",
+        "crevice",
+        "outdoors",
+        "cliff"
+      ],
+      "centered_csls@0.25": [
+        "rock face",
+        "mountainside",
+        "mountain path",
+        "crevice",
+        "cliff"
+      ],
+      "sparse": [
+        "rock face",
+        "hike",
+        "brotula",
+        "cupboard",
+        "deer grass"
+      ],
+      "raw/small": [
+        "mountain path",
+        "mountain pass",
+        "rock face",
+        "cliff",
+        "outcrop"
+      ],
+      "prior/small": [
+        "rock face",
+        "mountain path",
+        "rock formation",
+        "hike",
+        "cliff"
+      ],
+      "centered/small": [
+        "rock face",
+        "mountain path",
+        "cliff",
+        "hike",
+        "rock formation"
+      ],
+      "sparse/small": [
+        "rock face",
+        "hike",
+        "debris",
+        "keyboard",
+        "underclothes"
+      ],
+      "raw/large": [
+        "mountain path",
+        "mountain trail",
+        "high ground",
+        "crevice",
+        "crevasse"
+      ],
+      "prior/large": [
+        "rock face",
+        "mountain trail",
+        "mountainside",
+        "mountain path",
+        "climbing"
+      ],
+      "centered/large": [
+        "rock face",
+        "mountain trail",
+        "mountainside",
+        "mountain path",
+        "rock outcrop"
+      ],
+      "sparse/large": [
+        "rock face",
+        "mountain trail",
+        "genus prionace",
+        "groschen",
+        "thoracic medicine"
+      ]
+    },
+    "kart:20": {
+      "raw": [
+        "go-kart",
+        "karting",
+        "raceway",
+        "performance arena",
+        "checking tires"
+      ],
+      "null": [
+        "karting",
+        "go-kart",
+        "raceway",
+        "golfcart",
+        "race track"
+      ],
+      "prior": [
+        "karting",
+        "go-kart",
+        "bowling alley",
+        "raceway",
+        "club car"
+      ],
+      "centered": [
+        "karting",
+        "go-kart",
+        "bowling alley",
+        "raceway",
+        "club car"
+      ],
+      "centered_csls": [
+        "karting",
+        "go-kart",
+        "bowling alley",
+        "hippodrome",
+        "raceway"
+      ],
+      "centered_csls@0.25": [
+        "karting",
+        "go-kart",
+        "bowling alley",
+        "raceway",
+        "club car"
+      ],
+      "sparse": [
+        "karting",
+        "paper mill",
+        "girlfriend",
+        "steering wheel",
+        "scorekeeper"
+      ],
+      "raw/small": [
+        "karting",
+        "raceway",
+        "performance arena",
+        "obstacle course",
+        "race track"
+      ],
+      "prior/small": [
+        "karting",
+        "bowling alley",
+        "raceway",
+        "race track",
+        "bowling"
+      ],
+      "centered/small": [
+        "karting",
+        "bowling alley",
+        "raceway",
+        "race track",
+        "golf cart"
+      ],
+      "sparse/small": [
+        "karting",
+        "steering wheel",
+        "pavilion",
+        "couple",
+        "barista"
+      ],
+      "raw/large": [
+        "go-cart",
+        "go-kart",
+        "karting",
+        "wheeling",
+        "raceway"
+      ],
+      "prior/large": [
+        "karting",
+        "go-kart",
+        "go-cart",
+        "bowling alley",
+        "driving range"
+      ],
+      "centered/large": [
+        "karting",
+        "go-kart",
+        "go-cart",
+        "bowling alley",
+        "raceway"
+      ],
+      "sparse/large": [
+        "karting",
+        "learner's permit",
+        "daugavpils",
+        "party to the action",
+        "telegraph plant"
+      ]
+    },
+    "f16:9": {
+      "raw": [
+        "cluster bomb",
+        "power takeoff",
+        "wing",
+        "horizontal tail",
+        "landing flap"
+      ],
+      "null": [
+        "power takeoff",
+        "wing commander",
+        "fighter pilot",
+        "ejection seat",
+        "aileron"
+      ],
+      "prior": [
+        "power takeoff",
+        "tanker plane",
+        "wing commander",
+        "flight simulator",
+        "cluster bomb"
+      ],
+      "centered": [
+        "power takeoff",
+        "ramjet",
+        "tanker plane",
+        "cluster bomb",
+        "wing"
+      ],
+      "centered_csls": [
+        "chicken hawk",
+        "power takeoff",
+        "wing",
+        "ramjet",
+        "cluster bomb"
+      ],
+      "centered_csls@0.25": [
+        "power takeoff",
+        "ramjet",
+        "cluster bomb",
+        "wing",
+        "tanker plane"
+      ],
+      "sparse": [
+        "fragmentation bomb",
+        "power takeoff",
+        "gamecock",
+        "anglewing",
+        "string cheese"
+      ],
+      "raw/small": [
+        "wing",
+        "falcon",
+        "tail",
+        "takeoff",
+        "shotgun"
+      ],
+      "prior/small": [
+        "fighter jet",
+        "takeoff",
+        "missile",
+        "wing",
+        "bomb"
+      ],
+      "centered/small": [
+        "wing",
+        "fighter jet",
+        "takeoff",
+        "missile",
+        "chicken wing"
+      ],
+      "sparse/small": [
+        "fighter jet",
+        "wing",
+        "bomb",
+        "string cheese",
+        "pelican"
+      ],
+      "raw/large": [
+        "tailspin",
+        "cluster bomb",
+        "airplane maneuver",
+        "wing loading",
+        "power takeoff"
+      ],
+      "prior/large": [
+        "shoot-down",
+        "takeoff booster",
+        "power takeoff",
+        "naval air warfare center weapons division",
+        "fusion bomb"
+      ],
+      "centered/large": [
+        "jdam",
+        "naval air warfare center weapons division",
+        "shoot-down",
+        "power takeoff",
+        "takeoff booster"
+      ],
+      "sparse/large": [
+        "tailspin",
+        "naval air warfare center weapons division",
+        "fat hen",
+        "jdam",
+        "yellow rocket"
+      ]
+    },
+    "f16:18": {
+      "raw": [
+        "pilot whale",
+        "thruster",
+        "testacean",
+        "pilot bit",
+        "openside plane"
+      ],
+      "null": [
+        "pitot tube",
+        "fighter pilot",
+        "fighter jet",
+        "ejection seat",
+        "wing commander"
+      ],
+      "prior": [
+        "fighter jet",
+        "naval missile",
+        "stealth fighter",
+        "flight simulator",
+        "cruise missile"
+      ],
+      "centered": [
+        "fighter jet",
+        "ramjet",
+        "naval missile",
+        "stealth fighter",
+        "lighter-than-air craft"
+      ],
+      "centered_csls": [
+        "whitetip shark",
+        "ocean",
+        "naval missile",
+        "mackerel shark",
+        "amberjack"
+      ],
+      "centered_csls@0.25": [
+        "fighter jet",
+        "naval missile",
+        "ramjet",
+        "mackerel shark",
+        "aerial torpedo"
+      ],
+      "sparse": [
+        "fighter jet",
+        "pacific cod",
+        "flight simulator",
+        "manta",
+        "white russian"
+      ],
+      "raw/small": [
+        "gulf",
+        "landing",
+        "falcon",
+        "wing",
+        "fighter jet"
+      ],
+      "prior/small": [
+        "fighter jet",
+        "aircraft carrier",
+        "warship",
+        "missile",
+        "space shuttle"
+      ],
+      "centered/small": [
+        "fighter jet",
+        "aircraft carrier",
+        "plane",
+        "warship",
+        "space shuttle"
+      ],
+      "sparse/small": [
+        "fighter jet",
+        "tropic",
+        "rum",
+        "eraser",
+        "coast"
+      ],
+      "raw/large": [
+        "fly-by",
+        "airplane maneuver",
+        "combat pilot",
+        "flight maneuver",
+        "tailspin"
+      ],
+      "prior/large": [
+        "fighter jet",
+        "fighter aircraft",
+        "territorial waters",
+        "naval missile",
+        "stealth fighter"
+      ],
+      "centered/large": [
+        "fighter jet",
+        "fighter aircraft",
+        "territorial waters",
+        "squadron",
+        "gbu-28"
+      ],
+      "sparse/large": [
+        "fighter jet",
+        "flypast",
+        "pacific cod",
+        "scomberomorus regalis",
+        "aegadean isles"
+      ]
+    },
+    "assetto:13": {
+      "raw": [
+        "companionway",
+        "night raven",
+        "night rider",
+        "chicane",
+        "carriageway"
+      ],
+      "null": [
+        "interchange",
+        "autostrada",
+        "carriageway",
+        "autobahn",
+        "highway"
+      ],
+      "prior": [
+        "traffic jam",
+        "carriageway",
+        "highway",
+        "interchange",
+        "night rider"
+      ],
+      "centered": [
+        "highway",
+        "carriageway",
+        "traffic jam",
+        "night rider",
+        "interchange"
+      ],
+      "centered_csls": [
+        "highway",
+        "interchange",
+        "divided highway",
+        "carriageway",
+        "superhighway"
+      ],
+      "centered_csls@0.25": [
+        "highway",
+        "carriageway",
+        "interchange",
+        "divided highway",
+        "traffic jam"
+      ],
+      "sparse": [
+        "highway",
+        "sedan",
+        "night bird",
+        "costumer film designer",
+        "illuminate"
+      ],
+      "raw/small": [
+        "highway",
+        "coupe",
+        "chase",
+        "avenue",
+        "crossroad"
+      ],
+      "prior/small": [
+        "traffic jam",
+        "highway",
+        "traffic congestion",
+        "traffic",
+        "brake light"
+      ],
+      "centered/small": [
+        "highway",
+        "traffic jam",
+        "avenue",
+        "sedan",
+        "brake light"
+      ],
+      "sparse/small": [
+        "highway",
+        "sedan",
+        "illuminate",
+        "costumer film designer",
+        "spaghetti"
+      ],
+      "raw/large": [
+        "fast lane",
+        "highroad",
+        "thruway",
+        "nightrider",
+        "companionway"
+      ],
+      "prior/large": [
+        "slow lane",
+        "vehicular traffic",
+        "fast lane",
+        "vehicle traffic",
+        "traffic jam"
+      ],
+      "centered/large": [
+        "slow lane",
+        "highway",
+        "fast lane",
+        "vehicular traffic",
+        "carriageway"
+      ],
+      "sparse/large": [
+        "slow lane",
+        "night bird",
+        "box girder bridge",
+        "quintuple",
+        "maraschino"
+      ]
+    },
+    "trex:10": {
+      "raw": [
+        "net",
+        "mew",
+        "emu",
+        "bug",
+        "tinter"
+      ],
+      "null": [
+        "black-winged stilt",
+        "black-necked stilt",
+        "white-headed stilt",
+        "mailsorter",
+        "modem"
+      ],
+      "prior": [
+        "modem",
+        "number icon",
+        "computer screen",
+        "acoustic modem",
+        "intelnet"
+      ],
+      "centered": [
+        "intelnet",
+        "modem",
+        "acoustic modem",
+        "number icon",
+        "computer screen"
+      ],
+      "centered_csls": [
+        "number icon",
+        "intelnet",
+        "browser",
+        "walrus",
+        "flickertail"
+      ],
+      "centered_csls@0.25": [
+        "intelnet",
+        "modem",
+        "number icon",
+        "browser",
+        "computer screen"
+      ],
+      "sparse": [
+        "intelnet",
+        "tenrec",
+        "number icon",
+        "skinny-dipper",
+        "web site"
+      ],
+      "raw/small": [
+        "net",
+        "bug",
+        "jackcrab",
+        "hen",
+        "heron"
+      ],
+      "prior/small": [
+        "number icon",
+        "computer screen",
+        "cartoon style",
+        "bug",
+        "net"
+      ],
+      "centered/small": [
+        "number icon",
+        "computer screen",
+        "net",
+        "walrus",
+        "cartoon style"
+      ],
+      "sparse/small": [
+        "walrus",
+        "number icon",
+        "computer screen",
+        "net",
+        "noodle"
+      ],
+      "raw/large": [
+        "ninib",
+        "coturnix coturnix",
+        "nisus",
+        "inh",
+        "zig"
+      ],
+      "prior/large": [
+        "netscape",
+        "internet explorer",
+        "wifi",
+        "modem",
+        "nothing"
+      ],
+      "centered/large": [
+        "netscape",
+        "internet explorer",
+        "ninib",
+        "www",
+        "intelnet"
+      ],
+      "sparse/large": [
+        "netscape",
+        "genus phoeniculus",
+        "ghz",
+        "inanimateness",
+        "ninib"
+      ]
+    }
+  },
+  "siglip2": {
+    "zugspitze:3": {
+      "raw": [
+        "cave",
+        "cavern",
+        "crevice",
+        "chasm",
+        "tunnel"
+      ],
+      "null": [
+        "cave myotis",
+        "cave",
+        "ice cave",
+        "sea cave",
+        "cavern"
+      ],
+      "prior": [
+        "cave myotis",
+        "sea cave",
+        "burial chamber",
+        "cave",
+        "great bowerbird"
+      ],
+      "centered": [
+        "cave",
+        "sea cave",
+        "cavern",
+        "cave myotis",
+        "darkness"
+      ],
+      "centered_csls": [
+        "sea cave",
+        "cave",
+        "cave myotis",
+        "cavern",
+        "darkness"
+      ],
+      "centered_csls@0.25": [
+        "cave",
+        "sea cave",
+        "cave myotis",
+        "cavern",
+        "darkness"
+      ],
+      "sparse": [
+        "cave",
+        "horror film",
+        "flashlight fish",
+        "stream orchid",
+        "false rue anemone"
+      ],
+      "raw/small": [
+        "cave",
+        "tunnel",
+        "grotto",
+        "darkness",
+        "sea cave"
+      ],
+      "prior/small": [
+        "sea cave",
+        "burial chamber",
+        "cave",
+        "ice cave",
+        "catacomb"
+      ],
+      "centered/small": [
+        "cave",
+        "sea cave",
+        "darkness",
+        "night",
+        "burial chamber"
+      ],
+      "sparse/small": [
+        "cave",
+        "night",
+        "horror film",
+        "terrarium",
+        "water pipe"
+      ],
+      "raw/large": [
+        "cave in",
+        "cave",
+        "cavern",
+        "cave dweller",
+        "grot"
+      ],
+      "prior/large": [
+        "mammoth cave national park",
+        "cave myotis",
+        "cave dweller",
+        "empty tomb",
+        "sea cave"
+      ],
+      "centered/large": [
+        "cave",
+        "cave in",
+        "sea cave",
+        "cave dweller",
+        "cavern"
+      ],
+      "sparse/large": [
+        "cave",
+        "the irish famine",
+        "clintonia borealis",
+        "night blindness",
+        "light pen"
+      ]
+    },
+    "zugspitze:13": {
+      "raw": [
+        "hiker",
+        "mountain path",
+        "flume",
+        "gully",
+        "hike"
+      ],
+      "null": [
+        "flume",
+        "rope bridge",
+        "hiker",
+        "mountain path",
+        "mountaineering bag"
+      ],
+      "prior": [
+        "mountain path",
+        "hiker",
+        "mountain stream",
+        "flume",
+        "mountain river"
+      ],
+      "centered": [
+        "hiker",
+        "mountain path",
+        "mountain stream",
+        "mountain river",
+        "waterfall"
+      ],
+      "centered_csls": [
+        "waterfall",
+        "hiker",
+        "nullah",
+        "mountain river",
+        "mountain stream"
+      ],
+      "centered_csls@0.25": [
+        "hiker",
+        "mountain stream",
+        "waterfall",
+        "mountain river",
+        "mountain path"
+      ],
+      "sparse": [
+        "hiker",
+        "nullah",
+        "rope bridge",
+        "nettle-leaved goosefoot",
+        "chamois"
+      ],
+      "raw/small": [
+        "hiker",
+        "mountain path",
+        "hike",
+        "trail",
+        "ravine"
+      ],
+      "prior/small": [
+        "mountain path",
+        "hiker",
+        "mountain stream",
+        "mountain river",
+        "rope bridge"
+      ],
+      "centered/small": [
+        "hiker",
+        "mountain path",
+        "mountain stream",
+        "mountain river",
+        "waterfall"
+      ],
+      "sparse/small": [
+        "hiker",
+        "raincoat",
+        "waterfall",
+        "suspension bridge",
+        "narrow"
+      ],
+      "raw/large": [
+        "hiking",
+        "hiker",
+        "mountain path",
+        "flume",
+        "chute"
+      ],
+      "prior/large": [
+        "hiking",
+        "mountain path",
+        "hiker",
+        "mountain stream",
+        "backpacking"
+      ],
+      "centered/large": [
+        "hiking",
+        "hiker",
+        "backpacking",
+        "mountain path",
+        "mountain stream"
+      ],
+      "sparse/large": [
+        "hiking",
+        "valle d'aosta",
+        "flume",
+        "old woman",
+        "aiguilette"
+      ]
+    },
+    "zugspitze:28": {
+      "raw": [
+        "ridge rope",
+        "abseiling",
+        "crag",
+        "precipice",
+        "rock climbing"
+      ],
+      "null": [
+        "abseiling",
+        "rope bridge",
+        "buttress",
+        "rock climbing",
+        "rock climber"
+      ],
+      "prior": [
+        "abseiling",
+        "rock climbing",
+        "rock climber",
+        "climbing a rope",
+        "keyhole saw"
+      ],
+      "centered": [
+        "rock climbing",
+        "rock climber",
+        "rock face",
+        "buttress",
+        "abseiling"
+      ],
+      "centered_csls": [
+        "rock face",
+        "abseiling",
+        "rock climbing",
+        "rock climber",
+        "keyhole saw"
+      ],
+      "centered_csls@0.25": [
+        "rock climbing",
+        "rock face",
+        "rock climber",
+        "abseiling",
+        "buttress"
+      ],
+      "sparse": [
+        "rock climbing",
+        "long beech fern",
+        "keyhole saw",
+        "cordage",
+        "stonecress"
+      ],
+      "raw/small": [
+        "rock climbing",
+        "ledge",
+        "rock climber",
+        "rock face",
+        "cliff"
+      ],
+      "prior/small": [
+        "rock climbing",
+        "rock climber",
+        "rock face",
+        "rope bridge",
+        "outcrop"
+      ],
+      "centered/small": [
+        "rock climbing",
+        "rock climber",
+        "rock face",
+        "outcrop",
+        "rock formation"
+      ],
+      "sparse/small": [
+        "rope",
+        "outcrop",
+        "hiker",
+        "needle",
+        "rock climbing"
+      ],
+      "raw/large": [
+        "ridge rope",
+        "abseiling",
+        "crag",
+        "clamber",
+        "climbing hemp-vine"
+      ],
+      "prior/large": [
+        "rope ladder",
+        "climbing hemp-vine",
+        "abseiling",
+        "rock climbing",
+        "phleum pratense"
+      ],
+      "centered/large": [
+        "rock climbing",
+        "rock face",
+        "rock climber",
+        "buttress",
+        "climbing hemp-vine"
+      ],
+      "sparse/large": [
+        "rock climbing",
+        "hieracium praealtum",
+        "mizen",
+        "cordage",
+        "jacob's staff"
+      ]
+    },
+    "zugspitze:50": {
+      "raw": [
+        "ice climbing",
+        "ice ax",
+        "crampon",
+        "crevasse",
+        "icecap"
+      ],
+      "null": [
+        "ice climbing",
+        "ice ax",
+        "alpinist",
+        "ice shelf",
+        "piedmont glacier"
+      ],
+      "prior": [
+        "ice climbing",
+        "ice shelf",
+        "sea ice",
+        "shoveling snow",
+        "ice fishing"
+      ],
+      "centered": [
+        "sea ice",
+        "ice shelf",
+        "ice climbing",
+        "ice floe",
+        "shoveling snow"
+      ],
+      "centered_csls": [
+        "sea ice",
+        "ice floe",
+        "ice shelf",
+        "shoveling snow",
+        "ice fishing"
+      ],
+      "centered_csls@0.25": [
+        "sea ice",
+        "ice shelf",
+        "ice floe",
+        "ice climbing",
+        "shoveling snow"
+      ],
+      "sparse": [
+        "sea ice",
+        "shoveling snow",
+        "hiker",
+        "tunicate",
+        "hip boot"
+      ],
+      "raw/small": [
+        "snowfield",
+        "hiker",
+        "ice floe",
+        "mountaineer",
+        "ice shelf"
+      ],
+      "prior/small": [
+        "ice shelf",
+        "sea ice",
+        "ice floe",
+        "skiing shoes",
+        "tide pool"
+      ],
+      "centered/small": [
+        "sea ice",
+        "ice shelf",
+        "ice floe",
+        "snow",
+        "skiing shoes"
+      ],
+      "sparse/small": [
+        "sea ice",
+        "hiker",
+        "foam",
+        "excavation",
+        "wetsuit"
+      ],
+      "raw/large": [
+        "ice axe",
+        "ice climbing",
+        "ice ax",
+        "frost heave",
+        "avalanche"
+      ],
+      "prior/large": [
+        "ice climbing",
+        "ice shelf",
+        "chadar",
+        "sea ice",
+        "lake eyre"
+      ],
+      "centered/large": [
+        "sea ice",
+        "ice shelf",
+        "ice climbing",
+        "ice floe",
+        "pack ice"
+      ],
+      "sparse/large": [
+        "sea ice",
+        "hiker",
+        "shoveling snow",
+        "osteoclast",
+        "detritus"
+      ]
+    },
+    "zugspitze:61": {
+      "raw": [
+        "crampon",
+        "crevasse",
+        "ice climbing",
+        "alpinist",
+        "ice ax"
+      ],
+      "null": [
+        "ice climbing",
+        "mountaineering bag",
+        "ice ax",
+        "crampon",
+        "crevasse"
+      ],
+      "prior": [
+        "ice climbing",
+        "mountaineering bag",
+        "crevasse",
+        "hiking boot",
+        "ice cave"
+      ],
+      "centered": [
+        "ice climbing",
+        "mountaineering bag",
+        "hiking boot",
+        "hiker",
+        "ice cave"
+      ],
+      "centered_csls": [
+        "mountaineering bag",
+        "ice climbing",
+        "hiking boot",
+        "geologist",
+        "spacesuit"
+      ],
+      "centered_csls@0.25": [
+        "ice climbing",
+        "mountaineering bag",
+        "hiking boot",
+        "geologist",
+        "crevasse"
+      ],
+      "sparse": [
+        "ice climbing",
+        "hiking boot",
+        "cadaver",
+        "paleolith",
+        "burn bag"
+      ],
+      "raw/small": [
+        "mountaineering bag",
+        "mountaineer",
+        "hiker",
+        "climber",
+        "rock climber"
+      ],
+      "prior/small": [
+        "mountaineering bag",
+        "hiking boot",
+        "ice cave",
+        "rock climber",
+        "ice shelf"
+      ],
+      "centered/small": [
+        "mountaineering bag",
+        "hiking boot",
+        "hiker",
+        "hiking equipment",
+        "rock climber"
+      ],
+      "sparse/small": [
+        "worker",
+        "cave",
+        "hiking boot",
+        "mountaineering bag",
+        "ice shelf"
+      ],
+      "raw/large": [
+        "crampon",
+        "speleologist",
+        "crevasse",
+        "mountaineering",
+        "ice axe"
+      ],
+      "prior/large": [
+        "ice climbing",
+        "atacama trench",
+        "ice axe",
+        "mount whitney",
+        "mountaineering bag"
+      ],
+      "centered/large": [
+        "mountaineering",
+        "ice climbing",
+        "speleologist",
+        "mountaineering bag",
+        "hiking boot"
+      ],
+      "sparse/large": [
+        "mountaineering",
+        "human remains pouch",
+        "speleologist",
+        "atacama trench",
+        "palestinian hizballah"
+      ]
+    },
+    "zugspitze:88": {
+      "raw": [
+        "summit",
+        "mountaineer",
+        "abseiler",
+        "alpenstock",
+        "teton"
+      ],
+      "null": [
+        "torchbearer",
+        "abseiler",
+        "teton",
+        "alpinist",
+        "mountaineer"
+      ],
+      "prior": [
+        "queensland bottletree",
+        "flag pole",
+        "torchbearer",
+        "totem pole",
+        "toothbrush tree"
+      ],
+      "centered": [
+        "flag pole",
+        "space capsule",
+        "totem pole",
+        "flagpole",
+        "hiker"
+      ],
+      "centered_csls": [
+        "space capsule",
+        "bottle cap",
+        "pinata",
+        "torchbearer",
+        "beer can"
+      ],
+      "centered_csls@0.25": [
+        "space capsule",
+        "flag pole",
+        "totem pole",
+        "torchbearer",
+        "pinata"
+      ],
+      "sparse": [
+        "mountaineer",
+        "queensland bottletree",
+        "flag pole",
+        "space capsule",
+        "high priest"
+      ],
+      "raw/small": [
+        "summit",
+        "mountaineer",
+        "pillar",
+        "climb mountain",
+        "spire"
+      ],
+      "prior/small": [
+        "flag pole",
+        "totem pole",
+        "stupa",
+        "bottle cap",
+        "beer can"
+      ],
+      "centered/small": [
+        "flag pole",
+        "hiker",
+        "mountaineer",
+        "totem pole",
+        "trophy"
+      ],
+      "sparse/small": [
+        "mountaineer",
+        "flag pole",
+        "balloon",
+        "bottle cap",
+        "pop artist"
+      ],
+      "raw/large": [
+        "stalin peak",
+        "cliffhanger",
+        "teapot dome scandal",
+        "steeplejack",
+        "lookout man"
+      ],
+      "prior/large": [
+        "queensland bottletree",
+        "bottle tree",
+        "montgolfier",
+        "can buoy",
+        "wind gage"
+      ],
+      "centered/large": [
+        "wind gage",
+        "bottle tree",
+        "wind sock",
+        "can buoy",
+        "flag pole"
+      ],
+      "sparse/large": [
+        "wind gage",
+        "tibet",
+        "stickup man",
+        "bottle bill",
+        "montgolfier"
+      ]
+    },
+    "wetterstein:20": {
+      "raw": [
+        "crag",
+        "gully",
+        "crevice",
+        "chasm",
+        "outcrop"
+      ],
+      "null": [
+        "buttress",
+        "crag",
+        "outcrop",
+        "flying buttress",
+        "mountain path"
+      ],
+      "prior": [
+        "rock face",
+        "outcrop",
+        "quira",
+        "rock formation",
+        "mountain path"
+      ],
+      "centered": [
+        "outcrop",
+        "rock formation",
+        "rock face",
+        "geological formation",
+        "mountain path"
+      ],
+      "centered_csls": [
+        "outcrop",
+        "rock formation",
+        "rock face",
+        "geological formation",
+        "mountainside"
+      ],
+      "centered_csls@0.25": [
+        "outcrop",
+        "rock formation",
+        "rock face",
+        "geological formation",
+        "mountainside"
+      ],
+      "sparse": [
+        "outcrop",
+        "european woolly thistle",
+        "mountain path",
+        "saddle",
+        "parang"
+      ],
+      "raw/small": [
+        "outcrop",
+        "rock face",
+        "mountain path",
+        "cliff",
+        "ravine"
+      ],
+      "prior/small": [
+        "rock face",
+        "outcrop",
+        "rock formation",
+        "mountain path",
+        "rock climbing"
+      ],
+      "centered/small": [
+        "rock formation",
+        "outcrop",
+        "rock face",
+        "mountain path",
+        "mountain landscape"
+      ],
+      "sparse/small": [
+        "rock formation",
+        "mountain path",
+        "saddle",
+        "dry",
+        "hike"
+      ],
+      "raw/large": [
+        "transylvanian alps",
+        "crag",
+        "crna gora",
+        "gully",
+        "rockslide"
+      ],
+      "prior/large": [
+        "rock outcrop",
+        "dry-stone wall",
+        "transylvanian alps",
+        "rock face",
+        "outcrop"
+      ],
+      "centered/large": [
+        "rock outcrop",
+        "outcrop",
+        "rock formation",
+        "rock face",
+        "geological formation"
+      ],
+      "sparse/large": [
+        "rock outcrop",
+        "transylvanian alps",
+        "roof of the mouth",
+        "climbing hemp-vine",
+        "munro"
+      ]
+    },
+    "kart:20": {
+      "raw": [
+        "karting",
+        "go-kart",
+        "luge",
+        "racer",
+        "hovercraft"
+      ],
+      "null": [
+        "karting",
+        "dune cycling",
+        "hovercraft",
+        "bobsledding",
+        "luge"
+      ],
+      "prior": [
+        "karting",
+        "bumper car",
+        "dune cycling",
+        "hovercraft",
+        "auto racing"
+      ],
+      "centered": [
+        "karting",
+        "motorsport",
+        "bumper car",
+        "auto racing",
+        "race car"
+      ],
+      "centered_csls": [
+        "karting",
+        "go-kart",
+        "bumper car",
+        "amusement park",
+        "cart"
+      ],
+      "centered_csls@0.25": [
+        "karting",
+        "bumper car",
+        "motorsport",
+        "go-kart",
+        "auto racing"
+      ],
+      "sparse": [
+        "karting",
+        "lotus",
+        "cart",
+        "dominus",
+        "bucket seat"
+      ],
+      "raw/small": [
+        "karting",
+        "drift",
+        "ride",
+        "turn",
+        "raceway"
+      ],
+      "prior/small": [
+        "karting",
+        "race car",
+        "motorsport",
+        "hoverboard",
+        "golf cart"
+      ],
+      "centered/small": [
+        "karting",
+        "motorsport",
+        "race car",
+        "amusement park",
+        "golf cart"
+      ],
+      "sparse/small": [
+        "karting",
+        "lotus",
+        "cart",
+        "fun",
+        "steering wheel"
+      ],
+      "raw/large": [
+        "karting",
+        "cart track",
+        "dodgem",
+        "karttika",
+        "buggy whip"
+      ],
+      "prior/large": [
+        "karting",
+        "dodgem",
+        "bumper car",
+        "cart track",
+        "dune cycling"
+      ],
+      "centered/large": [
+        "karting",
+        "motorsport",
+        "dodgem",
+        "cart track",
+        "auto racing"
+      ],
+      "sparse/large": [
+        "karting",
+        "test driver",
+        "cape fear",
+        "lotus",
+        "yamoussukro"
+      ]
+    },
+    "f16:9": {
+      "raw": [
+        "power takeoff",
+        "fighter jet",
+        "landing flap",
+        "air field",
+        "warplane"
+      ],
+      "null": [
+        "flanker back",
+        "jet bridge",
+        "reconnaissance plane",
+        "joint direct attack munition",
+        "landing flap"
+      ],
+      "prior": [
+        "fighter jet",
+        "reconnaissance plane",
+        "warplane",
+        "tanker plane",
+        "air field"
+      ],
+      "centered": [
+        "fighter jet",
+        "warplane",
+        "aircraft",
+        "aircraft model",
+        "reconnaissance plane"
+      ],
+      "centered_csls": [
+        "aircraft",
+        "fighter jet",
+        "warplane",
+        "reconnaissance plane",
+        "aircraft model"
+      ],
+      "centered_csls@0.25": [
+        "fighter jet",
+        "warplane",
+        "aircraft",
+        "aircraft model",
+        "reconnaissance plane"
+      ],
+      "sparse": [
+        "fighter jet",
+        "scale model",
+        "north american",
+        "farley maidenhair",
+        "tarpon"
+      ],
+      "raw/small": [
+        "fighter jet",
+        "air field",
+        "takeoff",
+        "airshow",
+        "falcon"
+      ],
+      "prior/small": [
+        "fighter jet",
+        "air field",
+        "airshow",
+        "aircraft model",
+        "airport runway"
+      ],
+      "centered/small": [
+        "fighter jet",
+        "aircraft model",
+        "air field",
+        "airshow",
+        "plane"
+      ],
+      "sparse/small": [
+        "fighter jet",
+        "scale model",
+        "takeoff",
+        "mustard",
+        "screenshot"
+      ],
+      "raw/large": [
+        "usaf",
+        "forced landing",
+        "power takeoff",
+        "fighter jet",
+        "air base"
+      ],
+      "prior/large": [
+        "operation desert storm",
+        "united states air force",
+        "naval air warfare center weapons division",
+        "us air force",
+        "military plane"
+      ],
+      "centered/large": [
+        "warplane",
+        "fighter jet",
+        "fighter aircraft",
+        "aircraft",
+        "attack aircraft"
+      ],
+      "sparse/large": [
+        "warplane",
+        "kennedy international airport",
+        "afisr",
+        "flanker",
+        "vertical tail"
+      ]
+    },
+    "f16:18": {
+      "raw": [
+        "fighter jet",
+        "flight simulator",
+        "warplane",
+        "power takeoff",
+        "flanker back"
+      ],
+      "null": [
+        "flanker back",
+        "shortfin mako",
+        "longfin mako",
+        "aquaplane",
+        "reconnaissance plane"
+      ],
+      "prior": [
+        "shortfin mako",
+        "longfin mako",
+        "aquaplane",
+        "blue shark",
+        "seaplane"
+      ],
+      "centered": [
+        "warplane",
+        "fighter jet",
+        "aircraft carrier",
+        "airplane",
+        "reconnaissance plane"
+      ],
+      "centered_csls": [
+        "aquaplane",
+        "submarine water",
+        "seaplane",
+        "floatplane",
+        "attack submarine"
+      ],
+      "centered_csls@0.25": [
+        "aquaplane",
+        "seaplane",
+        "aircraft carrier",
+        "warplane",
+        "submarine water"
+      ],
+      "sparse": [
+        "warplane",
+        "shortfin mako",
+        "aquaplane",
+        "atoll",
+        "gulf"
+      ],
+      "raw/small": [
+        "fighter jet",
+        "plane",
+        "jet",
+        "takeoff",
+        "flight"
+      ],
+      "prior/small": [
+        "seaplane",
+        "aircraft carrier",
+        "fighter jet",
+        "submarine water",
+        "airshow"
+      ],
+      "centered/small": [
+        "fighter jet",
+        "aircraft carrier",
+        "plane",
+        "seaplane",
+        "airliner"
+      ],
+      "sparse/small": [
+        "fighter jet",
+        "seaplane",
+        "gulf",
+        "anniversary",
+        "model"
+      ],
+      "raw/large": [
+        "flight maneuver",
+        "contrail",
+        "airplane maneuver",
+        "jet plane",
+        "dogfight"
+      ],
+      "prior/large": [
+        "oceanic whitetip shark",
+        "amphibious aircraft",
+        "shortfin mako",
+        "longfin mako",
+        "bermuda triangle"
+      ],
+      "centered/large": [
+        "jet plane",
+        "warplane",
+        "fighter aircraft",
+        "fighter jet",
+        "attack aircraft carrier"
+      ],
+      "sparse/large": [
+        "jet plane",
+        "indian ocean",
+        "shortfin mako",
+        "dardanelles campaign",
+        "rogue state"
+      ]
+    },
+    "assetto:13": {
+      "raw": [
+        "autobahn",
+        "autostrada",
+        "spaghetti junction",
+        "turnpike",
+        "overpass"
+      ],
+      "null": [
+        "spaghetti junction",
+        "autostrada",
+        "autobahn",
+        "bay bridge",
+        "overpass"
+      ],
+      "prior": [
+        "bay bridge",
+        "spaghetti junction",
+        "traffic congestion",
+        "autobahn",
+        "divided highway"
+      ],
+      "centered": [
+        "city nightview",
+        "traffic",
+        "traffic congestion",
+        "bay bridge",
+        "highway"
+      ],
+      "centered_csls": [
+        "bay bridge",
+        "traffic",
+        "divided highway",
+        "highway",
+        "autostrada"
+      ],
+      "centered_csls@0.25": [
+        "traffic",
+        "bay bridge",
+        "highway",
+        "traffic congestion",
+        "city nightview"
+      ],
+      "sparse": [
+        "bay bridge",
+        "traffic",
+        "city nightview",
+        "sodium-vapor lamp",
+        "hearse"
+      ],
+      "raw/small": [
+        "overpass",
+        "traffic",
+        "highway",
+        "traffic jam",
+        "night view"
+      ],
+      "prior/small": [
+        "bay bridge",
+        "traffic congestion",
+        "city nightview",
+        "traffic",
+        "highway"
+      ],
+      "centered/small": [
+        "traffic",
+        "city nightview",
+        "highway",
+        "traffic congestion",
+        "bay bridge"
+      ],
+      "sparse/small": [
+        "traffic",
+        "bay bridge",
+        "city nightview",
+        "toy car",
+        "lighting"
+      ],
+      "raw/large": [
+        "highway robbery",
+        "autobahn",
+        "car traffic",
+        "autostrada",
+        "freeway"
+      ],
+      "prior/large": [
+        "walt whitman bridge",
+        "george washington bridge",
+        "baton rouge bridge",
+        "sydney harbor bridge",
+        "delaware memorial bridge"
+      ],
+      "centered/large": [
+        "car traffic",
+        "motorway",
+        "vehicular traffic",
+        "interstate highway",
+        "city nightview"
+      ],
+      "sparse/large": [
+        "bay bridge",
+        "car traffic",
+        "night-sight",
+        "highway robbery",
+        "sodium-vapor lamp"
+      ]
+    },
+    "trex:10": {
+      "raw": [
+        "webcam",
+        "dialog box",
+        "tab key",
+        "voicer",
+        "browser"
+      ],
+      "null": [
+        "toggle bolt",
+        "backscratcher",
+        "modem",
+        "winch",
+        "voicer"
+      ],
+      "prior": [
+        "voicer",
+        "dialog box",
+        "blackboard eraser",
+        "desk dictionary",
+        "paper fastener"
+      ],
+      "centered": [
+        "dialog box",
+        "voicer",
+        "wordbook",
+        "notepad",
+        "browser"
+      ],
+      "centered_csls": [
+        "dialog box",
+        "voicer",
+        "wordbook",
+        "desk dictionary",
+        "notepad"
+      ],
+      "centered_csls@0.25": [
+        "dialog box",
+        "voicer",
+        "wordbook",
+        "notepad",
+        "desk dictionary"
+      ],
+      "sparse": [
+        "dialog box",
+        "cowpea",
+        "voicer",
+        "desk dictionary",
+        "volleyball player"
+      ],
+      "raw/small": [
+        "webcam",
+        "window",
+        "screenshot",
+        "notepad",
+        "window screen"
+      ],
+      "prior/small": [
+        "laptop keyboard",
+        "whiteboard",
+        "mail slot",
+        "router",
+        "notepad"
+      ],
+      "centered/small": [
+        "notepad",
+        "window",
+        "router",
+        "computer screen",
+        "computer"
+      ],
+      "sparse/small": [
+        "notepad",
+        "install",
+        "recipe",
+        "volleyball player",
+        "aquarium"
+      ],
+      "raw/large": [
+        "webcam",
+        "slow virus",
+        "dialog box",
+        "command prompt",
+        "title bar"
+      ],
+      "prior/large": [
+        "bilingual dictionary",
+        "command prompt",
+        "window lock",
+        "slow virus",
+        "library catalog"
+      ],
+      "centered/large": [
+        "slow virus",
+        "dialog box",
+        "password",
+        "bilingual dictionary",
+        "computer virus"
+      ],
+      "sparse/large": [
+        "slow virus",
+        "dialog box",
+        "bilingual dictionary",
+        "decanoic acid",
+        "password"
+      ]
+    }
+  },
+  "qwen3vl": {
+    "zugspitze:3": {
+      "raw": [
+        "hiker",
+        "hike",
+        "cave",
+        "trail",
+        "backpacker"
+      ],
+      "null": [
+        "hiker",
+        "backpacker",
+        "hike",
+        "alpinist",
+        "cave"
+      ],
+      "prior": [
+        "hiker",
+        "cave",
+        "cavern",
+        "backpacker",
+        "grotto"
+      ],
+      "centered": [
+        "hiker",
+        "cave",
+        "backpacker",
+        "cavern",
+        "dark lantern"
+      ],
+      "centered_csls": [
+        "flashlight fish",
+        "cave",
+        "dark lantern",
+        "flashlight",
+        "cavern"
+      ],
+      "centered_csls@0.25": [
+        "cave",
+        "backpacker",
+        "cavern",
+        "dark lantern",
+        "hiker"
+      ],
+      "sparse": [
+        "cave",
+        "hiker",
+        "flashlight fish",
+        "evening bag",
+        "walking fern"
+      ],
+      "raw/small": [
+        "hiker",
+        "hike",
+        "cave",
+        "trail",
+        "hiking equipment"
+      ],
+      "prior/small": [
+        "hiker",
+        "cave",
+        "grotto",
+        "hike",
+        "hiking equipment"
+      ],
+      "centered/small": [
+        "cave",
+        "hiker",
+        "grotto",
+        "hike",
+        "sea cave"
+      ],
+      "sparse/small": [
+        "cave",
+        "hiker",
+        "backpack",
+        "illuminate",
+        "lamp"
+      ],
+      "raw/large": [
+        "cave dweller",
+        "hiker",
+        "spelunker",
+        "nightwalker",
+        "cave man"
+      ],
+      "prior/large": [
+        "cave dweller",
+        "cave man",
+        "speleologist",
+        "hiker",
+        "spelunker"
+      ],
+      "centered/large": [
+        "cave dweller",
+        "cave man",
+        "speleologist",
+        "nightwalker",
+        "spelunker"
+      ],
+      "sparse/large": [
+        "cave dweller",
+        "backpacking",
+        "walking fern",
+        "lysichiton",
+        "blackwater"
+      ]
+    },
+    "zugspitze:13": {
+      "raw": [
+        "hiker",
+        "hike",
+        "mountain path",
+        "trail",
+        "hiking equipment"
+      ],
+      "null": [
+        "hiker",
+        "hike",
+        "mountain path",
+        "backpacker",
+        "alpinist"
+      ],
+      "prior": [
+        "hiker",
+        "hike",
+        "backpacker",
+        "hiking equipment",
+        "mountain path"
+      ],
+      "centered": [
+        "hiker",
+        "backpacker",
+        "hike",
+        "packhorse",
+        "hiking equipment"
+      ],
+      "centered_csls": [
+        "hiker",
+        "backpacker",
+        "hike",
+        "packhorse",
+        "wanderer"
+      ],
+      "centered_csls@0.25": [
+        "hiker",
+        "backpacker",
+        "hike",
+        "packhorse",
+        "wanderer"
+      ],
+      "sparse": [
+        "hiker",
+        "foot bridge",
+        "valerian",
+        "washwoman",
+        "evening bag"
+      ],
+      "raw/small": [
+        "hiker",
+        "hike",
+        "mountain path",
+        "trail",
+        "hiking equipment"
+      ],
+      "prior/small": [
+        "hiker",
+        "hike",
+        "hiking equipment",
+        "mountain path",
+        "mountaineering bag"
+      ],
+      "centered/small": [
+        "hiker",
+        "hike",
+        "hiking equipment",
+        "mountain path",
+        "trail"
+      ],
+      "sparse/small": [
+        "hiker",
+        "foot bridge",
+        "valley",
+        "tote bag",
+        "bath"
+      ],
+      "raw/large": [
+        "hiker",
+        "hike",
+        "hiking",
+        "mountain trail",
+        "mountain path"
+      ],
+      "prior/large": [
+        "hiker",
+        "hike",
+        "backpacker",
+        "hiking",
+        "backpacking"
+      ],
+      "centered/large": [
+        "hiker",
+        "hike",
+        "backpacker",
+        "hiking",
+        "backpacking"
+      ],
+      "sparse/large": [
+        "hiker",
+        "foot bridge",
+        "valle d'aosta",
+        "washwoman",
+        "pan troglodytes verus"
+      ]
+    },
+    "zugspitze:28": {
+      "raw": [
+        "rock climber",
+        "climbing a rope",
+        "rock climbing",
+        "climber",
+        "abseiler"
+      ],
+      "null": [
+        "rock climber",
+        "climber",
+        "alpinist",
+        "rock climbing",
+        "climb mountain"
+      ],
+      "prior": [
+        "rock climber",
+        "climbing a rope",
+        "climber",
+        "rock climbing",
+        "abseiling"
+      ],
+      "centered": [
+        "rock climber",
+        "climber",
+        "climbing a rope",
+        "rock climbing",
+        "root climber"
+      ],
+      "centered_csls": [
+        "stair-rod",
+        "root climber",
+        "semi-climber",
+        "ridge rope",
+        "climbing a rope"
+      ],
+      "centered_csls@0.25": [
+        "rock climber",
+        "climber",
+        "climbing a rope",
+        "root climber",
+        "semi-climber"
+      ],
+      "sparse": [
+        "rock climber",
+        "stair-rod",
+        "shillelagh",
+        "rope bridge",
+        "precipice"
+      ],
+      "raw/small": [
+        "rock climber",
+        "rock climbing",
+        "climber",
+        "climb mountain",
+        "rock face"
+      ],
+      "prior/small": [
+        "rock climber",
+        "climber",
+        "rock climbing",
+        "rope bridge",
+        "climb"
+      ],
+      "centered/small": [
+        "rock climber",
+        "climber",
+        "rock climbing",
+        "climb",
+        "rope bridge"
+      ],
+      "sparse/small": [
+        "rock climber",
+        "rope bridge",
+        "stair",
+        "shadow",
+        "cane"
+      ],
+      "raw/large": [
+        "mountain climber",
+        "rock climber",
+        "mountain climbing",
+        "climbing a rope",
+        "rock climbing"
+      ],
+      "prior/large": [
+        "rock climber",
+        "climbing a rope",
+        "mountain climber",
+        "climber",
+        "rock climbing"
+      ],
+      "centered/large": [
+        "rock climber",
+        "mountain climber",
+        "climber",
+        "climbing a rope",
+        "rope ladder"
+      ],
+      "sparse/large": [
+        "rock climber",
+        "stair-rod",
+        "tightrope walking",
+        "cliff-brake",
+        "sisal hemp"
+      ]
+    },
+    "zugspitze:50": {
+      "raw": [
+        "ice climbing",
+        "alpinist",
+        "ice ax",
+        "crevasse",
+        "rock climber"
+      ],
+      "null": [
+        "ice climbing",
+        "alpinist",
+        "hiker",
+        "mountaineer",
+        "rock climber"
+      ],
+      "prior": [
+        "ice climbing",
+        "alpinist",
+        "ice ax",
+        "ice fishing",
+        "ice field"
+      ],
+      "centered": [
+        "ice climbing",
+        "alpinist",
+        "ice ax",
+        "ice field",
+        "ice fishing"
+      ],
+      "centered_csls": [
+        "ice climbing",
+        "ice ax",
+        "ice mass",
+        "ice field",
+        "ice fishing"
+      ],
+      "centered_csls@0.25": [
+        "ice climbing",
+        "ice ax",
+        "alpinist",
+        "ice field",
+        "ice fishing"
+      ],
+      "sparse": [
+        "ice climbing",
+        "hiker",
+        "ice mass",
+        "beggarman",
+        "spadefoot"
+      ],
+      "raw/small": [
+        "rock climber",
+        "hiker",
+        "snowshoe",
+        "climber",
+        "climb mountain"
+      ],
+      "prior/small": [
+        "snowshoe",
+        "ice cave",
+        "icicle",
+        "mountaineering bag",
+        "rock climber"
+      ],
+      "centered/small": [
+        "snowshoe",
+        "icicle",
+        "ice",
+        "ice cave",
+        "ice shelf"
+      ],
+      "sparse/small": [
+        "snowshoe",
+        "rock climber",
+        "ice bag",
+        "ice cave",
+        "father"
+      ],
+      "raw/large": [
+        "ice climbing",
+        "ice axe",
+        "alpinist",
+        "mountain climber",
+        "ice ax"
+      ],
+      "prior/large": [
+        "ice climbing",
+        "ice axe",
+        "alpinist",
+        "ice ax",
+        "ice fishing"
+      ],
+      "centered/large": [
+        "ice climbing",
+        "ice axe",
+        "alpinist",
+        "ice ax",
+        "ice field"
+      ],
+      "sparse/large": [
+        "ice climbing",
+        "plectrophenax nivalis",
+        "archeologist",
+        "white-man's foot",
+        "hiker"
+      ]
+    },
+    "zugspitze:61": {
+      "raw": [
+        "ice climbing",
+        "crevasse",
+        "alpinist",
+        "climb mountain",
+        "ice ax"
+      ],
+      "null": [
+        "ice climbing",
+        "alpinist",
+        "climb mountain",
+        "mountaineer",
+        "mountaineering bag"
+      ],
+      "prior": [
+        "ice climbing",
+        "crevasse",
+        "ice fishing",
+        "alpinist",
+        "ice pack"
+      ],
+      "centered": [
+        "ice climbing",
+        "crevasse",
+        "alpinist",
+        "ice ax",
+        "ice fishing"
+      ],
+      "centered_csls": [
+        "ice climbing",
+        "ice pack",
+        "crevasse",
+        "ice bag",
+        "ice fishing"
+      ],
+      "centered_csls@0.25": [
+        "ice climbing",
+        "crevasse",
+        "ice pack",
+        "ice fishing",
+        "ice ax"
+      ],
+      "sparse": [
+        "ice climbing",
+        "messmate",
+        "sawpit",
+        "yak butter",
+        "waders"
+      ],
+      "raw/small": [
+        "climb mountain",
+        "snowshoe",
+        "rock climbing",
+        "rock climber",
+        "climber"
+      ],
+      "prior/small": [
+        "ice cave",
+        "mountaineering bag",
+        "ice bag",
+        "snowshoe",
+        "ice cube"
+      ],
+      "centered/small": [
+        "ice cave",
+        "mountaineering bag",
+        "ice bag",
+        "snowshoe",
+        "ice"
+      ],
+      "sparse/small": [
+        "mountaineering bag",
+        "ice cave",
+        "interaction",
+        "chisel",
+        "scoop"
+      ],
+      "raw/large": [
+        "ice climbing",
+        "ice axe",
+        "mountaineering",
+        "mountain climbing",
+        "crevasse"
+      ],
+      "prior/large": [
+        "ice climbing",
+        "ice axe",
+        "crevasse",
+        "alpinism",
+        "ice fishing"
+      ],
+      "centered/large": [
+        "ice climbing",
+        "ice axe",
+        "crevasse",
+        "alpinism",
+        "alpinist"
+      ],
+      "sparse/large": [
+        "ice climbing",
+        "messmate",
+        "food cache",
+        "businessmen",
+        "gouge"
+      ]
+    },
+    "zugspitze:88": {
+      "raw": [
+        "snow-on-the-mountain",
+        "climb mountain",
+        "alpinist",
+        "mount",
+        "peak"
+      ],
+      "null": [
+        "alpinist",
+        "climb mountain",
+        "mountaineer",
+        "mountainside",
+        "ski cap"
+      ],
+      "prior": [
+        "totem pole",
+        "menhir",
+        "flagpole",
+        "topper",
+        "snowcap"
+      ],
+      "centered": [
+        "totem pole",
+        "topper",
+        "flagpole",
+        "snowcap",
+        "menhir"
+      ],
+      "centered_csls": [
+        "topper",
+        "capstone",
+        "totem pole",
+        "cupule",
+        "pillbox"
+      ],
+      "centered_csls@0.25": [
+        "topper",
+        "totem pole",
+        "flagpole",
+        "snowcap",
+        "menhir"
+      ],
+      "sparse": [
+        "topper",
+        "alpinist",
+        "totem pole",
+        "poster",
+        "stilton"
+      ],
+      "raw/small": [
+        "climb mountain",
+        "peak",
+        "mountain",
+        "summit",
+        "pole"
+      ],
+      "prior/small": [
+        "totem pole",
+        "summit",
+        "flag pole",
+        "snow mountain",
+        "poster"
+      ],
+      "centered/small": [
+        "totem pole",
+        "flag pole",
+        "summit",
+        "pole",
+        "poster"
+      ],
+      "sparse/small": [
+        "summit",
+        "totem pole",
+        "sticker",
+        "beer can",
+        "group photo"
+      ],
+      "raw/large": [
+        "mountain peak",
+        "topographic point",
+        "snow-on-the-mountain",
+        "climb mountain",
+        "mountain climbing"
+      ],
+      "prior/large": [
+        "mountain peak",
+        "pobedy peak",
+        "pobeda peak",
+        "stalin peak",
+        "adam's peak"
+      ],
+      "centered/large": [
+        "mountain peak",
+        "pobedy peak",
+        "pobeda peak",
+        "stalin peak",
+        "totem pole"
+      ],
+      "sparse/large": [
+        "mountain peak",
+        "helmut heinrich waldemar schmidt",
+        "bill sticker",
+        "stylite",
+        "polemonium viscosum"
+      ]
+    },
+    "wetterstein:20": {
+      "raw": [
+        "hiker",
+        "mountainside",
+        "mountain path",
+        "rock face",
+        "trail"
+      ],
+      "null": [
+        "hiker",
+        "mountainside",
+        "mountain path",
+        "mountain pass",
+        "climb mountain"
+      ],
+      "prior": [
+        "hiker",
+        "mountain path",
+        "hike",
+        "rock face",
+        "mountainside"
+      ],
+      "centered": [
+        "hiker",
+        "mountain path",
+        "hike",
+        "rock face",
+        "mountainside"
+      ],
+      "centered_csls": [
+        "mountain biking",
+        "mountain biker",
+        "mountain bike",
+        "skullcap",
+        "riding mountain bike"
+      ],
+      "centered_csls@0.25": [
+        "hiker",
+        "mountain biker",
+        "hike",
+        "mountainside",
+        "rock face"
+      ],
+      "sparse": [
+        "hiker",
+        "valley",
+        "bladder stone",
+        "redcap",
+        "partial veil"
+      ],
+      "raw/small": [
+        "hiker",
+        "mountain path",
+        "rock face",
+        "trail",
+        "hike"
+      ],
+      "prior/small": [
+        "hiker",
+        "mountain path",
+        "hike",
+        "rock face",
+        "mountain biker"
+      ],
+      "centered/small": [
+        "hiker",
+        "mountain path",
+        "rock face",
+        "hike",
+        "rocky"
+      ],
+      "sparse/small": [
+        "hiker",
+        "valley",
+        "rock face",
+        "bicycle helmet",
+        "pebble"
+      ],
+      "raw/large": [
+        "mountain trail",
+        "hiker",
+        "mountainside",
+        "mountain path",
+        "rising slope"
+      ],
+      "prior/large": [
+        "hiker",
+        "mountain trail",
+        "mountain path",
+        "hiking",
+        "hike"
+      ],
+      "centered/large": [
+        "hiker",
+        "mountain trail",
+        "mountain path",
+        "hike",
+        "rock face"
+      ],
+      "sparse/large": [
+        "hiker",
+        "vallecula",
+        "helmetflower",
+        "rocky",
+        "mountainside"
+      ]
+    },
+    "kart:20": {
+      "raw": [
+        "karting",
+        "go-kart",
+        "racing",
+        "auto racing",
+        "motorsport"
+      ],
+      "null": [
+        "karting",
+        "go-kart",
+        "stockcar",
+        "racing",
+        "auto racing"
+      ],
+      "prior": [
+        "karting",
+        "go-kart",
+        "bumper car",
+        "stockcar",
+        "racing"
+      ],
+      "centered": [
+        "karting",
+        "go-kart",
+        "bumper car",
+        "stockcar",
+        "racing"
+      ],
+      "centered_csls": [
+        "karting",
+        "go-kart",
+        "bumper car",
+        "racing",
+        "racing gig"
+      ],
+      "centered_csls@0.25": [
+        "karting",
+        "go-kart",
+        "bumper car",
+        "racing",
+        "stockcar"
+      ],
+      "sparse": [
+        "karting",
+        "gook",
+        "steering wheel",
+        "bowler",
+        "competitor"
+      ],
+      "raw/small": [
+        "karting",
+        "motorsport",
+        "drive",
+        "race",
+        "raceway"
+      ],
+      "prior/small": [
+        "karting",
+        "raceway",
+        "motorsport",
+        "race track",
+        "race car"
+      ],
+      "centered/small": [
+        "karting",
+        "raceway",
+        "motorsport",
+        "race car",
+        "race track"
+      ],
+      "sparse/small": [
+        "karting",
+        "steering wheel",
+        "couple",
+        "goalkeeper",
+        "bow"
+      ],
+      "raw/large": [
+        "karting",
+        "go-kart",
+        "go-cart",
+        "racing",
+        "car racing"
+      ],
+      "prior/large": [
+        "karting",
+        "go-kart",
+        "go-cart",
+        "car racing",
+        "bumper car"
+      ],
+      "centered/large": [
+        "karting",
+        "go-kart",
+        "go-cart",
+        "bumper car",
+        "car racing"
+      ],
+      "sparse/large": [
+        "karting",
+        "gook",
+        "helmsman",
+        "double-dealer",
+        "circle of curvature"
+      ]
+    },
+    "f16:9": {
+      "raw": [
+        "flight simulator",
+        "fighter jet",
+        "simulator",
+        "stealth fighter",
+        "stealth aircraft"
+      ],
+      "null": [
+        "flight simulator",
+        "fighter jet",
+        "fighter pilot",
+        "stealth fighter",
+        "fanjet"
+      ],
+      "prior": [
+        "fighter jet",
+        "flight simulator",
+        "warplane",
+        "stealth fighter",
+        "jet engine"
+      ],
+      "centered": [
+        "fighter jet",
+        "flight simulator",
+        "warplane",
+        "stealth fighter",
+        "jet"
+      ],
+      "centered_csls": [
+        "fighter jet",
+        "warplane",
+        "stealth fighter",
+        "flight simulator",
+        "jet engine"
+      ],
+      "centered_csls@0.25": [
+        "fighter jet",
+        "warplane",
+        "flight simulator",
+        "stealth fighter",
+        "jet"
+      ],
+      "sparse": [
+        "fighter jet",
+        "takeoff",
+        "3d cg rendering",
+        "game fowl",
+        "video game"
+      ],
+      "raw/small": [
+        "fighter jet",
+        "flight",
+        "video game",
+        "takeoff",
+        "jet"
+      ],
+      "prior/small": [
+        "fighter jet",
+        "jet",
+        "aircraft model",
+        "takeoff",
+        "airport runway"
+      ],
+      "centered/small": [
+        "fighter jet",
+        "jet",
+        "takeoff",
+        "aircraft model",
+        "airshow"
+      ],
+      "sparse/small": [
+        "fighter jet",
+        "takeoff",
+        "video game",
+        "army tank",
+        "3d cg rendering"
+      ],
+      "raw/large": [
+        "flight simulator",
+        "fighter jet",
+        "fighter aircraft",
+        "airplane maneuver",
+        "flight maneuver"
+      ],
+      "prior/large": [
+        "fighter jet",
+        "fighter aircraft",
+        "flight simulator",
+        "warplane",
+        "military plane"
+      ],
+      "centered/large": [
+        "fighter jet",
+        "fighter aircraft",
+        "flight simulator",
+        "warplane",
+        "military plane"
+      ],
+      "sparse/large": [
+        "fighter jet",
+        "war game",
+        "takeoff",
+        "spurious wing",
+        "3d cg rendering"
+      ]
+    },
+    "f16:18": {
+      "raw": [
+        "flight simulator",
+        "aerial torpedo",
+        "fighter jet",
+        "stealth aircraft",
+        "flight"
+      ],
+      "null": [
+        "fighter pilot",
+        "fighter jet",
+        "flight simulator",
+        "flying boat",
+        "floatplane"
+      ],
+      "prior": [
+        "fighter jet",
+        "flying boat",
+        "warplane",
+        "floatplane",
+        "seaplane"
+      ],
+      "centered": [
+        "fighter jet",
+        "flying boat",
+        "aerial torpedo",
+        "warplane",
+        "floatplane"
+      ],
+      "centered_csls": [
+        "aerial torpedo",
+        "floatplane",
+        "diving petrel",
+        "flying boat",
+        "frigate bird"
+      ],
+      "centered_csls@0.25": [
+        "aerial torpedo",
+        "flying boat",
+        "floatplane",
+        "fighter jet",
+        "seaplane"
+      ],
+      "sparse": [
+        "aerial torpedo",
+        "fighter jet",
+        "ocean",
+        "frigate bird",
+        "game fowl"
+      ],
+      "raw/small": [
+        "fighter jet",
+        "flight",
+        "jet",
+        "plane",
+        "drone"
+      ],
+      "prior/small": [
+        "fighter jet",
+        "seaplane",
+        "aircraft carrier",
+        "jet",
+        "airshow"
+      ],
+      "centered/small": [
+        "fighter jet",
+        "jet",
+        "seaplane",
+        "aircraft carrier",
+        "plane"
+      ],
+      "sparse/small": [
+        "fighter jet",
+        "sea",
+        "aircraft carrier",
+        "drop",
+        "video game"
+      ],
+      "raw/large": [
+        "attack aircraft carrier",
+        "flight simulator",
+        "instrument flying",
+        "jet-propelled plane",
+        "fighter aircraft"
+      ],
+      "prior/large": [
+        "fighter jet",
+        "attack aircraft carrier",
+        "amphibious aircraft",
+        "fighter aircraft",
+        "flying boat"
+      ],
+      "centered/large": [
+        "attack aircraft carrier",
+        "amphibious aircraft",
+        "fighter jet",
+        "fighter aircraft",
+        "attack aircraft"
+      ],
+      "sparse/large": [
+        "attack aircraft carrier",
+        "jet",
+        "fiji islands",
+        "delphinus delphis",
+        "war game"
+      ]
+    },
+    "assetto:13": {
+      "raw": [
+        "highway",
+        "divided highway",
+        "traffic",
+        "autobahn",
+        "action film"
+      ],
+      "null": [
+        "autostrada",
+        "autobahn",
+        "police car",
+        "superhighway",
+        "highway"
+      ],
+      "prior": [
+        "police car",
+        "police van",
+        "autobahn",
+        "emergency vehicle",
+        "highway"
+      ],
+      "centered": [
+        "police car",
+        "police van",
+        "emergency vehicle",
+        "autobahn",
+        "highway"
+      ],
+      "centered_csls": [
+        "police car",
+        "police van",
+        "emergency vehicle",
+        "highway",
+        "movie"
+      ],
+      "centered_csls@0.25": [
+        "police car",
+        "police van",
+        "emergency vehicle",
+        "highway",
+        "autobahn"
+      ],
+      "sparse": [
+        "police car",
+        "autobahn",
+        "drama film",
+        "night bird",
+        "aerial torpedo"
+      ],
+      "raw/small": [
+        "highway",
+        "traffic",
+        "action film",
+        "road",
+        "drive"
+      ],
+      "prior/small": [
+        "police car",
+        "police van",
+        "emergency vehicle",
+        "highway",
+        "traffic congestion"
+      ],
+      "centered/small": [
+        "police car",
+        "police van",
+        "highway",
+        "emergency vehicle",
+        "police"
+      ],
+      "sparse/small": [
+        "police car",
+        "highway",
+        "drama film",
+        "night view",
+        "loft"
+      ],
+      "raw/large": [
+        "speed cop",
+        "car traffic",
+        "automobile traffic",
+        "highway",
+        "collision course"
+      ],
+      "prior/large": [
+        "police car",
+        "speed cop",
+        "police cruiser",
+        "police van",
+        "automobile traffic"
+      ],
+      "centered/large": [
+        "police car",
+        "speed cop",
+        "automobile traffic",
+        "police investigation",
+        "car traffic"
+      ],
+      "sparse/large": [
+        "freeway",
+        "police car",
+        "drama film",
+        "red notice",
+        "night bird"
+      ]
+    },
+    "trex:10": {
+      "raw": [
+        "small computer system interface",
+        "twitterer",
+        "computer screen",
+        "interface",
+        "screenshot"
+      ],
+      "null": [
+        "browser",
+        "twitterer",
+        "sound spectrograph",
+        "dawdler",
+        "digital-analog converter"
+      ],
+      "prior": [
+        "sound spectrograph",
+        "twitterer",
+        "doodlebug",
+        "computer screen",
+        "browser"
+      ],
+      "centered": [
+        "sound spectrograph",
+        "twitterer",
+        "doodlebug",
+        "computer screen",
+        "browser"
+      ],
+      "centered_csls": [
+        "doodlebug",
+        "sound spectrograph",
+        "twitterer",
+        "cursor",
+        "computer screen"
+      ],
+      "centered_csls@0.25": [
+        "sound spectrograph",
+        "twitterer",
+        "doodlebug",
+        "computer screen",
+        "cursor"
+      ],
+      "sparse": [
+        "sound spectrograph",
+        "doodlebug",
+        "remote terminal",
+        "twitterer",
+        "cactus wren"
+      ],
+      "raw/small": [
+        "computer screen",
+        "screenshot",
+        "desktop",
+        "webcam",
+        "web"
+      ],
+      "prior/small": [
+        "computer screen",
+        "desktop",
+        "doodle",
+        "app icon",
+        "mousepad"
+      ],
+      "centered/small": [
+        "computer screen",
+        "desktop",
+        "doodle",
+        "web",
+        "software"
+      ],
+      "sparse/small": [
+        "computer screen",
+        "doodle",
+        "canary",
+        "recording studio",
+        "wind chime"
+      ],
+      "raw/large": [
+        "user interface",
+        "web browser",
+        "small computer system interface",
+        "ticktacktoo",
+        "graphical user interface"
+      ],
+      "prior/large": [
+        "web browser",
+        "sound spectrograph",
+        "graphical user interface",
+        "terminal emulation",
+        "text editor"
+      ],
+      "centered/large": [
+        "web browser",
+        "graphical user interface",
+        "user interface",
+        "sound spectrograph",
+        "ticktacktoo"
+      ],
+      "sparse/large": [
+        "web browser",
+        "cactus wren",
+        "ticktacktoo",
+        "sound spectrograph",
+        "terminal emulation"
+      ]
+    }
+  }
+}

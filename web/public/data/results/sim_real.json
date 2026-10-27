@@ -1,0 +1,101 @@
+[
+  {
+    "model": "qwen3vl",
+    "auc_all": 0.9626648351648351,
+    "auc_racing": 0.6098765432098765,
+    "sim_words": [
+      "flight simulator",
+      "fighter jet",
+      "jet plane",
+      "dogfight",
+      "fighter aircraft",
+      "jet-propelled plane",
+      "computer simulation",
+      "jet",
+      "stealth fighter",
+      "simulator",
+      "warplane",
+      "attack aircraft"
+    ],
+    "real_words": [
+      "hiker",
+      "mountain climber",
+      "mountain climbing",
+      "rock climber",
+      "alpinist",
+      "hiking equipment",
+      "climber",
+      "crag",
+      "climb mountain",
+      "mountain path",
+      "mountaineering",
+      "mountain trail"
+    ]
+  },
+  {
+    "model": "gemma2",
+    "auc_all": 0.9492857142857143,
+    "auc_racing": 0.5006172839506173,
+    "sim_words": [
+      "anhinga anhinga",
+      "intelnet",
+      "nothing",
+      "nightbird",
+      "slowpoke",
+      "loading zone",
+      "aiai",
+      "night raven",
+      "acoustic modem",
+      "yottabyte",
+      "uuh",
+      "night bird"
+    ],
+    "real_words": [
+      "mountain path",
+      "mountain trail",
+      "brenner pass",
+      "mount wilson",
+      "abseiling",
+      "dolomite alps",
+      "rope bridge",
+      "hiking",
+      "trailhead",
+      "mount ranier national park",
+      "mountain climbing",
+      "traverse"
+    ]
+  },
+  {
+    "model": "siglip2",
+    "auc_all": 0.9579945054945055,
+    "auc_racing": 0.5549382716049382,
+    "sim_words": [
+      "aircraft",
+      "aircraft model",
+      "airliner",
+      "aerogram",
+      "widebody aircraft",
+      "warplane",
+      "city nightview",
+      "airplane",
+      "anti-virus program",
+      "american plane",
+      "aerospace",
+      "united states air force"
+    ],
+    "real_words": [
+      "hiking",
+      "mountain climbing",
+      "rock climbing",
+      "mountaineering",
+      "mountain man",
+      "mountain trail",
+      "hiker",
+      "rock climber",
+      "mountain sickness",
+      "rock outcrop",
+      "outcrop",
+      "buttress"
+    ]
+  }
+]

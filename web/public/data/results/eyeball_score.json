@@ -1,0 +1,272 @@
+[
+  {
+    "model": "gemma2",
+    "method": "raw",
+    "precision@5": 0.5166666666666667,
+    "top1": 0.5833333333333334
+  },
+  {
+    "model": "gemma2",
+    "method": "null",
+    "precision@5": 0.45,
+    "top1": 0.3333333333333333
+  },
+  {
+    "model": "gemma2",
+    "method": "prior",
+    "precision@5": 0.5833333333333334,
+    "top1": 0.75
+  },
+  {
+    "model": "gemma2",
+    "method": "centered",
+    "precision@5": 0.55,
+    "top1": 0.75
+  },
+  {
+    "model": "gemma2",
+    "method": "centered_csls",
+    "precision@5": 0.5333333333333333,
+    "top1": 0.6666666666666666
+  },
+  {
+    "model": "gemma2",
+    "method": "centered_csls@0.25",
+    "precision@5": 0.55,
+    "top1": 0.75
+  },
+  {
+    "model": "gemma2",
+    "method": "sparse",
+    "precision@5": 0.3333333333333333,
+    "top1": 0.75
+  },
+  {
+    "model": "gemma2",
+    "method": "raw/small",
+    "precision@5": 0.6,
+    "top1": 0.9166666666666666
+  },
+  {
+    "model": "gemma2",
+    "method": "prior/small",
+    "precision@5": 0.5,
+    "top1": 0.5833333333333334
+  },
+  {
+    "model": "gemma2",
+    "method": "centered/small",
+    "precision@5": 0.5833333333333334,
+    "top1": 0.6666666666666666
+  },
+  {
+    "model": "gemma2",
+    "method": "sparse/small",
+    "precision@5": 0.43333333333333335,
+    "top1": 0.6666666666666666
+  },
+  {
+    "model": "gemma2",
+    "method": "raw/large",
+    "precision@5": 0.4166666666666667,
+    "top1": 0.5
+  },
+  {
+    "model": "gemma2",
+    "method": "prior/large",
+    "precision@5": 0.43333333333333335,
+    "top1": 0.5
+  },
+  {
+    "model": "gemma2",
+    "method": "centered/large",
+    "precision@5": 0.5,
+    "top1": 0.75
+  },
+  {
+    "model": "gemma2",
+    "method": "sparse/large",
+    "precision@5": 0.2,
+    "top1": 0.6666666666666666
+  },
+  {
+    "model": "siglip2",
+    "method": "raw",
+    "precision@5": 0.75,
+    "top1": 0.8333333333333334
+  },
+  {
+    "model": "siglip2",
+    "method": "null",
+    "precision@5": 0.48333333333333334,
+    "top1": 0.4166666666666667
+  },
+  {
+    "model": "siglip2",
+    "method": "prior",
+    "precision@5": 0.45,
+    "top1": 0.5
+  },
+  {
+    "model": "siglip2",
+    "method": "centered",
+    "precision@5": 0.7,
+    "top1": 0.9166666666666666
+  },
+  {
+    "model": "siglip2",
+    "method": "centered_csls",
+    "precision@5": 0.5,
+    "top1": 0.5833333333333334
+  },
+  {
+    "model": "siglip2",
+    "method": "centered_csls@0.25",
+    "precision@5": 0.6,
+    "top1": 0.75
+  },
+  {
+    "model": "siglip2",
+    "method": "sparse",
+    "precision@5": 0.36666666666666664,
+    "top1": 0.8333333333333334
+  },
+  {
+    "model": "siglip2",
+    "method": "raw/small",
+    "precision@5": 0.7666666666666667,
+    "top1": 0.9166666666666666
+  },
+  {
+    "model": "siglip2",
+    "method": "prior/small",
+    "precision@5": 0.5166666666666667,
+    "top1": 0.5833333333333334
+  },
+  {
+    "model": "siglip2",
+    "method": "centered/small",
+    "precision@5": 0.7333333333333333,
+    "top1": 0.8333333333333334
+  },
+  {
+    "model": "siglip2",
+    "method": "sparse/small",
+    "precision@5": 0.45,
+    "top1": 0.75
+  },
+  {
+    "model": "siglip2",
+    "method": "raw/large",
+    "precision@5": 0.48333333333333334,
+    "top1": 0.4166666666666667
+  },
+  {
+    "model": "siglip2",
+    "method": "prior/large",
+    "precision@5": 0.26666666666666666,
+    "top1": 0.4166666666666667
+  },
+  {
+    "model": "siglip2",
+    "method": "centered/large",
+    "precision@5": 0.6833333333333333,
+    "top1": 0.75
+  },
+  {
+    "model": "siglip2",
+    "method": "sparse/large",
+    "precision@5": 0.23333333333333334,
+    "top1": 0.6666666666666666
+  },
+  {
+    "model": "qwen3vl",
+    "method": "raw",
+    "precision@5": 0.8,
+    "top1": 0.8333333333333334
+  },
+  {
+    "model": "qwen3vl",
+    "method": "null",
+    "precision@5": 0.7666666666666667,
+    "top1": 0.9166666666666666
+  },
+  {
+    "model": "qwen3vl",
+    "method": "prior",
+    "precision@5": 0.6666666666666666,
+    "top1": 0.8333333333333334
+  },
+  {
+    "model": "qwen3vl",
+    "method": "centered",
+    "precision@5": 0.65,
+    "top1": 0.8333333333333334
+  },
+  {
+    "model": "qwen3vl",
+    "method": "centered_csls",
+    "precision@5": 0.4,
+    "top1": 0.4166666666666667
+  },
+  {
+    "model": "qwen3vl",
+    "method": "centered_csls@0.25",
+    "precision@5": 0.5666666666666667,
+    "top1": 0.6666666666666666
+  },
+  {
+    "model": "qwen3vl",
+    "method": "sparse",
+    "precision@5": 0.35,
+    "top1": 0.6666666666666666
+  },
+  {
+    "model": "qwen3vl",
+    "method": "raw/small",
+    "precision@5": 0.8666666666666667,
+    "top1": 0.9166666666666666
+  },
+  {
+    "model": "qwen3vl",
+    "method": "prior/small",
+    "precision@5": 0.6,
+    "top1": 0.75
+  },
+  {
+    "model": "qwen3vl",
+    "method": "centered/small",
+    "precision@5": 0.6833333333333333,
+    "top1": 0.75
+  },
+  {
+    "model": "qwen3vl",
+    "method": "sparse/small",
+    "precision@5": 0.4166666666666667,
+    "top1": 0.8333333333333334
+  },
+  {
+    "model": "qwen3vl",
+    "method": "raw/large",
+    "precision@5": 0.75,
+    "top1": 0.75
+  },
+  {
+    "model": "qwen3vl",
+    "method": "prior/large",
+    "precision@5": 0.6333333333333333,
+    "top1": 0.8333333333333334
+  },
+  {
+    "model": "qwen3vl",
+    "method": "centered/large",
+    "precision@5": 0.7,
+    "top1": 0.75
+  },
+  {
+    "model": "qwen3vl",
+    "method": "sparse/large",
+    "precision@5": 0.3,
+    "top1": 0.8333333333333334
+  }
+]

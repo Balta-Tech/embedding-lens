@@ -1,0 +1,2610 @@
+[
+  {
+    "model": "gemma2",
+    "video_vs_frames_cos": 0.9386783242225647,
+    "action_share_content": 0.09999999999999998,
+    "action_share_residual": 0.06458333333333334,
+    "examples": [
+      {
+        "segment": "zugspitze:5",
+        "content": [
+          "grotto",
+          "cave myotis",
+          "sea cave",
+          "mineshaft",
+          "cave",
+          "elevator shaft",
+          "cavern",
+          "ice cave",
+          "stairwell",
+          "trap door"
+        ],
+        "motion": [
+          "platform",
+          "fringe tree",
+          "tree",
+          "cherry tree",
+          "foot bridge",
+          "banyan tree",
+          "tree house",
+          "rope bridge",
+          "bungee",
+          "grove"
+        ]
+      },
+      {
+        "segment": "zugspitze:16",
+        "content": [
+          "iron tree",
+          "lead tree",
+          "blackboard",
+          "chalk",
+          "signboard",
+          "sandwich board",
+          "signage",
+          "alpenstock",
+          "grape arbor",
+          "whiteboard"
+        ],
+        "motion": [
+          "alpine glacier",
+          "polar glacier",
+          "climber",
+          "continental glacier",
+          "rock climber",
+          "ski slope",
+          "mountaineer",
+          "ice climbing",
+          "mountain tent",
+          "bristlecone pine"
+        ]
+      },
+      {
+        "segment": "zugspitze:27",
+        "content": [
+          "rope bridge",
+          "ridge rope",
+          "ropewalker",
+          "abseiling",
+          "climbing a rope",
+          "slacklining",
+          "bungee jumping",
+          "funambulist",
+          "funambulism",
+          "abseiler"
+        ],
+        "motion": [
+          "shadow",
+          "ropewalker",
+          "digital watch",
+          "climbing a rope",
+          "bungee jumping",
+          "cliff diving",
+          "rope bridge",
+          "abseiler",
+          "shadow box",
+          "abseiling"
+        ]
+      },
+      {
+        "segment": "zugspitze:38",
+        "content": [
+          "mountain path",
+          "outdoorswoman",
+          "white-leaved rockrose",
+          "gregarine",
+          "rockrose",
+          "rock face",
+          "rock purslane",
+          "inflorescence",
+          "lenten rose",
+          "rock star"
+        ],
+        "motion": [
+          "hand",
+          "pinch bar",
+          "intake valve",
+          "hand throttle",
+          "thumbhole",
+          "golf glove",
+          "back",
+          "allen screw",
+          "portal",
+          "section hand"
+        ]
+      },
+      {
+        "segment": "zugspitze:49",
+        "content": [
+          "water ice",
+          "ice field",
+          "ice fishing",
+          "glacier",
+          "alpine glacier",
+          "ice",
+          "sea ice",
+          "ice shelf",
+          "ice climbing",
+          "ice floe"
+        ],
+        "motion": [
+          "kitesurfing",
+          "cliff diving",
+          "bodyboard",
+          "paragliding",
+          "spinning poi",
+          "windsurfing",
+          "water chute",
+          "bungee jumping",
+          "water ski",
+          "snowkiting"
+        ]
+      },
+      {
+        "segment": "zugspitze:60",
+        "content": [
+          "trouser cuff",
+          "paleontologist",
+          "alpinist",
+          "insole",
+          "plimsoll",
+          "gaiter",
+          "gusset",
+          "ski boot",
+          "ski pole",
+          "tent peg"
+        ],
+        "motion": [
+          "measuring stick",
+          "tar pit",
+          "cub scout",
+          "col",
+          "troop",
+          "bat boy",
+          "juvenile",
+          "coal seam",
+          "sea scout",
+          "preceptor"
+        ]
+      },
+      {
+        "segment": "zugspitze:71",
+        "content": [
+          "ice climbing",
+          "abseiler",
+          "alpine glacier",
+          "ice ax",
+          "abseiling",
+          "hour hand",
+          "alpinist",
+          "ice sculpture",
+          "thumbhole",
+          "alpenstock"
+        ],
+        "motion": [
+          "analog watch",
+          "wristwatch",
+          "digital watch",
+          "ice climbing",
+          "pendulum watch",
+          "golf glove",
+          "watch glass",
+          "abseiler",
+          "wristband",
+          "abseiling"
+        ]
+      },
+      {
+        "segment": "zugspitze:82",
+        "content": [
+          "summit",
+          "alpine glacier",
+          "pinnacle",
+          "conning tower",
+          "topmast",
+          "vertex",
+          "continental glacier",
+          "second balcony",
+          "peak",
+          "abutment"
+        ],
+        "motion": [
+          "shrine",
+          "chapel",
+          "desktop",
+          "high altar",
+          "pinnacle",
+          "pillbox",
+          "polaroid camera",
+          "watchtower",
+          "altar",
+          "pyramidal tent"
+        ]
+      },
+      {
+        "segment": "wetterstein:3",
+        "content": [
+          "minivan",
+          "campsite",
+          "camper",
+          "mountain village",
+          "camper trailer",
+          "wagon",
+          "horsebox",
+          "van",
+          "recreational vehicle",
+          "parking"
+        ],
+        "motion": [
+          "hot spring",
+          "tramp steamer",
+          "camera tripod",
+          "shipping",
+          "weather ship",
+          "geiger counter",
+          "geyser",
+          "vulcanizer",
+          "sandbank",
+          "photographic equipment"
+        ]
+      },
+      {
+        "segment": "wetterstein:9",
+        "content": [
+          "autumn forest",
+          "logwood",
+          "forest floor",
+          "spruce forest",
+          "bear oak",
+          "forest path",
+          "woodland",
+          "swamp chestnut oak",
+          "swamp oak",
+          "black beech"
+        ],
+        "motion": [
+          "entlebucher",
+          "portmanteau",
+          "deadlifting",
+          "logwood",
+          "folding door",
+          "furnishing",
+          "demolition",
+          "pivot",
+          "home interior",
+          "read/write head"
+        ]
+      },
+      {
+        "segment": "wetterstein:15",
+        "content": [
+          "pronghorn",
+          "odd-toed ungulate",
+          "muntjac",
+          "lesser kudu",
+          "goat antelope",
+          "white-tailed jackrabbit",
+          "mountain goat",
+          "even-toed ungulate",
+          "mountain sheep",
+          "blacktail jackrabbit"
+        ],
+        "motion": [
+          "lynx",
+          "caracal",
+          "antelope",
+          "pronghorn",
+          "markhor",
+          "thylacine",
+          "goat antelope",
+          "mountain goat",
+          "bobcat",
+          "hartebeest"
+        ]
+      },
+      {
+        "segment": "wetterstein:21",
+        "content": [
+          "mountainside",
+          "rock face",
+          "cloud grass",
+          "cloudy",
+          "grassy",
+          "stone wall",
+          "rock beauty",
+          "hike",
+          "mountain path",
+          "outdoor"
+        ],
+        "motion": [
+          "digital camera",
+          "camera",
+          "motion-picture camera",
+          "skybox",
+          "polaroid camera",
+          "camcorder",
+          "film camera",
+          "drone",
+          "open sight",
+          "spinning poi"
+        ]
+      },
+      {
+        "segment": "wetterstein:27",
+        "content": [
+          "mountain path",
+          "mountain landscape",
+          "mountain view",
+          "trail",
+          "shortgrass",
+          "midfield",
+          "hike",
+          "grassy",
+          "towpath",
+          "pyrenees daisy"
+        ],
+        "motion": [
+          "camcorder",
+          "orthoscope",
+          "hoverboard",
+          "treadmill",
+          "endoscope",
+          "open sight",
+          "surface search radar",
+          "promiser",
+          "hoverboarding",
+          "serger"
+        ]
+      },
+      {
+        "segment": "wetterstein:33",
+        "content": [
+          "crucifix",
+          "altar",
+          "christ's-thorn",
+          "catholic",
+          "confessor",
+          "high altar",
+          "scapular",
+          "pieta",
+          "gargoyle",
+          "gravestone"
+        ],
+        "motion": [
+          "crucifix",
+          "rosary",
+          "church",
+          "pieta",
+          "religion",
+          "tabernacle",
+          "virgin mary",
+          "our lord's candle",
+          "lorraine cross",
+          "chapel"
+        ]
+      },
+      {
+        "segment": "wetterstein:39",
+        "content": [
+          "crucifix",
+          "weathervane",
+          "steeple",
+          "monstrance",
+          "christ's-thorn",
+          "nazarene",
+          "sundial",
+          "fire tower",
+          "high altar",
+          "church tower"
+        ],
+        "motion": [
+          "reflex camera",
+          "spinning poi",
+          "sand dab",
+          "camera lucida",
+          "hoverboard",
+          "finger snapping",
+          "motion-picture camera",
+          "camcorder",
+          "fluid flywheel",
+          "smoke screen"
+        ]
+      },
+      {
+        "segment": "wetterstein:45",
+        "content": [
+          "edelweiss",
+          "flying kite",
+          "maypole",
+          "cityscape",
+          "austrian",
+          "appenzeller",
+          "hanger",
+          "hanging fly",
+          "kaiser roll",
+          "liederkranz"
+        ],
+        "motion": [
+          "crucifix",
+          "cross",
+          "double-crosser",
+          "low st andrew's cross",
+          "crossbar",
+          "cross bun",
+          "cross-examiner",
+          "crosswalk",
+          "maypole",
+          "swastika"
+        ]
+      },
+      {
+        "segment": "kart:3",
+        "content": [
+          "karting",
+          "go-kart",
+          "bumper car",
+          "steering wheel",
+          "driving car",
+          "golf driving",
+          "touring car",
+          "driving wheel",
+          "car dealership",
+          "driving tractor"
+        ],
+        "motion": [
+          "filature",
+          "finback",
+          "redbrick university",
+          "viyella",
+          "florentine",
+          "clotheshorse",
+          "poniard",
+          "tortoiseshell",
+          "cathedral",
+          "red lauan"
+        ]
+      },
+      {
+        "segment": "kart:10",
+        "content": [
+          "karting",
+          "go-kart",
+          "golfcart",
+          "club car",
+          "golf cart",
+          "golf driving",
+          "blue racer",
+          "raceway",
+          "handcar",
+          "cabin car"
+        ],
+        "motion": [
+          "bluefish",
+          "blue racer",
+          "oneida",
+          "blue fox",
+          "bluehead",
+          "smallmouth",
+          "blue pike",
+          "yellow squash",
+          "blue jay",
+          "blue orchid"
+        ]
+      },
+      {
+        "segment": "kart:17",
+        "content": [
+          "cotton mill",
+          "race track",
+          "racecourse",
+          "training ground",
+          "racerunner",
+          "checking tires",
+          "horse farm",
+          "field house",
+          "warehouse",
+          "sporting man"
+        ],
+        "motion": [
+          "go-kart",
+          "karting",
+          "water cart",
+          "handcar",
+          "applecart",
+          "pony cart",
+          "golfcart",
+          "card",
+          "tobogganing",
+          "card table"
+        ]
+      },
+      {
+        "segment": "kart:24",
+        "content": [
+          "karting",
+          "go-kart",
+          "handlebar",
+          "golfcart",
+          "handcar",
+          "hand throttle",
+          "golf cart",
+          "mobility scooter",
+          "raceway",
+          "side-wheeler"
+        ],
+        "motion": [
+          "smallmouth",
+          "lingonberry",
+          "racecourse",
+          "customhouse",
+          "island",
+          "ice hockey rink",
+          "field house",
+          "athenaeum",
+          "pickerel",
+          "turmeric"
+        ]
+      },
+      {
+        "segment": "kart:31",
+        "content": [
+          "go-kart",
+          "karting",
+          "driving tractor",
+          "driving car",
+          "dune buggy",
+          "golf driving",
+          "golf cart",
+          "club car",
+          "golfcart",
+          "handcar"
+        ],
+        "motion": [
+          "tansy-leaved rocket",
+          "yellow bristlegrass",
+          "yellow bedstraw",
+          "dwarf dandelion",
+          "lingonberry",
+          "prairie cordgrass",
+          "common dandelion",
+          "narrow goldenrod",
+          "foxtail grass",
+          "recycling plant"
+        ]
+      },
+      {
+        "segment": "kart:38",
+        "content": [
+          "go-kart",
+          "karting",
+          "raceway",
+          "bowling alley",
+          "community center",
+          "indoor basketball court",
+          "physics laboratory",
+          "basketball hoop",
+          "town square",
+          "microbrewery"
+        ],
+        "motion": [
+          "scoinson arch",
+          "skywalk",
+          "shouldered arch",
+          "triumphal arch",
+          "arch",
+          "archway",
+          "steel arch bridge",
+          "arch bridge",
+          "lancet arch",
+          "trefoil arch"
+        ]
+      },
+      {
+        "segment": "kart:45",
+        "content": [
+          "go-kart",
+          "karting",
+          "golf driving",
+          "club car",
+          "driving car",
+          "driving tractor",
+          "dune buggy",
+          "raceway",
+          "using segway",
+          "football game"
+        ],
+        "motion": [
+          "stadium",
+          "football stadium",
+          "soccer stadium",
+          "baseball stadium",
+          "shortgrass",
+          "basketball stadium",
+          "football match",
+          "outdoor athletic field",
+          "ballpark",
+          "canary grass"
+        ]
+      },
+      {
+        "segment": "kart:52",
+        "content": [
+          "go-kart",
+          "karting",
+          "side-wheeler",
+          "driving tractor",
+          "steering wheel",
+          "dune buggy",
+          "handcar",
+          "minicar",
+          "steering system",
+          "driving car"
+        ],
+        "motion": [
+          "blue toadflax",
+          "blue fleabane",
+          "blueweed",
+          "dwarf bilberry",
+          "dwarf dandelion",
+          "blue daisy",
+          "dwarf spurge",
+          "thyme-leaved speedwell",
+          "dichondra",
+          "mouse-ear hawkweed"
+        ]
+      },
+      {
+        "segment": "f16:2",
+        "content": [
+          "airfield",
+          "air terminal",
+          "tanker plane",
+          "naval tactical data system",
+          "aircraft",
+          "air field",
+          "widebody aircraft",
+          "hangar queen",
+          "naval equipment",
+          "wing commander"
+        ],
+        "motion": [
+          "spinning poi",
+          "flare",
+          "dark lantern",
+          "spark coil",
+          "pouter pigeon",
+          "glow",
+          "fog",
+          "hydrant",
+          "steam",
+          "night raven"
+        ]
+      },
+      {
+        "segment": "f16:6",
+        "content": [
+          "wing commander",
+          "anglewing",
+          "fighter jet",
+          "stealth bomber",
+          "tanker plane",
+          "wing",
+          "gamecock",
+          "warplane",
+          "ramjet",
+          "hydrogen bomb"
+        ],
+        "motion": [
+          "fuddy-duddy",
+          "grugru nut",
+          "babassu nut",
+          "hotchpotch",
+          "camel's hair",
+          "wallah",
+          "hiccup nut",
+          "cohune nut",
+          "peanut worm",
+          "butty"
+        ]
+      },
+      {
+        "segment": "f16:10",
+        "content": [
+          "fragmentation bomb",
+          "cluster bomb",
+          "joint direct attack munition",
+          "laser-guided bomb",
+          "incendiary bomb",
+          "penetration bomb",
+          "surface-to-air missile",
+          "air-to-ground missile",
+          "detonator",
+          "ramjet"
+        ],
+        "motion": [
+          "bonduc nut",
+          "cohune nut",
+          "coquilla nut",
+          "bomb rack",
+          "agueweed",
+          "chilean nut",
+          "lumpsucker",
+          "cluster bomb",
+          "grugru nut",
+          "dumb bomb"
+        ]
+      },
+      {
+        "segment": "f16:14",
+        "content": [
+          "power takeoff",
+          "takeoff",
+          "incendiary bomb",
+          "tanker plane",
+          "cluster bomb",
+          "ejection seat",
+          "flight simulator",
+          "bomb",
+          "greek fire",
+          "fireball"
+        ],
+        "motion": [
+          "juggling fire",
+          "coal black",
+          "coal chute",
+          "flame tokay",
+          "pellet",
+          "fireball",
+          "extinguishing fire",
+          "greek fire",
+          "negro vine",
+          "flame pea"
+        ]
+      },
+      {
+        "segment": "f16:18",
+        "content": [
+          "whitetip shark",
+          "ocean",
+          "naval missile",
+          "mackerel shark",
+          "amberjack",
+          "submarine torpedo",
+          "spanish mackerel",
+          "aerial torpedo",
+          "atlantic manta",
+          "pacific cod"
+        ],
+        "motion": [
+          "bialy",
+          "kuvasz",
+          "muslin",
+          "needlenose pliers",
+          "beachwear",
+          "straw hat",
+          "tiger cowrie",
+          "coral necklace",
+          "etui",
+          "shirt"
+        ]
+      },
+      {
+        "segment": "f16:22",
+        "content": [
+          "fighter jet",
+          "aircraft",
+          "warplane",
+          "flight simulator",
+          "tupelo",
+          "redtail",
+          "ranch house",
+          "narrowbody aircraft",
+          "blue ash",
+          "american basswood"
+        ],
+        "motion": [
+          "senega",
+          "chaja",
+          "sumac",
+          "yerba santa",
+          "mojarra",
+          "catmint",
+          "raja",
+          "chickasaw plum",
+          "sweet",
+          "smooth sumac"
+        ]
+      },
+      {
+        "segment": "f16:26",
+        "content": [
+          "fighter jet",
+          "air-to-air missile",
+          "aircraft model",
+          "aircraft",
+          "jet engine",
+          "narrowbody aircraft",
+          "flight simulator",
+          "wing commander",
+          "power takeoff",
+          "nosewheel"
+        ],
+        "motion": [
+          "calaba",
+          "backbencher",
+          "mojarra",
+          "syllabub",
+          "hoecake",
+          "chanar",
+          "bunya bunya",
+          "chaja",
+          "city father",
+          "senega"
+        ]
+      },
+      {
+        "segment": "f16:30",
+        "content": [
+          "landing flap",
+          "flight simulator",
+          "landing gear",
+          "field-sequential color television",
+          "takeoff",
+          "aircraft",
+          "dive bomber",
+          "tanker plane",
+          "fighter jet",
+          "interceptor"
+        ],
+        "motion": [
+          "virginia thimbleweed",
+          "cattley guava",
+          "longheaded thimbleweed",
+          "crownbeard",
+          "thimbleweed",
+          "baneberry",
+          "tom",
+          "field-sequential color television",
+          "virginia crownbeard",
+          "barnaby's thistle"
+        ]
+      },
+      {
+        "segment": "assetto:1",
+        "content": [
+          "oyabun",
+          "violet",
+          "bunya bunya",
+          "night rider",
+          "bunji-bunji",
+          "purple",
+          "purple anise",
+          "cayenne",
+          "brougham",
+          "porker"
+        ],
+        "motion": [
+          "oyabun",
+          "hay",
+          "tory",
+          "weasel",
+          "bush",
+          "tribesman",
+          "kawaka",
+          "hami melon",
+          "dude",
+          "dun"
+        ]
+      },
+      {
+        "segment": "assetto:4",
+        "content": [
+          "suv",
+          "audi",
+          "ford",
+          "tunnel",
+          "armored car",
+          "tun",
+          "cover girl",
+          "welcome wagon",
+          "sport utility",
+          "voicer"
+        ],
+        "motion": [
+          "dude",
+          "tory",
+          "audi",
+          "musk kangaroo",
+          "snoop",
+          "patriarch",
+          "rhymer",
+          "musk deer",
+          "quandong nut",
+          "bush"
+        ]
+      },
+      {
+        "segment": "assetto:7",
+        "content": [
+          "model car",
+          "ford",
+          "racerunner",
+          "pace car",
+          "highway",
+          "sedan",
+          "chase",
+          "mustang",
+          "corolla",
+          "muscle car"
+        ],
+        "motion": [
+          "lego",
+          "yellow rocket",
+          "model car",
+          "dishtowel",
+          "cactus mouse",
+          "bowling shoe",
+          "dental floss",
+          "baby shoe",
+          "felt fern",
+          "hurricane lamp"
+        ]
+      },
+      {
+        "segment": "assetto:10",
+        "content": [
+          "tachometer",
+          "fuel gauge",
+          "cruise control",
+          "machmeter",
+          "brake light",
+          "car interior",
+          "odometer",
+          "speedometer",
+          "meter",
+          "cayenne"
+        ],
+        "motion": [
+          "shrew",
+          "stoat",
+          "trammel",
+          "spaghetti",
+          "burrow",
+          "snoop",
+          "mound",
+          "crinkleroot",
+          "curly grass",
+          "sild"
+        ]
+      },
+      {
+        "segment": "assetto:13",
+        "content": [
+          "highway",
+          "interchange",
+          "divided highway",
+          "carriageway",
+          "superhighway",
+          "traffic jam",
+          "avenue",
+          "night rider",
+          "companionway",
+          "traffic congestion"
+        ],
+        "motion": [
+          "quahog",
+          "swamp dewberry",
+          "common myrtle",
+          "mosquito",
+          "water chinquapin",
+          "cabbage palmetto",
+          "donna",
+          "myrtle",
+          "drey",
+          "gebang palm"
+        ]
+      },
+      {
+        "segment": "assetto:16",
+        "content": [
+          "car bomb",
+          "pimp",
+          "cayenne",
+          "splasher",
+          "wreck",
+          "gangplank",
+          "brood bitch",
+          "blewits",
+          "coquilla nut",
+          "bitch"
+        ],
+        "motion": [
+          "quandong nut",
+          "coquilla nut",
+          "physic nut",
+          "nut",
+          "babassu nut",
+          "bonduc nut",
+          "cohune nut",
+          "queensland nut",
+          "grugru nut",
+          "herb robert"
+        ]
+      },
+      {
+        "segment": "assetto:19",
+        "content": [
+          "sedan",
+          "statesman",
+          "car window",
+          "carriageway",
+          "corolla",
+          "drove",
+          "rain",
+          "taillight",
+          "bullet train",
+          "night bird"
+        ],
+        "motion": [
+          "droshky",
+          "tory",
+          "mazer",
+          "burberry",
+          "turki",
+          "arabist",
+          "sweet sultan",
+          "sheikdom",
+          "nosh",
+          "tartan"
+        ]
+      },
+      {
+        "segment": "assetto:22",
+        "content": [
+          "girl",
+          "media",
+          "conversation",
+          "cat",
+          "fruit",
+          "lady",
+          "woman",
+          "composition",
+          "model",
+          "texture"
+        ],
+        "motion": [
+          "conversation",
+          "spoke",
+          "instrument",
+          "trim",
+          "interface",
+          "greeting",
+          "exit",
+          "connection",
+          "speaker",
+          "talk"
+        ]
+      },
+      {
+        "segment": "trex:1",
+        "content": [
+          "fin",
+          "quitter",
+          "exit",
+          "hang",
+          "rood screen",
+          "off-line equipment",
+          "banana quit",
+          "end man",
+          "chess master",
+          "net"
+        ],
+        "motion": [
+          "day game",
+          "dado plane",
+          "game board",
+          "pavement",
+          "asphalt road",
+          "finger",
+          "deathbed",
+          "peace",
+          "shoot-'em-up",
+          "pied-a-terre"
+        ]
+      },
+      {
+        "segment": "trex:4",
+        "content": [
+          "acoustic modem",
+          "cero",
+          "cactus",
+          "cactus wren",
+          "intelnet",
+          "bolivian",
+          "chino",
+          "mexican hairless",
+          "western wood pewee",
+          "connection"
+        ],
+        "motion": [
+          "cero",
+          "chichipe",
+          "mexican bean beetle",
+          "maricopa",
+          "ceibo",
+          "pichiciago",
+          "vegetation desert",
+          "cholla",
+          "mojave rattlesnake",
+          "bolivian"
+        ]
+      },
+      {
+        "segment": "trex:7",
+        "content": [
+          "pigeon guillemot",
+          "ninon",
+          "portmanteau",
+          "pipistrelle",
+          "lapin",
+          "nonpasserine bird",
+          "reseau",
+          "nib",
+          "ivorybill",
+          "web site"
+        ],
+        "motion": [
+          "porte-cochere",
+          "pigeon guillemot",
+          "fleur-de-lis",
+          "nonpasserine bird",
+          "coquilles saint-jacques",
+          "prie-dieu",
+          "jacobean lily",
+          "osier",
+          "coquille",
+          "drogue"
+        ]
+      },
+      {
+        "segment": "trex:10",
+        "content": [
+          "number icon",
+          "intelnet",
+          "browser",
+          "walrus",
+          "flickertail",
+          "modem",
+          "nib",
+          "internet",
+          "tenrec",
+          "nebbish"
+        ],
+        "motion": [
+          "chichipe",
+          "ceibo",
+          "street sign",
+          "jacobean lily",
+          "symbol",
+          "chino",
+          "liquidambar",
+          "white willow",
+          "willow aster",
+          "parking sign"
+        ]
+      },
+      {
+        "segment": "trex:13",
+        "content": [
+          "waterdog",
+          "seizure-alert dog",
+          "french bulldog",
+          "fox terrier",
+          "schnauzer",
+          "dog violet",
+          "welsh terrier",
+          "rat terrier",
+          "intelnet",
+          "norfolk terrier"
+        ],
+        "motion": [
+          "hearing dog",
+          "prie-dieu",
+          "briard",
+          "moonflower",
+          "fleur-de-lis",
+          "belgian sheepdog",
+          "west highland white terrier",
+          "bouvier des flandres",
+          "maigre",
+          "carillonneur"
+        ]
+      },
+      {
+        "segment": "trex:16",
+        "content": [
+          "acoustic modem",
+          "modem",
+          "piculet",
+          "cero",
+          "intelnet",
+          "peachick",
+          "chick",
+          "least sandpiper",
+          "computer screen",
+          "silky tamarin"
+        ],
+        "motion": [
+          "audiovisual",
+          "cero",
+          "chichipe",
+          "olla podrida",
+          "sound",
+          "piculet",
+          "vox humana",
+          "beak",
+          "voicer",
+          "peludo"
+        ]
+      },
+      {
+        "segment": "trex:19",
+        "content": [
+          "acoustic modem",
+          "nonpasserine bird",
+          "nightingale",
+          "reseau",
+          "pigeon guillemot",
+          "intelnet",
+          "least bittern",
+          "least sandpiper",
+          "passerine",
+          "modem"
+        ],
+        "motion": [
+          "nonpasserine bird",
+          "prie-dieu",
+          "carillonneur",
+          "passerine",
+          "pigeon guillemot",
+          "faille",
+          "drogue",
+          "socle",
+          "birdcall",
+          "comedienne"
+        ]
+      },
+      {
+        "segment": "trex:22",
+        "content": [
+          "inscription",
+          "robin",
+          "fiddlestick",
+          "modem",
+          "tamarin",
+          "pigeon guillemot",
+          "nonpasserine bird",
+          "web site",
+          "reseau",
+          "number icon"
+        ],
+        "motion": [
+          "nonpasserine bird",
+          "pigeon guillemot",
+          "prie-dieu",
+          "angoumois moth",
+          "fleur-de-lis",
+          "brassard",
+          "anthropoid",
+          "procellariiform seabird",
+          "drogue",
+          "podicipitiform seabird"
+        ]
+      }
+    ]
+  },
+  {
+    "model": "qwen3vl",
+    "video_vs_frames_cos": 0.8184059262275696,
+    "action_share_content": 0.11041666666666668,
+    "action_share_residual": 0.060416666666666674,
+    "examples": [
+      {
+        "segment": "zugspitze:5",
+        "content": [
+          "mineshaft",
+          "cave",
+          "cavern",
+          "coal miner",
+          "miner",
+          "colliery",
+          "catacomb",
+          "dungeon",
+          "railroad tunnel",
+          "grotto"
+        ],
+        "motion": [
+          "person",
+          "backpacker",
+          "scuba diver",
+          "adventurer",
+          "blue artist",
+          "traveler",
+          "color-blind person",
+          "hiker",
+          "blue succory",
+          "blue toadflax"
+        ]
+      },
+      {
+        "segment": "zugspitze:16",
+        "content": [
+          "signboard",
+          "sign",
+          "placard",
+          "signage",
+          "bulletin board",
+          "blackboard",
+          "ledger board",
+          "corkboard",
+          "pegboard",
+          "whiteboard"
+        ],
+        "motion": [
+          "hiker",
+          "runner",
+          "person",
+          "player",
+          "athlete",
+          "field judge",
+          "photographer",
+          "torchbearer",
+          "researcher",
+          "rifleman"
+        ]
+      },
+      {
+        "segment": "zugspitze:27",
+        "content": [
+          "abseiling",
+          "root climber",
+          "climbing a rope",
+          "abseiler",
+          "climber",
+          "rock climber",
+          "funambulist",
+          "semi-climber",
+          "funambulism",
+          "rock climbing"
+        ],
+        "motion": [
+          "amoralist",
+          "admiral",
+          "iconoclast",
+          "bing cherry",
+          "malacca",
+          "holocentrus ascensionis",
+          "clown anemone fish",
+          "ambystomid",
+          "sweet sultan",
+          "phoronid"
+        ]
+      },
+      {
+        "segment": "zugspitze:38",
+        "content": [
+          "hiker",
+          "rock beauty",
+          "old woman",
+          "outdoorswoman",
+          "hike",
+          "old lady",
+          "mountain lady's slipper",
+          "hamadryad",
+          "herbalist",
+          "hiking boot"
+        ],
+        "motion": [
+          "aerial torpedo",
+          "three-dimensional radar",
+          "artificial horizon",
+          "early warning radar",
+          "air-to-ground missile",
+          "avatar",
+          "fire control radar",
+          "plane figure",
+          "homing torpedo",
+          "basic point defense missile system"
+        ]
+      },
+      {
+        "segment": "zugspitze:49",
+        "content": [
+          "ice fishing",
+          "icepick",
+          "ice ax",
+          "oyster fish",
+          "fishing pole",
+          "ice water",
+          "fishing",
+          "ice",
+          "water ice",
+          "ice floe"
+        ],
+        "motion": [
+          "manila grass",
+          "walking leaf",
+          "standing",
+          "stilt",
+          "seedling",
+          "yellow cypress",
+          "shoe tree",
+          "climbing tree",
+          "yellow oleander",
+          "guinea gold vine"
+        ]
+      },
+      {
+        "segment": "zugspitze:60",
+        "content": [
+          "crampon",
+          "ice climbing",
+          "ski binding",
+          "ski boot",
+          "cleat",
+          "cleats",
+          "bootjack",
+          "belaying pin",
+          "cobbler",
+          "clinch"
+        ],
+        "motion": [
+          "sit",
+          "people",
+          "natural elevation",
+          "altar boy",
+          "child",
+          "group photo",
+          "sitting",
+          "stand",
+          "line up",
+          "place"
+        ]
+      },
+      {
+        "segment": "zugspitze:71",
+        "content": [
+          "climbing a rope",
+          "abseiler",
+          "rock climbing",
+          "climber",
+          "rock climber",
+          "abseiling",
+          "cable car",
+          "alpinist",
+          "cable",
+          "ice climbing"
+        ],
+        "motion": [
+          "renaissance man",
+          "black muslim",
+          "paradise",
+          "cosmopolitan",
+          "socialite",
+          "tahitian",
+          "party man",
+          "malik",
+          "bastard indigo",
+          "narcissist"
+        ]
+      },
+      {
+        "segment": "zugspitze:82",
+        "content": [
+          "summit",
+          "climb mountain",
+          "lookout",
+          "snow-on-the-mountain",
+          "snow mountain",
+          "observation tower",
+          "peak",
+          "mountaineer",
+          "mountainside",
+          "alpinist"
+        ],
+        "motion": [
+          "phoronid",
+          "siris",
+          "ambassador",
+          "sodalist",
+          "finn",
+          "fern ally",
+          "intelligence analyst",
+          "fanaloka",
+          "stroll",
+          "illinoisan"
+        ]
+      },
+      {
+        "segment": "wetterstein:3",
+        "content": [
+          "parking",
+          "parking lot",
+          "parking sign",
+          "park",
+          "passenger van",
+          "no-parking zone",
+          "van",
+          "car dealership",
+          "minivan",
+          "moving van"
+        ],
+        "motion": [
+          "angledozer",
+          "rotating shaft",
+          "motion-picture camera",
+          "bulldozer",
+          "broadside",
+          "rotating mechanism",
+          "yardarm",
+          "zoom lens",
+          "periscope",
+          "movement"
+        ]
+      },
+      {
+        "segment": "wetterstein:9",
+        "content": [
+          "autumn forest",
+          "forest floor",
+          "forest path",
+          "broadleaf forest",
+          "forest",
+          "pine forest",
+          "autumn leave",
+          "spruce forest",
+          "mountain maple",
+          "weeping beech"
+        ],
+        "motion": [
+          "skid lid",
+          "cover plate",
+          "swage block",
+          "trunk lid",
+          "pivoting window",
+          "l-plate",
+          "gas bracket",
+          "sheet bend",
+          "toggle joint",
+          "bumper jack"
+        ]
+      },
+      {
+        "segment": "wetterstein:15",
+        "content": [
+          "chamois",
+          "goat antelope",
+          "wild goat",
+          "mountain goat",
+          "antelope",
+          "mouflon",
+          "mountain sheep",
+          "serow",
+          "ibex",
+          "dall sheep"
+        ],
+        "motion": [
+          "butterfly house",
+          "airframe",
+          "cheeseboard",
+          "anglewing",
+          "glass floor",
+          "liebfraumilch",
+          "sea view",
+          "sunroof",
+          "venn diagram",
+          "wide-angle lens"
+        ]
+      },
+      {
+        "segment": "wetterstein:21",
+        "content": [
+          "mountainside",
+          "rocky",
+          "mountain",
+          "hillside",
+          "rock face",
+          "cloud grass",
+          "uphill",
+          "escarpment",
+          "natural elevation",
+          "cloud"
+        ],
+        "motion": [
+          "wide-angle lens",
+          "field lens",
+          "water-shield",
+          "palmetto",
+          "fresnel lens",
+          "atoll",
+          "geodesic dome",
+          "roundel",
+          "fire control radar",
+          "palmate leaf"
+        ]
+      },
+      {
+        "segment": "wetterstein:27",
+        "content": [
+          "mountain path",
+          "grassland",
+          "mountain landscape",
+          "hillside",
+          "trail",
+          "grassy",
+          "mountainside",
+          "wild field",
+          "meadowgrass",
+          "horse-trail"
+        ],
+        "motion": [
+          "palmate leaf",
+          "fan palm",
+          "palm tree",
+          "palmetto",
+          "miniature fan palm",
+          "figure",
+          "palm",
+          "panama redwood tree",
+          "panama tree",
+          "ginkgo tree"
+        ]
+      },
+      {
+        "segment": "wetterstein:33",
+        "content": [
+          "crucifix",
+          "cross",
+          "crosspiece",
+          "rock formation",
+          "crossbill",
+          "promontory",
+          "mount",
+          "mountain",
+          "outcrop",
+          "rock"
+        ],
+        "motion": [
+          "wide-angle lens",
+          "panorama",
+          "closeup lens",
+          "filmy fern",
+          "periscope",
+          "filming",
+          "field lens",
+          "omnirange",
+          "ground control",
+          "panchromatic film"
+        ]
+      },
+      {
+        "segment": "wetterstein:39",
+        "content": [
+          "crucifix",
+          "cross",
+          "crosspiece",
+          "rosary",
+          "transept",
+          "steeple",
+          "place of worship",
+          "prie-dieu",
+          "altar",
+          "worshiper"
+        ],
+        "motion": [
+          "closeup lens",
+          "section hand",
+          "fetoscope",
+          "peep sight",
+          "close-up",
+          "fingerstall",
+          "hand",
+          "finger",
+          "periscope",
+          "palmist"
+        ]
+      },
+      {
+        "segment": "wetterstein:45",
+        "content": [
+          "pylon",
+          "ski lift",
+          "chairlift",
+          "telpherage",
+          "crosspiece",
+          "observation tower",
+          "crane",
+          "telegraph pole",
+          "power line",
+          "fire tower"
+        ],
+        "motion": [
+          "monoplane flying fish",
+          "seaplane",
+          "lighter-than-air craft",
+          "flying boat",
+          "propjet",
+          "stealth aircraft",
+          "jet",
+          "propeller plane",
+          "shuttle",
+          "heavier-than-air craft"
+        ]
+      },
+      {
+        "segment": "kart:3",
+        "content": [
+          "go-kart",
+          "karting",
+          "bumper car",
+          "stockcar",
+          "golfcart",
+          "stock car",
+          "golf cart",
+          "raceway",
+          "motorsport",
+          "auto racing"
+        ],
+        "motion": [
+          "couple",
+          "twin",
+          "yellowfin",
+          "yellowfin croaker",
+          "guan",
+          "kaoliang",
+          "two-piece",
+          "parer",
+          "people",
+          "chino"
+        ]
+      },
+      {
+        "segment": "kart:10",
+        "content": [
+          "go-kart",
+          "karting",
+          "stockcar",
+          "raceway",
+          "steering wheel",
+          "stock car",
+          "auto racing",
+          "bumper car",
+          "racing",
+          "motorsport"
+        ],
+        "motion": [
+          "cleft",
+          "crevasse",
+          "precipice",
+          "yellowfin croaker",
+          "yellowfin",
+          "hallway",
+          "split",
+          "seine",
+          "jaw",
+          "crevice"
+        ]
+      },
+      {
+        "segment": "kart:17",
+        "content": [
+          "base runner",
+          "track star",
+          "sporting man",
+          "homeboy",
+          "runner",
+          "racerunner",
+          "boy",
+          "farm boy",
+          "skateboarder",
+          "boy wonder"
+        ],
+        "motion": [
+          "kickstand",
+          "coattail",
+          "kangaroo paw",
+          "skeleton fork fern",
+          "knee piece",
+          "rudder",
+          "fin keel",
+          "ski boot",
+          "rudder blade",
+          "knee brace"
+        ]
+      },
+      {
+        "segment": "kart:24",
+        "content": [
+          "go-kart",
+          "karting",
+          "bumper car",
+          "golfcart",
+          "golf cart",
+          "stockcar",
+          "steering wheel",
+          "raceway",
+          "driver",
+          "stock car"
+        ],
+        "motion": [
+          "couple",
+          "parer",
+          "partner",
+          "separate",
+          "people",
+          "peer",
+          "two-piece",
+          "twin",
+          "carp",
+          "duet"
+        ]
+      },
+      {
+        "segment": "kart:31",
+        "content": [
+          "go-kart",
+          "karting",
+          "stockcar",
+          "steering wheel",
+          "driving wheel",
+          "golfcart",
+          "golf cart",
+          "stock car",
+          "raceway",
+          "steering gear"
+        ],
+        "motion": [
+          "lean",
+          "individual",
+          "hall",
+          "detached house",
+          "salmi",
+          "cleft",
+          "corridor",
+          "loser",
+          "lesson",
+          "efficiency apartment"
+        ]
+      },
+      {
+        "segment": "kart:38",
+        "content": [
+          "go-kart",
+          "karting",
+          "driving wheel",
+          "stockcar",
+          "bumper car",
+          "steering wheel",
+          "racing gig",
+          "stock car",
+          "raceway",
+          "race track"
+        ],
+        "motion": [
+          "person",
+          "kiang",
+          "yellowfin croaker",
+          "guan",
+          "loser",
+          "white croaker",
+          "gown",
+          "entrant",
+          "chino",
+          "gulch"
+        ]
+      },
+      {
+        "segment": "kart:45",
+        "content": [
+          "go-kart",
+          "karting",
+          "stockcar",
+          "steering wheel",
+          "raceway",
+          "stock car",
+          "driving wheel",
+          "bumper car",
+          "touring car",
+          "golf cart"
+        ],
+        "motion": [
+          "precipice",
+          "trench coat",
+          "cleft",
+          "yellowfin croaker",
+          "tawny eagle",
+          "crab-eating dog",
+          "passage",
+          "crucian carp",
+          "pedestrian",
+          "chasm"
+        ]
+      },
+      {
+        "segment": "kart:52",
+        "content": [
+          "go-kart",
+          "karting",
+          "steering wheel",
+          "driving wheel",
+          "stockcar",
+          "steering gear",
+          "steering system",
+          "raceway",
+          "stock car",
+          "auto racing"
+        ],
+        "motion": [
+          "juvenile",
+          "teenager",
+          "gulch",
+          "person",
+          "salad green",
+          "assistant",
+          "sage green",
+          "grama",
+          "yellowfin croaker",
+          "loser"
+        ]
+      },
+      {
+        "segment": "f16:2",
+        "content": [
+          "multiengine airplane",
+          "aircraft model",
+          "air field",
+          "aircraft",
+          "flight simulator",
+          "airfield",
+          "warplane",
+          "stealth aircraft",
+          "airliner",
+          "control tower"
+        ],
+        "motion": [
+          "drone",
+          "robber fly",
+          "red-shafted flicker",
+          "black squirrel",
+          "rocker arm",
+          "pipistrelle",
+          "fruit fly",
+          "streamer fly",
+          "flying gecko",
+          "flying phalanger"
+        ]
+      },
+      {
+        "segment": "f16:6",
+        "content": [
+          "fighter jet",
+          "warplane",
+          "hangar",
+          "aircraft model",
+          "stealth fighter",
+          "stealth aircraft",
+          "flight simulator",
+          "multiengine airplane",
+          "outdoor hangar",
+          "air field"
+        ],
+        "motion": [
+          "rotating mechanism",
+          "movement",
+          "swivel",
+          "move",
+          "balance car",
+          "rubik's cube",
+          "trip wire",
+          "driving wheel",
+          "wheelie",
+          "swinging on something"
+        ]
+      },
+      {
+        "segment": "f16:10",
+        "content": [
+          "fighter jet",
+          "warplane",
+          "stealth fighter",
+          "jet",
+          "jet engine",
+          "fanjet",
+          "stealth aircraft",
+          "flight simulator",
+          "fighter",
+          "multiengine airplane"
+        ],
+        "motion": [
+          "clockwork",
+          "analog clock",
+          "round table",
+          "video game",
+          "boardroom",
+          "nightclub",
+          "hockey arena",
+          "automobile model",
+          "electric clock",
+          "clock"
+        ]
+      },
+      {
+        "segment": "f16:14",
+        "content": [
+          "takeoff",
+          "fighter jet",
+          "jet",
+          "airport runway",
+          "multiengine airplane",
+          "jet engine",
+          "runway",
+          "flight simulator",
+          "warplane",
+          "fanjet"
+        ],
+        "motion": [
+          "black oak",
+          "blackheart",
+          "blackjack",
+          "blackjack oak",
+          "blacktop",
+          "blackwood",
+          "knothole",
+          "short circuit",
+          "black ash",
+          "crash"
+        ]
+      },
+      {
+        "segment": "f16:18",
+        "content": [
+          "aerial torpedo",
+          "floatplane",
+          "diving petrel",
+          "flying boat",
+          "frigate bird",
+          "seaplane",
+          "aircraft carrier",
+          "coastal diving bird",
+          "pelagic bird",
+          "dive bomber"
+        ],
+        "motion": [
+          "drogue parachute",
+          "rescue",
+          "accident",
+          "lekvar",
+          "crash",
+          "landing",
+          "landfall",
+          "landing net",
+          "drop",
+          "safety net"
+        ]
+      },
+      {
+        "segment": "f16:22",
+        "content": [
+          "fighter jet",
+          "warplane",
+          "flight simulator",
+          "reconnaissance plane",
+          "stealth aircraft",
+          "airshow",
+          "stealth fighter",
+          "stealth bomber",
+          "dive bomber",
+          "fighter pilot"
+        ],
+        "motion": [
+          "moonlight",
+          "boarding house",
+          "crash",
+          "kinetoscope",
+          "tenement",
+          "orbit",
+          "maze",
+          "chicane",
+          "playing monopoly",
+          "tunnel"
+        ]
+      },
+      {
+        "segment": "f16:26",
+        "content": [
+          "flight simulator",
+          "fighter jet",
+          "warplane",
+          "stealth fighter",
+          "fighter pilot",
+          "stealth aircraft",
+          "fighter",
+          "airshow",
+          "video game",
+          "fanjet"
+        ],
+        "motion": [
+          "video game",
+          "game",
+          "screenshot",
+          "flight simulator",
+          "playing monopoly",
+          "playing controller",
+          "simulator",
+          "gaming table",
+          "board game",
+          "crash"
+        ]
+      },
+      {
+        "segment": "f16:30",
+        "content": [
+          "flight simulator",
+          "takeoff",
+          "fighter jet",
+          "landing flap",
+          "flight",
+          "landing",
+          "warplane",
+          "jet",
+          "aircraft",
+          "landing skid"
+        ],
+        "motion": [
+          "video game",
+          "game",
+          "wii",
+          "flight simulator",
+          "simulator",
+          "playing monopoly",
+          "no-hit game",
+          "day game",
+          "play basketball",
+          "ball game"
+        ]
+      },
+      {
+        "segment": "assetto:1",
+        "content": [
+          "toll bridge",
+          "autobahn",
+          "bay bridge",
+          "sports car",
+          "pontoon bridge",
+          "tollbooth",
+          "autostrada",
+          "parking sign",
+          "roadster",
+          "neon light"
+        ],
+        "motion": [
+          "small stores",
+          "signage",
+          "divided highway",
+          "highway",
+          "road sign",
+          "knitting needle",
+          "spaghetti junction",
+          "computer network",
+          "traffic congestion",
+          "road trip"
+        ]
+      },
+      {
+        "segment": "assetto:4",
+        "content": [
+          "tunnel",
+          "traffic jam",
+          "railroad tunnel",
+          "traffic congestion",
+          "car train",
+          "indoor parking garage",
+          "neon",
+          "traffic",
+          "toll line",
+          "bullet train"
+        ],
+        "motion": [
+          "flea market",
+          "potluck",
+          "boat racing",
+          "flower market",
+          "hitchrack",
+          "blueberry yogurt",
+          "farkleberry",
+          "blueberry",
+          "farmer market",
+          "oxcart"
+        ]
+      },
+      {
+        "segment": "assetto:7",
+        "content": [
+          "police car",
+          "movie",
+          "action film",
+          "autobahn",
+          "roadster",
+          "sports car",
+          "sedan",
+          "highway",
+          "hardtop",
+          "muscle car"
+        ],
+        "motion": [
+          "huckleberry",
+          "grist",
+          "ozark chinkapin",
+          "hunkpapa",
+          "gristmill",
+          "farmer market",
+          "flax rust",
+          "farkleberry",
+          "shagbark",
+          "flea market"
+        ]
+      },
+      {
+        "segment": "assetto:10",
+        "content": [
+          "tachometer",
+          "dashboard",
+          "speedometer",
+          "car interior",
+          "glove compartment",
+          "tunnel",
+          "cruise control",
+          "speed limit",
+          "taximeter",
+          "tachymeter"
+        ],
+        "motion": [
+          "tunnel",
+          "trench",
+          "mineshaft",
+          "traffic jam",
+          "railroad tunnel",
+          "traffic congestion",
+          "roadblock",
+          "trawler",
+          "slum",
+          "traffic"
+        ]
+      },
+      {
+        "segment": "assetto:13",
+        "content": [
+          "police car",
+          "police van",
+          "emergency vehicle",
+          "highway",
+          "movie",
+          "autobahn",
+          "police",
+          "divided highway",
+          "carriageway",
+          "drama film"
+        ],
+        "motion": [
+          "police van",
+          "police",
+          "police car",
+          "flea market",
+          "farmer market",
+          "farmyard",
+          "emergency vehicle",
+          "pitchfork",
+          "police station",
+          "field hospital"
+        ]
+      },
+      {
+        "segment": "assetto:16",
+        "content": [
+          "police car",
+          "emergency vehicle",
+          "police boat",
+          "police van",
+          "police",
+          "motorcycle cop",
+          "sports car",
+          "traffic jam",
+          "traffic congestion",
+          "action film"
+        ],
+        "motion": [
+          "garter",
+          "grated cheese",
+          "gall wasp",
+          "wagtail",
+          "grackle",
+          "irish terrier",
+          "violator",
+          "apiary",
+          "hackberry",
+          "constable"
+        ]
+      },
+      {
+        "segment": "assetto:19",
+        "content": [
+          "sports car",
+          "muscle car",
+          "roadster",
+          "police car",
+          "car",
+          "speedboat",
+          "family car",
+          "race car",
+          "autobahn",
+          "night"
+        ],
+        "motion": [
+          "garter",
+          "canteen",
+          "tabernacle",
+          "commissariat",
+          "commissary",
+          "information desk",
+          "cheeseboard",
+          "vestry",
+          "hayfork",
+          "victualer"
+        ]
+      },
+      {
+        "segment": "assetto:22",
+        "content": [
+          "darkness",
+          "black calla",
+          "black swan",
+          "black",
+          "black tie",
+          "black bee",
+          "blank",
+          "blowing out candles",
+          "solid figure",
+          "black bread"
+        ],
+        "motion": [
+          "swage block",
+          "finger plate",
+          "monkey-wrench",
+          "ratchet wheel",
+          "ball-peen hammer",
+          "shaping tool",
+          "merostomata",
+          "breechblock",
+          "fringepod",
+          "rollmops"
+        ]
+      },
+      {
+        "segment": "trex:1",
+        "content": [
+          "internet",
+          "webcam",
+          "browser",
+          "intelnet",
+          "chat room",
+          "process-server",
+          "using computer",
+          "dialog box",
+          "screenshot",
+          "reset button"
+        ],
+        "motion": [
+          "mountain quail",
+          "quail",
+          "griffon",
+          "quagga",
+          "ptarmigan",
+          "sandgrouse",
+          "gordon setter",
+          "duckbill",
+          "sharp-tailed grouse",
+          "angle bracket"
+        ]
+      },
+      {
+        "segment": "trex:4",
+        "content": [
+          "sound spectrograph",
+          "oscillograph",
+          "wire recorder",
+          "oscilloscope",
+          "recorder",
+          "acoustic device",
+          "multichannel recorder",
+          "sound recording",
+          "acoustic modem",
+          "sequencer"
+        ],
+        "motion": [
+          "grouse",
+          "sharp-tailed grouse",
+          "quail",
+          "sage grouse",
+          "migratory quail",
+          "greyhen",
+          "partridge",
+          "grackle",
+          "black grouse",
+          "cockerel"
+        ]
+      },
+      {
+        "segment": "trex:7",
+        "content": [
+          "browser",
+          "twitterer",
+          "chat room",
+          "computer screen",
+          "small computer system interface",
+          "internet",
+          "using computer",
+          "dialog box",
+          "world wide web",
+          "remote terminal"
+        ],
+        "motion": [
+          "sharp-tailed grouse",
+          "barred owl",
+          "thrush",
+          "spotted owl",
+          "wood thrush",
+          "woodpecker",
+          "screech owl",
+          "dimmer",
+          "greyhen",
+          "downy woodpecker"
+        ]
+      },
+      {
+        "segment": "trex:10",
+        "content": [
+          "doodlebug",
+          "sound spectrograph",
+          "twitterer",
+          "cursor",
+          "computer screen",
+          "whistling swan",
+          "cactus mouse",
+          "remote terminal",
+          "soundbox",
+          "tweeter"
+        ],
+        "motion": [
+          "sage grouse",
+          "sandgrouse",
+          "turtledove",
+          "australian turtledove",
+          "roadrunner",
+          "sharp-tailed grouse",
+          "mountain quail",
+          "white-crowned sparrow",
+          "screech owl",
+          "grouse"
+        ]
+      },
+      {
+        "segment": "trex:13",
+        "content": [
+          "browser",
+          "small computer system interface",
+          "computer screen",
+          "sound spectrograph",
+          "cursor",
+          "mouser",
+          "visualizer",
+          "doodlebug",
+          "remote terminal",
+          "desktop"
+        ],
+        "motion": [
+          "gravelweed",
+          "sharp-tailed grouse",
+          "grey",
+          "burgrass",
+          "shearwater",
+          "grouse",
+          "murre",
+          "ruddy turnstone",
+          "loggerhead shrike",
+          "sage grouse"
+        ]
+      },
+      {
+        "segment": "trex:16",
+        "content": [
+          "doodlebug",
+          "browser",
+          "twitterer",
+          "remote terminal",
+          "cursor",
+          "desktop",
+          "new world chat",
+          "computer screen",
+          "newsreader",
+          "web spinner"
+        ],
+        "motion": [
+          "ruddy turnstone",
+          "roadrunner",
+          "black turnstone",
+          "turtledove",
+          "bustard",
+          "sandgrouse",
+          "sharp-tailed grouse",
+          "ptarmigan",
+          "turnstone",
+          "australian turtledove"
+        ]
+      },
+      {
+        "segment": "trex:19",
+        "content": [
+          "twitterer",
+          "small computer system interface",
+          "web spinner",
+          "cursor",
+          "doodlebug",
+          "remote terminal",
+          "browser",
+          "tattler",
+          "owlet",
+          "desktop"
+        ],
+        "motion": [
+          "sharp-tailed grouse",
+          "ruddy turnstone",
+          "mountain quail",
+          "ptarmigan",
+          "dark-eyed junco",
+          "black turnstone",
+          "grouse",
+          "partridge",
+          "thrush",
+          "migratory quail"
+        ]
+      },
+      {
+        "segment": "trex:22",
+        "content": [
+          "twitterer",
+          "cursor",
+          "doodlebug",
+          "cactus mouse",
+          "doodle",
+          "new world chat",
+          "web spinner",
+          "newsreader",
+          "dialog box",
+          "browser"
+        ],
+        "motion": [
+          "greasewood",
+          "barrel cactus",
+          "saguaro",
+          "saltbush",
+          "tarweed",
+          "creosote bush",
+          "burgrass",
+          "desert sunflower",
+          "gravelweed",
+          "desert plume"
+        ]
+      }
+    ]
+  }
+]

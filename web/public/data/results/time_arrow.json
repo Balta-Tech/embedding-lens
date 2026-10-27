@@ -1,0 +1,149 @@
+[
+  {
+    "model": "qwen3vl",
+    "reversed_cos": 0.9820520070291334,
+    "shuffled_cos": 0.9772669788329832,
+    "probe": [
+      {
+        "segment": 13,
+        "phase": "take-off",
+        "forward": -0.028178507462143898,
+        "backward": -0.028168849647045135
+      },
+      {
+        "segment": 14,
+        "phase": "take-off",
+        "forward": 0.013735560700297356,
+        "backward": -0.05975677818059921
+      },
+      {
+        "segment": 15,
+        "phase": "take-off",
+        "forward": -0.06709115207195282,
+        "backward": -0.03119734302163124
+      },
+      {
+        "segment": 29,
+        "phase": "landing",
+        "forward": -0.0489906370639801,
+        "backward": -0.03398537635803223
+      },
+      {
+        "segment": 30,
+        "phase": "landing",
+        "forward": -0.03139699622988701,
+        "backward": -0.004421563819050789
+      },
+      {
+        "segment": 31,
+        "phase": "landing",
+        "forward": -0.002167277503758669,
+        "backward": 0.006326925940811634
+      },
+      {
+        "segment": 32,
+        "phase": "landing",
+        "forward": -0.029420407488942146,
+        "backward": -0.03097759373486042
+      }
+    ]
+  },
+  {
+    "model": "gemma2",
+    "reversed_cos": 0.9811782760004844,
+    "shuffled_cos": 0.9858796846482062,
+    "probe": [
+      {
+        "segment": 13,
+        "phase": "take-off",
+        "forward": 0.0118950754404068,
+        "backward": 0.012886062264442444
+      },
+      {
+        "segment": 14,
+        "phase": "take-off",
+        "forward": 0.0180610790848732,
+        "backward": 0.012278531678020954
+      },
+      {
+        "segment": 15,
+        "phase": "take-off",
+        "forward": 0.011806072667241096,
+        "backward": 0.01030055247247219
+      },
+      {
+        "segment": 29,
+        "phase": "landing",
+        "forward": 0.012016436085104942,
+        "backward": 0.010937870480120182
+      },
+      {
+        "segment": 30,
+        "phase": "landing",
+        "forward": 0.006904514506459236,
+        "backward": 0.0035072453320026398
+      },
+      {
+        "segment": 31,
+        "phase": "landing",
+        "forward": 0.006222405005246401,
+        "backward": 0.010971872135996819
+      },
+      {
+        "segment": 32,
+        "phase": "landing",
+        "forward": 0.010359533131122589,
+        "backward": 0.008328966796398163
+      }
+    ]
+  },
+  {
+    "model": "siglip2",
+    "reversed_cos": 0.9999999788499647,
+    "shuffled_cos": 0.9999999826954257,
+    "probe": [
+      {
+        "segment": 13,
+        "phase": "take-off",
+        "forward": -0.0013452458661049604,
+        "backward": -0.001345244818367064
+      },
+      {
+        "segment": 14,
+        "phase": "take-off",
+        "forward": -0.0004311752272769809,
+        "backward": -0.00043117563473060727
+      },
+      {
+        "segment": 15,
+        "phase": "take-off",
+        "forward": -0.0008070566691458225,
+        "backward": -0.0008070566691458225
+      },
+      {
+        "segment": 29,
+        "phase": "landing",
+        "forward": 0.00035190331982448697,
+        "backward": 0.00035190372727811337
+      },
+      {
+        "segment": 30,
+        "phase": "landing",
+        "forward": -0.0005861528916284442,
+        "backward": -0.0005861528334207833
+      },
+      {
+        "segment": 31,
+        "phase": "landing",
+        "forward": -0.0007362898322753608,
+        "backward": -0.0007362913456745446
+      },
+      {
+        "segment": 32,
+        "phase": "landing",
+        "forward": -0.0014979500556364655,
+        "backward": -0.0014979494735598564
+      }
+    ]
+  }
+]

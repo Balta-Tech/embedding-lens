@@ -1,0 +1,33 @@
+{
+  "vocab_sizes": {
+    "small": 4585,
+    "medium": 22985,
+    "large": 118979
+  },
+  "rows": [
+    {
+      "model": "siglip2",
+      "phrases_per_s": 265.31467741935484,
+      "segments_per_s": 5.0,
+      "small_min": 0.288022763798638,
+      "medium_min": 1.443882928225015,
+      "large_min": 7.47408078822206
+    },
+    {
+      "model": "gemma2",
+      "phrases_per_s": 363.2591935483871,
+      "segments_per_s": 0.7,
+      "small_min": 0.21036402663402315,
+      "medium_min": 1.0545729884804846,
+      "large_min": 5.458866199539681
+    },
+    {
+      "model": "qwen3vl",
+      "phrases_per_s": 37.9789247311828,
+      "segments_per_s": 0.3,
+      "small_min": 2.012080837136612,
+      "medium_min": 10.086734578317344,
+      "large_min": 52.21272975390991
+    }
+  ]
+}

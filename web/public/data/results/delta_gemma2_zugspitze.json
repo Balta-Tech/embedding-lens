@@ -1,0 +1,1892 @@
+[
+  {
+    "from": "zugspitze:0",
+    "to": "zugspitze:1",
+    "change": 0.3280881643295288,
+    "appeared": [
+      "myrmecophyte",
+      "trail",
+      "vertical file",
+      "upper berth",
+      "flat file",
+      "hike"
+    ],
+    "faded": [
+      "street scene",
+      "residential neighborhood",
+      "street",
+      "streetlight",
+      "manor house",
+      "town"
+    ]
+  },
+  {
+    "from": "zugspitze:1",
+    "to": "zugspitze:2",
+    "change": 0.47596752643585205,
+    "appeared": [
+      "catacomb",
+      "mineshaft",
+      "elevator shaft",
+      "grotto",
+      "cave",
+      "basement"
+    ],
+    "faded": [
+      "backpacking tent",
+      "camp chair",
+      "hiking equipment",
+      "mountaineering bag",
+      "folding chair",
+      "campstool"
+    ]
+  },
+  {
+    "from": "zugspitze:2",
+    "to": "zugspitze:3",
+    "change": 0.2387334108352661,
+    "appeared": [
+      "grass",
+      "meadowgrass",
+      "grass frog",
+      "green bristlegrass",
+      "velvet grass",
+      "arrow grass"
+    ],
+    "faded": [
+      "hydraulic cement",
+      "cannery",
+      "sluice",
+      "roman building",
+      "sudatorium",
+      "slop basin"
+    ]
+  },
+  {
+    "from": "zugspitze:3",
+    "to": "zugspitze:4",
+    "change": 0.24593818187713623,
+    "appeared": [
+      "watercourse",
+      "austrian",
+      "aqueduct",
+      "sluice",
+      "box girder bridge",
+      "alluvial flat"
+    ],
+    "faded": [
+      "monk",
+      "korean lawn grass",
+      "solo",
+      "harvest",
+      "lawn",
+      "punch bag"
+    ]
+  },
+  {
+    "from": "zugspitze:4",
+    "to": "zugspitze:5",
+    "change": 0.23954063653945923,
+    "appeared": [
+      "elevator car",
+      "throne room",
+      "podium",
+      "theater curtain",
+      "jew's harp",
+      "trapeze"
+    ],
+    "faded": [
+      "grass frog",
+      "sporting man",
+      "eelgrass",
+      "swim cap",
+      "green bristlegrass",
+      "waders"
+    ]
+  },
+  {
+    "from": "zugspitze:5",
+    "to": "zugspitze:6",
+    "change": 0.423481822013855,
+    "appeared": [
+      "mountaineering bag",
+      "backpack",
+      "bag lady",
+      "duffel bag",
+      "book bag",
+      "bag"
+    ],
+    "faded": [
+      "lectern",
+      "bleacher",
+      "night view",
+      "pavilion",
+      "metal wood",
+      "platform"
+    ]
+  },
+  {
+    "from": "zugspitze:6",
+    "to": "zugspitze:7",
+    "change": 0.08510547876358032,
+    "appeared": [
+      "stair-rod",
+      "barge pole",
+      "t-bar lift",
+      "ski pole",
+      "swizzle stick",
+      "mop handle"
+    ],
+    "faded": [
+      "keyhole",
+      "reveal",
+      "trap door",
+      "horror",
+      "anteroom",
+      "appear"
+    ]
+  },
+  {
+    "from": "zugspitze:7",
+    "to": "zugspitze:8",
+    "change": 0.1910170316696167,
+    "appeared": [
+      "night",
+      "night-light",
+      "night bell",
+      "dark",
+      "evening light",
+      "night view"
+    ],
+    "faded": [
+      "climbing ladder",
+      "trapeze",
+      "climbing a rope",
+      "oarswoman",
+      "pillory",
+      "climbing maidenhair"
+    ]
+  },
+  {
+    "from": "zugspitze:8",
+    "to": "zugspitze:9",
+    "change": 0.42904824018478394,
+    "appeared": [
+      "brittlebush",
+      "fringed loosestrife",
+      "marsh plant",
+      "spanish heath",
+      "swamp azalea",
+      "parry manzanita"
+    ],
+    "faded": [
+      "torpedo tube",
+      "core drill",
+      "ski binding",
+      "piece de resistance",
+      "soil pipe",
+      "indoor rower"
+    ]
+  },
+  {
+    "from": "zugspitze:9",
+    "to": "zugspitze:10",
+    "change": 0.48297417163848877,
+    "appeared": [
+      "crescent",
+      "moon shell",
+      "moon",
+      "prima",
+      "prima donna",
+      "skysail"
+    ],
+    "faded": [
+      "spotted salamander",
+      "foot bridge",
+      "pedestrian bridge",
+      "narrow goldenrod",
+      "flashlight fish",
+      "flashlight"
+    ]
+  },
+  {
+    "from": "zugspitze:10",
+    "to": "zugspitze:11",
+    "change": 0.5249199867248535,
+    "appeared": [
+      "walking cane",
+      "throat protector",
+      "carry",
+      "narrow",
+      "bat boy",
+      "tight"
+    ],
+    "faded": [
+      "moon",
+      "crescent",
+      "moon shell",
+      "moonseed",
+      "moonlight",
+      "moonflower"
+    ]
+  },
+  {
+    "from": "zugspitze:11",
+    "to": "zugspitze:12",
+    "change": 0.3236396312713623,
+    "appeared": [
+      "powdered milk",
+      "waterfall",
+      "water filter",
+      "snowfield",
+      "cascade liquefier",
+      "powdered sugar"
+    ],
+    "faded": [
+      "dark lantern",
+      "darkness",
+      "night",
+      "dark",
+      "night-light",
+      "flashlight fish"
+    ]
+  },
+  {
+    "from": "zugspitze:12",
+    "to": "zugspitze:13",
+    "change": 0.12804889678955078,
+    "appeared": [
+      "foot bridge",
+      "bathhouse",
+      "footbridge",
+      "ski lodge",
+      "boardwalk",
+      "sauna"
+    ],
+    "faded": [
+      "spherule",
+      "arachnid",
+      "stomatopod",
+      "persian cat",
+      "spherical polygon",
+      "vouvray"
+    ]
+  },
+  {
+    "from": "zugspitze:13",
+    "to": "zugspitze:14",
+    "change": 0.37872499227523804,
+    "appeared": [
+      "duckboard",
+      "park bench",
+      "flatcar",
+      "seesaw",
+      "varnish tree",
+      "runway"
+    ],
+    "faded": [
+      "waterfall",
+      "traveling salesman",
+      "mountaineering bag",
+      "peeler",
+      "columnar cell",
+      "vinifera grape"
+    ]
+  },
+  {
+    "from": "zugspitze:14",
+    "to": "zugspitze:15",
+    "change": 0.23522943258285522,
+    "appeared": [
+      "arrow arum",
+      "stovepipe iron",
+      "arrow",
+      "bow and arrow",
+      "driving iron",
+      "arrow wood"
+    ],
+    "faded": [
+      "pontoon bridge",
+      "belly flop",
+      "gangway",
+      "glass floor",
+      "catwalk",
+      "jet bridge"
+    ]
+  },
+  {
+    "from": "zugspitze:15",
+    "to": "zugspitze:16",
+    "change": 0.2748357057571411,
+    "appeared": [
+      "hagberry tree",
+      "looking glass tree",
+      "sugarberry",
+      "cork tree",
+      "flint corn",
+      "lacebark"
+    ],
+    "faded": [
+      "evening light",
+      "evening sun",
+      "dusk",
+      "night",
+      "lodging house",
+      "morning light"
+    ]
+  },
+  {
+    "from": "zugspitze:16",
+    "to": "zugspitze:17",
+    "change": 0.6294312477111816,
+    "appeared": [
+      "evening light",
+      "evening sun",
+      "summer evening",
+      "morning light",
+      "golden glow",
+      "dusk"
+    ],
+    "faded": [
+      "signboard",
+      "sandwich board",
+      "bulletin board",
+      "iron tree",
+      "screw tree",
+      "chalk"
+    ]
+  },
+  {
+    "from": "zugspitze:17",
+    "to": "zugspitze:18",
+    "change": 0.2059628963470459,
+    "appeared": [
+      "climbing fumitory",
+      "climbing onion",
+      "olive-tree agaric",
+      "gill fungus",
+      "dead nettle",
+      "coral fungus"
+    ],
+    "faded": [
+      "riverbed",
+      "flood",
+      "river",
+      "confluence",
+      "crossing river",
+      "levee"
+    ]
+  },
+  {
+    "from": "zugspitze:18",
+    "to": "zugspitze:19",
+    "change": 0.5437210202217102,
+    "appeared": [
+      "shadow",
+      "yardgrass",
+      "shortgrass",
+      "barnyard grass",
+      "large crabgrass",
+      "smooth crabgrass"
+    ],
+    "faded": [
+      "backpack",
+      "mountaineering bag",
+      "pannier",
+      "book bag",
+      "black spruce",
+      "drawstring bag"
+    ]
+  },
+  {
+    "from": "zugspitze:19",
+    "to": "zugspitze:20",
+    "change": 0.18184363842010498,
+    "appeared": [
+      "yellow spiny daisy",
+      "white lupine",
+      "common valerian",
+      "buffalo clover",
+      "aconite",
+      "white mullein"
+    ],
+    "faded": [
+      "section hand",
+      "hand",
+      "footprint",
+      "cuticle",
+      "finger",
+      "drain basket"
+    ]
+  },
+  {
+    "from": "zugspitze:20",
+    "to": "zugspitze:21",
+    "change": 0.22478914260864258,
+    "appeared": [
+      "ladder",
+      "gangway",
+      "stair",
+      "ladder-back",
+      "scaling ladder",
+      "weir"
+    ],
+    "faded": [
+      "grass frog",
+      "game fowl",
+      "roundhead",
+      "spiny puffer",
+      "soapfish",
+      "cricket frog"
+    ]
+  },
+  {
+    "from": "zugspitze:21",
+    "to": "zugspitze:22",
+    "change": 0.4648723006248474,
+    "appeared": [
+      "bow and arrow",
+      "handbow",
+      "longbow",
+      "crossbow",
+      "bowline",
+      "shooting stick"
+    ],
+    "faded": [
+      "physostegia",
+      "aromatic aster",
+      "small white aster",
+      "white mullein",
+      "mountain avens",
+      "annual salt-marsh aster"
+    ]
+  },
+  {
+    "from": "zugspitze:22",
+    "to": "zugspitze:23",
+    "change": 0.40479332208633423,
+    "appeared": [
+      "mitten",
+      "sea squirt",
+      "wet cell",
+      "steel-wool pad",
+      "dripping pan",
+      "hard sauce"
+    ],
+    "faded": [
+      "bow and arrow",
+      "fox hunting",
+      "deer hunting",
+      "longbow",
+      "oboe da caccia",
+      "hunting dog"
+    ]
+  },
+  {
+    "from": "zugspitze:23",
+    "to": "zugspitze:24",
+    "change": 0.1413138508796692,
+    "appeared": [
+      "ski mask",
+      "fashion girl",
+      "black woman",
+      "jump suit",
+      "set gun",
+      "black muslim"
+    ],
+    "faded": [
+      "ulster",
+      "carrick bend",
+      "ayrshire",
+      "lancastrian",
+      "refectory",
+      "towpath"
+    ]
+  },
+  {
+    "from": "zugspitze:24",
+    "to": "zugspitze:25",
+    "change": 0.322029709815979,
+    "appeared": [
+      "cable car",
+      "goat grass",
+      "goose grass",
+      "funambulism",
+      "rampart",
+      "mountain pass"
+    ],
+    "faded": [
+      "eastern cricket frog",
+      "northern cricket frog",
+      "mud turtle",
+      "eastern red-backed salamander",
+      "eastern woodrat",
+      "african clawed frog"
+    ]
+  },
+  {
+    "from": "zugspitze:25",
+    "to": "zugspitze:26",
+    "change": 0.21634691953659058,
+    "appeared": [
+      "big-cone spruce",
+      "treelet",
+      "fir tree",
+      "tree",
+      "wollemi pine",
+      "red spruce"
+    ],
+    "faded": [
+      "threshing floor",
+      "cow pen",
+      "dirt track",
+      "freight elevator",
+      "train bridge",
+      "claymore mine"
+    ]
+  },
+  {
+    "from": "zugspitze:26",
+    "to": "zugspitze:27",
+    "change": 0.1441308856010437,
+    "appeared": [
+      "gangway",
+      "skywalk",
+      "foot bridge",
+      "rope bridge",
+      "footbridge",
+      "pedestrian bridge"
+    ],
+    "faded": [
+      "pickerel frog",
+      "possum",
+      "mitten",
+      "black squirrel",
+      "spindle tree",
+      "timepiece"
+    ]
+  },
+  {
+    "from": "zugspitze:27",
+    "to": "zugspitze:28",
+    "change": 0.1356266736984253,
+    "appeared": [
+      "barnyard grass",
+      "feather reed grass",
+      "cornstalk",
+      "strawworm",
+      "reed meadow grass",
+      "arrow grass"
+    ],
+    "faded": [
+      "analog watch",
+      "digital watch",
+      "wristwatch",
+      "climbing tree",
+      "wrist pin",
+      "riding mechanical bull"
+    ]
+  },
+  {
+    "from": "zugspitze:28",
+    "to": "zugspitze:29",
+    "change": 0.07798337936401367,
+    "appeared": [
+      "handcuff",
+      "knobkerrie",
+      "corn cockle",
+      "eating doughnuts",
+      "knuckle joint",
+      "reef knot"
+    ],
+    "faded": [
+      "ladder",
+      "tar pit",
+      "water wagon",
+      "threshing floor",
+      "riverbed",
+      "scaling ladder"
+    ]
+  },
+  {
+    "from": "zugspitze:29",
+    "to": "zugspitze:30",
+    "change": 0.1448284387588501,
+    "appeared": [
+      "ancient",
+      "lhasa",
+      "historic",
+      "railroad bed",
+      "flying carpet",
+      "history"
+    ],
+    "faded": [
+      "glove",
+      "kid glove",
+      "golf glove",
+      "baseball glove",
+      "batting glove",
+      "foxglove"
+    ]
+  },
+  {
+    "from": "zugspitze:30",
+    "to": "zugspitze:31",
+    "change": 0.12344419956207275,
+    "appeared": [
+      "kid glove",
+      "hand",
+      "glove",
+      "hand fern",
+      "hand glass",
+      "handsaw"
+    ],
+    "faded": [
+      "bike racing",
+      "raceway",
+      "trail",
+      "hipline",
+      "piste",
+      "perishable"
+    ]
+  },
+  {
+    "from": "zugspitze:31",
+    "to": "zugspitze:32",
+    "change": 0.18152165412902832,
+    "appeared": [
+      "vet",
+      "ski resort",
+      "trial",
+      "mountain landscape",
+      "greenery",
+      "mountain path"
+    ],
+    "faded": [
+      "kid glove",
+      "monkey wrench",
+      "lever",
+      "hacksaw",
+      "pneumatic drill",
+      "hand drill"
+    ]
+  },
+  {
+    "from": "zugspitze:32",
+    "to": "zugspitze:33",
+    "change": 0.2617175579071045,
+    "appeared": [
+      "rubble",
+      "garbage heap",
+      "debris",
+      "litter",
+      "parts bin",
+      "assembling computer"
+    ],
+    "faded": [
+      "bungee",
+      "rope",
+      "corkwood",
+      "rope bridge",
+      "suspension bridge",
+      "bungee jumping"
+    ]
+  },
+  {
+    "from": "zugspitze:33",
+    "to": "zugspitze:34",
+    "change": 0.1835564374923706,
+    "appeared": [
+      "jogging",
+      "pacer",
+      "orangeade",
+      "bike ride",
+      "jumpstyle dancing",
+      "butternut"
+    ],
+    "faded": [
+      "ridge rope",
+      "quipu",
+      "tendril",
+      "hangman's rope",
+      "barge pole",
+      "telephone wire"
+    ]
+  },
+  {
+    "from": "zugspitze:34",
+    "to": "zugspitze:35",
+    "change": 0.20203948020935059,
+    "appeared": [
+      "waterweed",
+      "hand fern",
+      "green frog",
+      "floating-moss",
+      "great duckweed",
+      "duckweed"
+    ],
+    "faded": [
+      "rubble",
+      "shuffler",
+      "shuttle",
+      "unloading truck",
+      "garbage heap",
+      "ramp"
+    ]
+  },
+  {
+    "from": "zugspitze:35",
+    "to": "zugspitze:36",
+    "change": 0.4452090263366699,
+    "appeared": [
+      "limestone fern",
+      "water lily",
+      "hand fern",
+      "acuminate leaf",
+      "obtuse leaf",
+      "crenate leaf"
+    ],
+    "faded": [
+      "sunshine",
+      "weizenbock",
+      "mountain pass",
+      "mutterer",
+      "sunny",
+      "finisher"
+    ]
+  },
+  {
+    "from": "zugspitze:36",
+    "to": "zugspitze:37",
+    "change": 0.09437000751495361,
+    "appeared": [
+      "hurdle",
+      "weizenbock",
+      "water horehound",
+      "damp",
+      "wet",
+      "footbath"
+    ],
+    "faded": [
+      "lotus",
+      "canada lily",
+      "water lily",
+      "tulip",
+      "impala lily",
+      "lily"
+    ]
+  },
+  {
+    "from": "zugspitze:37",
+    "to": "zugspitze:38",
+    "change": 0.35991525650024414,
+    "appeared": [
+      "sunshine",
+      "sunny",
+      "mountain pass",
+      "mountain landscape",
+      "hallway",
+      "mountain path"
+    ],
+    "faded": [
+      "hand fern",
+      "frond",
+      "waterweed",
+      "beech fern",
+      "bird's-foot fern",
+      "long beech fern"
+    ]
+  },
+  {
+    "from": "zugspitze:38",
+    "to": "zugspitze:39",
+    "change": 0.27771246433258057,
+    "appeared": [
+      "hard hat",
+      "safety helmet",
+      "space helmet",
+      "white man",
+      "shovel hat",
+      "picture hat"
+    ],
+    "faded": [
+      "hand",
+      "greens",
+      "outcrop",
+      "window sill",
+      "alcove",
+      "rock face"
+    ]
+  },
+  {
+    "from": "zugspitze:39",
+    "to": "zugspitze:40",
+    "change": 0.40390610694885254,
+    "appeared": [
+      "hand",
+      "snout",
+      "finger",
+      "valley",
+      "palm",
+      "female mammal"
+    ],
+    "faded": [
+      "climbing ladder",
+      "belay",
+      "safety helmet",
+      "batting helmet",
+      "climbing a rope",
+      "ropewalker"
+    ]
+  },
+  {
+    "from": "zugspitze:40",
+    "to": "zugspitze:41",
+    "change": 0.33137500286102295,
+    "appeared": [
+      "ice bag",
+      "polar glacier",
+      "ice ax",
+      "walking cane",
+      "alpine glacier",
+      "ice shelf"
+    ],
+    "faded": [
+      "nose",
+      "snout",
+      "tongue",
+      "bunny",
+      "hand",
+      "rabbit"
+    ]
+  },
+  {
+    "from": "zugspitze:41",
+    "to": "zugspitze:42",
+    "change": 0.16458261013031006,
+    "appeared": [
+      "ice shelf",
+      "snowkiting",
+      "water ice",
+      "shoveling snow",
+      "ice climbing",
+      "snow mushroom"
+    ],
+    "faded": [
+      "sunniness",
+      "sun",
+      "morning light",
+      "morning sun",
+      "sunny",
+      "sunshine"
+    ]
+  },
+  {
+    "from": "zugspitze:42",
+    "to": "zugspitze:43",
+    "change": 0.031560420989990234,
+    "appeared": [
+      "white dead nettle",
+      "roman nettle",
+      "dead nettle",
+      "scrub beefwood",
+      "wood nettle",
+      "stink bell"
+    ],
+    "faded": [
+      "hamburg",
+      "rainy",
+      "stormy",
+      "cloudy",
+      "azure",
+      "wetter"
+    ]
+  },
+  {
+    "from": "zugspitze:43",
+    "to": "zugspitze:44",
+    "change": 0.4396698474884033,
+    "appeared": [
+      "group photo",
+      "sitting",
+      "sit",
+      "supper",
+      "potluck",
+      "group"
+    ],
+    "faded": [
+      "walking cane",
+      "walking leaf",
+      "walking stick",
+      "stroll",
+      "walking",
+      "mountain male fern"
+    ]
+  },
+  {
+    "from": "zugspitze:44",
+    "to": "zugspitze:45",
+    "change": 0.35080409049987793,
+    "appeared": [
+      "lanyard",
+      "magnus hitch",
+      "boy scout",
+      "mescal button",
+      "teenager",
+      "garrote"
+    ],
+    "faded": [
+      "sky",
+      "cooking",
+      "recipe",
+      "morning light",
+      "picnic",
+      "stuffed cabbage"
+    ]
+  },
+  {
+    "from": "zugspitze:45",
+    "to": "zugspitze:46",
+    "change": 0.27066439390182495,
+    "appeared": [
+      "snowshoe",
+      "walking",
+      "mixing bowl",
+      "icing sugar",
+      "crossing river",
+      "footbridge"
+    ],
+    "faded": [
+      "teenager",
+      "young",
+      "nephew",
+      "boy scout",
+      "youth",
+      "maxim gun"
+    ]
+  },
+  {
+    "from": "zugspitze:46",
+    "to": "zugspitze:47",
+    "change": 0.3652094006538391,
+    "appeared": [
+      "old man",
+      "fall cankerworm",
+      "little chief hare",
+      "feather ball",
+      "centenarian",
+      "stroll"
+    ],
+    "faded": [
+      "cleats",
+      "crampon",
+      "shoebox",
+      "shoe",
+      "backpack",
+      "tool bag"
+    ]
+  },
+  {
+    "from": "zugspitze:47",
+    "to": "zugspitze:48",
+    "change": 0.39743125438690186,
+    "appeared": [
+      "grinding wheel",
+      "razor blade",
+      "knife",
+      "grinder",
+      "razorblade",
+      "water faucet"
+    ],
+    "faded": [
+      "renaissance man",
+      "walking cane",
+      "walking delegate",
+      "middle-aged man",
+      "stroll",
+      "lawyer cane"
+    ]
+  },
+  {
+    "from": "zugspitze:48",
+    "to": "zugspitze:49",
+    "change": 0.11704301834106445,
+    "appeared": [
+      "sargassum fish",
+      "flotsam",
+      "surfing crowd",
+      "marsh st-john's wort",
+      "purple willow",
+      "oarfish"
+    ],
+    "faded": [
+      "mountain path",
+      "sky",
+      "uphill",
+      "belay",
+      "ascent",
+      "mountain pass"
+    ]
+  },
+  {
+    "from": "zugspitze:49",
+    "to": "zugspitze:50",
+    "change": 0.2995041012763977,
+    "appeared": [
+      "belay",
+      "walking cane",
+      "sticktight",
+      "climbing ladder",
+      "ladder-back",
+      "stick"
+    ],
+    "faded": [
+      "surfing",
+      "crowbait",
+      "racing",
+      "surfing crowd",
+      "fishing",
+      "gusher"
+    ]
+  },
+  {
+    "from": "zugspitze:50",
+    "to": "zugspitze:51",
+    "change": 0.2566739320755005,
+    "appeared": [
+      "bota",
+      "cow pasture",
+      "knee-high",
+      "marcher",
+      "teetotaler",
+      "sheepwalk"
+    ],
+    "faded": [
+      "limestone",
+      "jacob's rod",
+      "rock face",
+      "sand bar",
+      "microfossil",
+      "chopstick"
+    ]
+  },
+  {
+    "from": "zugspitze:51",
+    "to": "zugspitze:52",
+    "change": 0.19971275329589844,
+    "appeared": [
+      "crevasse",
+      "lubber's hole",
+      "foramen magnum",
+      "hole",
+      "swimming hole",
+      "pit"
+    ],
+    "faded": [
+      "skiing shoes",
+      "footwear",
+      "shoe",
+      "tights",
+      "cleats",
+      "hot pants"
+    ]
+  },
+  {
+    "from": "zugspitze:52",
+    "to": "zugspitze:53",
+    "change": 0.33536529541015625,
+    "appeared": [
+      "sword",
+      "broadsword",
+      "knife",
+      "eastern indigo snake",
+      "swimming hole",
+      "sounding rocket"
+    ],
+    "faded": [
+      "marcher",
+      "pushing wheelchair",
+      "walking delegate",
+      "crampon",
+      "walk",
+      "pushing cart"
+    ]
+  },
+  {
+    "from": "zugspitze:53",
+    "to": "zugspitze:54",
+    "change": 0.24234187602996826,
+    "appeared": [
+      "stroll",
+      "walk",
+      "streetwalker",
+      "walking",
+      "marcher",
+      "walking the dog"
+    ],
+    "faded": [
+      "sword",
+      "broadsword",
+      "fencing sword",
+      "backsword",
+      "saber saw",
+      "rapier"
+    ]
+  },
+  {
+    "from": "zugspitze:54",
+    "to": "zugspitze:55",
+    "change": 0.501166433095932,
+    "appeared": [
+      "crampon",
+      "ski boot",
+      "cleats",
+      "latchkey",
+      "ski binding",
+      "belay"
+    ],
+    "faded": [
+      "lake bed",
+      "sinkhole",
+      "riverbed",
+      "tidal basin",
+      "erosion",
+      "volcanic crater"
+    ]
+  },
+  {
+    "from": "zugspitze:55",
+    "to": "zugspitze:56",
+    "change": 0.16963374614715576,
+    "appeared": [
+      "cavity wall",
+      "international grandmaster",
+      "curb roof",
+      "terra sigillata",
+      "tennis court",
+      "residence"
+    ],
+    "faded": [
+      "black woman",
+      "backpack",
+      "book bag",
+      "drawstring bag",
+      "mikado",
+      "tailed frog"
+    ]
+  },
+  {
+    "from": "zugspitze:56",
+    "to": "zugspitze:57",
+    "change": 0.23532330989837646,
+    "appeared": [
+      "drunk",
+      "crash helmet",
+      "wreck",
+      "choke",
+      "small white",
+      "rescue"
+    ],
+    "faded": [
+      "mountain view",
+      "blue sky",
+      "sea view",
+      "countryside",
+      "mountainside",
+      "retail"
+    ]
+  },
+  {
+    "from": "zugspitze:57",
+    "to": "zugspitze:58",
+    "change": 0.14486873149871826,
+    "appeared": [
+      "bluejack oak",
+      "divorce lawyer",
+      "rock polypody",
+      "beach sand verbena",
+      "seaside goldenrod",
+      "riverbed"
+    ],
+    "faded": [
+      "biking through snow",
+      "snow mushroom",
+      "leclanche cell",
+      "snow",
+      "ski cap",
+      "snow pea"
+    ]
+  },
+  {
+    "from": "zugspitze:58",
+    "to": "zugspitze:59",
+    "change": 0.216169536113739,
+    "appeared": [
+      "ski cap",
+      "toque",
+      "white hellebore",
+      "space helmet",
+      "bicycle helmet",
+      "beanie"
+    ],
+    "faded": [
+      "blue fox",
+      "bluefish",
+      "blue mold fungus",
+      "blue orchid",
+      "blue pimpernel",
+      "beefsteak fungus"
+    ]
+  },
+  {
+    "from": "zugspitze:59",
+    "to": "zugspitze:60",
+    "change": 0.17072463035583496,
+    "appeared": [
+      "bracken",
+      "mercury thermometer",
+      "lugworm",
+      "beet armyworm",
+      "measuring worm",
+      "kid glove"
+    ],
+    "faded": [
+      "diving cliff",
+      "cliff diving",
+      "pushing car",
+      "windjammer",
+      "speedskater",
+      "belay"
+    ]
+  },
+  {
+    "from": "zugspitze:60",
+    "to": "zugspitze:61",
+    "change": 0.2628403306007385,
+    "appeared": [
+      "videocassette recorder",
+      "polaroid camera",
+      "film camera",
+      "photographic equipment",
+      "dispenser",
+      "camcorder"
+    ],
+    "faded": [
+      "white ash",
+      "coccidium",
+      "sea scout",
+      "shadow",
+      "grey willow",
+      "female child"
+    ]
+  },
+  {
+    "from": "zugspitze:61",
+    "to": "zugspitze:62",
+    "change": 0.17136144638061523,
+    "appeared": [
+      "dipstick",
+      "hole",
+      "keyhole limpet",
+      "pit",
+      "limestone",
+      "foramen magnum"
+    ],
+    "faded": [
+      "pack",
+      "book bag",
+      "mountaineering bag",
+      "duffel bag",
+      "duffel",
+      "backpack"
+    ]
+  },
+  {
+    "from": "zugspitze:62",
+    "to": "zugspitze:63",
+    "change": 0.1827138066291809,
+    "appeared": [
+      "pack",
+      "book bag",
+      "duffel",
+      "backpack",
+      "mountaineering bag",
+      "duffel bag"
+    ],
+    "faded": [
+      "gully",
+      "dipstick",
+      "hole",
+      "pit",
+      "crevice",
+      "natural canal"
+    ]
+  },
+  {
+    "from": "zugspitze:63",
+    "to": "zugspitze:64",
+    "change": 0.581558883190155,
+    "appeared": [
+      "shadow",
+      "round shape",
+      "rock face",
+      "keyhole",
+      "knobble",
+      "roundhead"
+    ],
+    "faded": [
+      "first-aid kit",
+      "ice bag",
+      "hiking equipment",
+      "skiing shoes",
+      "crampon",
+      "ski boot"
+    ]
+  },
+  {
+    "from": "zugspitze:64",
+    "to": "zugspitze:65",
+    "change": 0.2652137279510498,
+    "appeared": [
+      "penknife",
+      "fish knife",
+      "letter opener",
+      "knife",
+      "trench knife",
+      "pocketknife"
+    ],
+    "faded": [
+      "roundhouse",
+      "cupule",
+      "glory hole",
+      "keyhole",
+      "round arch",
+      "call center"
+    ]
+  },
+  {
+    "from": "zugspitze:65",
+    "to": "zugspitze:66",
+    "change": 0.3865845799446106,
+    "appeared": [
+      "stirrup",
+      "luggage carrier",
+      "pannier",
+      "bridle",
+      "troop carrier",
+      "lock-gate"
+    ],
+    "faded": [
+      "quartz",
+      "lapidary",
+      "river red gum",
+      "sand dollar",
+      "fossil",
+      "mercury thermometer"
+    ]
+  },
+  {
+    "from": "zugspitze:66",
+    "to": "zugspitze:67",
+    "change": 0.18040847778320312,
+    "appeared": [
+      "hurdle",
+      "marcher",
+      "hike",
+      "orange sneezeweed",
+      "running suit",
+      "stinking iris"
+    ],
+    "faded": [
+      "shadow",
+      "shadow box",
+      "shaft",
+      "rope",
+      "elevator shaft",
+      "shading"
+    ]
+  },
+  {
+    "from": "zugspitze:67",
+    "to": "zugspitze:68",
+    "change": 0.0689467191696167,
+    "appeared": [
+      "overcast",
+      "cloudy",
+      "communist",
+      "minute hand",
+      "meat hook",
+      "hangman's rope"
+    ],
+    "faded": [
+      "backpack",
+      "back brace",
+      "book bag",
+      "hiker",
+      "mountaineering bag",
+      "backpacker"
+    ]
+  },
+  {
+    "from": "zugspitze:68",
+    "to": "zugspitze:69",
+    "change": 0.2077854871749878,
+    "appeared": [
+      "fisherman's knot",
+      "boat hook",
+      "love knot",
+      "reef knot",
+      "anklet",
+      "quartz"
+    ],
+    "faded": [
+      "hurdle",
+      "sandwichman",
+      "beggarman",
+      "orangeman",
+      "unskilled person",
+      "viol"
+    ]
+  },
+  {
+    "from": "zugspitze:69",
+    "to": "zugspitze:70",
+    "change": 0.1023569107055664,
+    "appeared": [
+      "ice milk",
+      "water ice",
+      "ice floe",
+      "ice-cream bean",
+      "water chute",
+      "ice field"
+    ],
+    "faded": [
+      "analog watch",
+      "timepiece",
+      "wristwatch",
+      "hook wrench",
+      "pendulum watch",
+      "phillips screwdriver"
+    ]
+  },
+  {
+    "from": "zugspitze:70",
+    "to": "zugspitze:71",
+    "change": 0.16633212566375732,
+    "appeared": [
+      "analog watch",
+      "pendulum watch",
+      "wristwatch",
+      "timepiece",
+      "digital watch",
+      "sea ice"
+    ],
+    "faded": [
+      "ocellated turkey",
+      "chain pickerel",
+      "hitchrack",
+      "pickerel frog",
+      "mudskipper",
+      "pacific tree toad"
+    ]
+  },
+  {
+    "from": "zugspitze:71",
+    "to": "zugspitze:72",
+    "change": 0.0788499116897583,
+    "appeared": [
+      "swinging on something",
+      "ridge rope",
+      "rope bridge",
+      "rope",
+      "harness",
+      "climbing a rope"
+    ],
+    "faded": [
+      "sea ice",
+      "ice shelf",
+      "water ice",
+      "analog watch",
+      "flooded gum",
+      "watch glass"
+    ]
+  },
+  {
+    "from": "zugspitze:72",
+    "to": "zugspitze:73",
+    "change": 0.11147546768188477,
+    "appeared": [
+      "gangway",
+      "crack",
+      "faille",
+      "autobahn",
+      "dehydrated food",
+      "crack willow"
+    ],
+    "faded": [
+      "glove",
+      "kid glove",
+      "gauntlet",
+      "wristwatch",
+      "boxing glove",
+      "hour hand"
+    ]
+  },
+  {
+    "from": "zugspitze:73",
+    "to": "zugspitze:74",
+    "change": 0.28283292055130005,
+    "appeared": [
+      "clothes hamper",
+      "hat",
+      "shovel hat",
+      "bucket seat",
+      "dress hat",
+      "baseball cap"
+    ],
+    "faded": [
+      "crack willow",
+      "faille",
+      "inclined fault",
+      "cabbage bark",
+      "rock face",
+      "telephone wire"
+    ]
+  },
+  {
+    "from": "zugspitze:74",
+    "to": "zugspitze:75",
+    "change": 0.14175963401794434,
+    "appeared": [
+      "wallpaper",
+      "world",
+      "sky",
+      "blue sky",
+      "background",
+      "landscape"
+    ],
+    "faded": [
+      "gangway",
+      "railing",
+      "footbridge",
+      "toastrack",
+      "safety rail",
+      "train bridge"
+    ]
+  },
+  {
+    "from": "zugspitze:75",
+    "to": "zugspitze:76",
+    "change": 0.09505981206893921,
+    "appeared": [
+      "bicycle pump",
+      "stirrup pump",
+      "shooting stick",
+      "running suit",
+      "grissino",
+      "broomstick"
+    ],
+    "faded": [
+      "swale",
+      "lubber's hole",
+      "sinkhole",
+      "inlet",
+      "pit",
+      "bowl"
+    ]
+  },
+  {
+    "from": "zugspitze:76",
+    "to": "zugspitze:77",
+    "change": 0.3539530038833618,
+    "appeared": [
+      "rope bridge",
+      "hand",
+      "section hand",
+      "bracer",
+      "finger",
+      "rope"
+    ],
+    "faded": [
+      "cross-country riding",
+      "push-bike",
+      "tricycle",
+      "cloud",
+      "unicycle",
+      "skiing crosscountry"
+    ]
+  },
+  {
+    "from": "zugspitze:77",
+    "to": "zugspitze:78",
+    "change": 0.08821678161621094,
+    "appeared": [
+      "yellow twining snapdragon",
+      "yellow bass",
+      "counterbore",
+      "wire recorder",
+      "yellow-leaf sickle pine",
+      "yellow pine"
+    ],
+    "faded": [
+      "footbridge",
+      "pedestrian bridge",
+      "finger",
+      "deaf person",
+      "hand",
+      "ditch"
+    ]
+  },
+  {
+    "from": "zugspitze:78",
+    "to": "zugspitze:79",
+    "change": 0.36137181520462036,
+    "appeared": [
+      "harbor",
+      "pier",
+      "harbor porpoise",
+      "shipwreck",
+      "bay scallop",
+      "seawall"
+    ],
+    "faded": [
+      "belay",
+      "wristwatch",
+      "international grandmaster",
+      "life belt",
+      "wristband",
+      "second-in-command"
+    ]
+  },
+  {
+    "from": "zugspitze:79",
+    "to": "zugspitze:80",
+    "change": 0.3300272822380066,
+    "appeared": [
+      "thumbtack",
+      "pinprick",
+      "claymore",
+      "buttonhook",
+      "hatpin",
+      "weathervane"
+    ],
+    "faded": [
+      "cable car",
+      "river boat",
+      "cove",
+      "boat ride",
+      "bay bridge",
+      "train bridge"
+    ]
+  },
+  {
+    "from": "zugspitze:80",
+    "to": "zugspitze:81",
+    "change": 0.12953472137451172,
+    "appeared": [
+      "train bridge",
+      "air line",
+      "hipline",
+      "rope bridge",
+      "breakax",
+      "tramline"
+    ],
+    "faded": [
+      "yellow-leaf sickle pine",
+      "knobcone pine",
+      "yellow pine",
+      "pinetum",
+      "pine cone",
+      "side-blotched lizard"
+    ]
+  },
+  {
+    "from": "zugspitze:81",
+    "to": "zugspitze:82",
+    "change": 0.2675541639328003,
+    "appeared": [
+      "control tower",
+      "time capsule",
+      "spiritual leader",
+      "empire state building",
+      "recording music",
+      "space capsule"
+    ],
+    "faded": [
+      "crowbar",
+      "undercarriage",
+      "ripping chisel",
+      "brace wrench",
+      "broken arch",
+      "stove bolt"
+    ]
+  },
+  {
+    "from": "zugspitze:82",
+    "to": "zugspitze:83",
+    "change": 0.21025729179382324,
+    "appeared": [
+      "glove",
+      "kid glove",
+      "batting glove",
+      "handsaw",
+      "handbow",
+      "gouge"
+    ],
+    "faded": [
+      "pillbox",
+      "white house",
+      "pediment",
+      "superstructure",
+      "control tower",
+      "high altar"
+    ]
+  },
+  {
+    "from": "zugspitze:83",
+    "to": "zugspitze:84",
+    "change": 0.31672441959381104,
+    "appeared": [
+      "logwood",
+      "driftwood",
+      "wood",
+      "wood sage",
+      "wood tick",
+      "harpoon log"
+    ],
+    "faded": [
+      "abseiling",
+      "climbing a rope",
+      "glove",
+      "rope bridge",
+      "pull chain",
+      "abseiler"
+    ]
+  },
+  {
+    "from": "zugspitze:84",
+    "to": "zugspitze:85",
+    "change": 0.23997658491134644,
+    "appeared": [
+      "solo",
+      "black",
+      "walking",
+      "introvert",
+      "black swan",
+      "fighter pilot"
+    ],
+    "faded": [
+      "logwood",
+      "harpoon log",
+      "dugout canoe",
+      "wood tick",
+      "arrow wood",
+      "driftwood"
+    ]
+  },
+  {
+    "from": "zugspitze:85",
+    "to": "zugspitze:86",
+    "change": 0.2971857190132141,
+    "appeared": [
+      "totem pole",
+      "wrapping present",
+      "decorate",
+      "christmas decoration",
+      "christmas ornament",
+      "giant red paintbrush"
+    ],
+    "faded": [
+      "rough",
+      "mountain path",
+      "bridle path",
+      "towpath",
+      "autobahn",
+      "introvert"
+    ]
+  },
+  {
+    "from": "zugspitze:86",
+    "to": "zugspitze:87",
+    "change": 0.16305017471313477,
+    "appeared": [
+      "gaiter",
+      "trouser cuff",
+      "heat shield",
+      "pant leg",
+      "thigh pad",
+      "waistband"
+    ],
+    "faded": [
+      "crucifix",
+      "altar",
+      "high altar",
+      "shrine",
+      "crucifer",
+      "lord"
+    ]
+  },
+  {
+    "from": "zugspitze:87",
+    "to": "zugspitze:88",
+    "change": 0.2414143681526184,
+    "appeared": [
+      "dovecote",
+      "beer can",
+      "honey bell",
+      "golden thistle",
+      "yellow bells",
+      "bosc"
+    ],
+    "faded": [
+      "trouser cuff",
+      "protective garment",
+      "thumbhole",
+      "earmuff",
+      "spider brake",
+      "splint"
+    ]
+  },
+  {
+    "from": "zugspitze:88",
+    "to": "zugspitze:89",
+    "change": 0.6066159009933472,
+    "appeared": [
+      "crucifix",
+      "cross",
+      "cruise control",
+      "right triangle",
+      "rhombus",
+      "linear accelerator"
+    ],
+    "faded": [
+      "turk's head",
+      "dovecote",
+      "litterbin",
+      "beer can",
+      "munich beer",
+      "weizenbock"
+    ]
+  },
+  {
+    "from": "zugspitze:89",
+    "to": "zugspitze:90",
+    "change": 0.836163729429245,
+    "appeared": [
+      "individual",
+      "reading",
+      "test",
+      "conversation",
+      "media",
+      "load"
+    ],
+    "faded": [
+      "crucifix",
+      "ski equipment",
+      "ski pole",
+      "ski binding",
+      "reliquary",
+      "ski boot"
+    ]
+  }
+]

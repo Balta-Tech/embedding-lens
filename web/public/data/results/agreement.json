@@ -1,0 +1,9 @@
+{
+  "configurations": 36,
+  "correlations": {
+    "second opinion": 0.6151866151866151,
+    "round trip (recall@5)": -0.6048906048906049,
+    "round trip (recall@1)": -0.5449163449163449,
+    "word variety (coverage)": -0.644015444015444
+  }
+}
