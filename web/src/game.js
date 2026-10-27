@@ -1,5 +1,6 @@
 // You vs the model: describe a moment, then see where your words rank in the model's eyes.
 import { backend, formatTime, liveScore, loadGameRanks, loadGameVocab, loadReadouts, spriteUrl, timeOf } from "./data.js";
+import { busy, waiting } from "./wait.js";
 
 const ROUNDS = 5;
 const MAX_WORDS = 5;
@@ -23,6 +24,37 @@ function variants(word) {
     if (f.endsWith("s")) forms.push(f.slice(0, -1));
   }
   return forms;
+}
+
+function distance(a, b, limit) {
+  // Levenshtein, giving up once every path exceeds the limit
+  let prev = Array.from({ length: b.length + 1 }, (_, j) => j);
+  for (let i = 1; i <= a.length; i++) {
+    const row = [i];
+    let best = i;
+    for (let j = 1; j <= b.length; j++) {
+      row[j] = Math.min(prev[j] + 1, row[j - 1] + 1, prev[j - 1] + (a[i - 1] === b[j - 1] ? 0 : 1));
+      best = Math.min(best, row[j]);
+    }
+    if (best > limit) return limit + 1;
+    prev = row;
+  }
+  return prev[b.length];
+}
+
+// Closest vocabulary entries to a word that isn't in it: completions first, then near spellings
+function closest(word, vocab, n = 3) {
+  const w = word.trim().toLowerCase();
+  const limit = w.length < 5 ? 1 : 2;
+  const scored = [];
+  for (const v of vocab) {
+    if (v.startsWith(w)) scored.push([v.length - w.length - 100, v]);
+    else if (Math.abs(v.length - w.length) <= limit) {
+      const d = distance(w, v, limit);
+      if (d <= limit) scored.push([d, v]);
+    }
+  }
+  return scored.sort((a, b) => a[0] - b[0]).slice(0, n).map(([, v]) => v);
 }
 
 export function createGame(manifest) {
@@ -56,9 +88,9 @@ export function createGame(manifest) {
       <div>
         <label class="control-label" for="game-input" style="width:auto">Your words</label>
         <div class="word-entry" id="word-entry">
-          <input id="game-input" list="game-vocab" placeholder="type a word, press Enter" autocomplete="off" />
+          <input id="game-input" placeholder="type a word, press Enter" autocomplete="off" />
         </div>
-        <datalist id="game-vocab"></datalist>
+        <p class="suggest" id="game-suggest" hidden></p>
         <div class="game-actions">
           <button class="btn primary" id="reveal" type="button" disabled>Reveal</button>
           <button class="btn ghost" id="skip" type="button">Skip</button>
@@ -66,12 +98,17 @@ export function createGame(manifest) {
         <div id="game-result"></div>
       </div>`;
     const input = root.querySelector("#game-input");
-    root.querySelector("#game-vocab").innerHTML = game.data.vocab.map((w) => `<option value="${w}">`).join("");
+    let timer;
+    input.addEventListener("input", () => {
+      clearTimeout(timer);
+      timer = setTimeout(() => suggest(input.value), 150);
+    });
     input.addEventListener("keydown", (e) => {
       if ((e.key === "Enter" || e.key === ",") && input.value.trim()) {
         e.preventDefault();
         addWord(input.value);
         input.value = "";
+        suggest("");
       } else if (e.key === "Backspace" && !input.value && game.words.length) {
         game.words.pop();
         renderChips();
@@ -83,6 +120,29 @@ export function createGame(manifest) {
     });
     root.querySelector("#skip").addEventListener("click", () => { game.round++; renderRound(); });
     input.focus({ preventScroll: true });
+  }
+
+  // Offline, only words in the precomputed list can be ranked: once the player has typed a word
+  // that isn't in it, offer the nearest ones. Live, any word works, so no suggestions.
+  function suggest(value) {
+    const el = root.querySelector("#game-suggest");
+    const known = (w) => variants(w).some((f) => game.index.has(f));
+    if (backend.live || value.trim().length < 3 || known(value)) {
+      el.hidden = true;
+      return;
+    }
+    const options = closest(value, game.data.vocab);
+    el.hidden = false;
+    el.innerHTML = options.length
+      ? `Not in the offline word list. Closest: ${options.map((o) => `<button type="button" class="chip">${o}</button>`).join("")}`
+      : "Not in the offline word list, so it can't be ranked without the live backend.";
+    el.querySelectorAll("button").forEach((b) => b.addEventListener("click", () => {
+      const input = root.querySelector("#game-input");
+      addWord(b.textContent);
+      input.value = "";
+      el.hidden = true;
+      input.focus();
+    }));
   }
 
   function addWord(raw) {
@@ -128,9 +188,21 @@ export function createGame(manifest) {
   }
 
   async function reveal(key) {
-    root.querySelector("#reveal").disabled = true;
+    const button = root.querySelector("#reveal");
     root.querySelector("#game-input").disabled = true;
-    const result = await score(key);
+    root.querySelector("#game-suggest").hidden = true;
+    let result;
+    if (backend.live) {
+      const done = busy(button, "Scoring…");
+      const out = root.querySelector("#game-result");
+      out.innerHTML = '<p class="hint"></p>';
+      waiting(out.firstChild, "The live model is ranking your words among 119,000. This takes a few seconds.");
+      result = await score(key);
+      done();
+    } else {
+      result = await score(key);
+    }
+    button.disabled = true;
     const readouts = game.readouts;
     const known = result.words.filter((w) => w.percentile !== null).map((w) => w.percentile).sort((a, b) => b - a);
     // Round score: the average of your best three words, so one stray guess doesn't sink you
